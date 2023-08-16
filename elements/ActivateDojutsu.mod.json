@@ -1,0 +1,9 @@
+{
+  "_fv": 43,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "0",
+    "keyBindingName": "Activate Dojutsu",
+    "keyBindingCategoryKey": "anime_chaos_naruto"
+  }
+}

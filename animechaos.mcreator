@@ -12,13 +12,80 @@
           "src/main/resources/assets/animechaos/models/item/test.json"
         ]
       }
+    },
+    {
+      "name": "ActivateDojutsu",
+      "type": "keybind",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "activate_dojutsu",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animechaos/network/ActivateDojutsuMessage.java"
+        ]
+      }
+    },
+    {
+      "name": "SecondFunction",
+      "type": "keybind",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "second_function",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animechaos/network/SecondFunctionMessage.java"
+        ]
+      }
     }
   ],
-  "variable_elements": [],
+  "variable_elements": [
+    {
+      "name": "SharinganXP",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "SharinganLevel",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "Clan",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "\"Uchiha\""
+    },
+    {
+      "name": "Anime",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "\"\""
+    },
+    {
+      "name": "LeftDojutsu",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "\"\""
+    },
+    {
+      "name": "RightDojutsu",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "\"\""
+    }
+  ],
   "sound_elements": [],
   "language_map": {
     "en_us": {
-      "item.animechaos.test": "Test"
+      "item.animechaos.test": "Anime Chaos Logo",
+      "key.animechaos.second_function": "Second Function",
+      "key.categories.anime_chaos": "Anime Chaos - General",
+      "key.animechaos.activate_dojutsu": "Activate Dojutsu",
+      "key.categories.anime_chaos_naruto": "Anime Chaos - Naruto"
     }
   },
   "foldersRoot": {
