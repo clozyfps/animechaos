@@ -8,7 +8,7 @@
       "registry_name": "test",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/anime_chaos/item/TestItem.java",
+          "src/main/java/net/mcreator/animechaos/item/TestItem.java",
           "src/main/resources/assets/anime_chaos/models/item/test.json"
         ]
       }
@@ -22,7 +22,7 @@
       "registry_name": "activate_dojutsu",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/anime_chaos/network/ActivateDojutsuMessage.java"
+          "src/main/java/net/mcreator/animechaos/network/ActivateDojutsuMessage.java"
         ]
       }
     },
@@ -35,7 +35,7 @@
       "registry_name": "second_function",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/anime_chaos/network/SecondFunctionMessage.java"
+          "src/main/java/net/mcreator/animechaos/network/SecondFunctionMessage.java"
         ]
       }
     },
@@ -48,7 +48,7 @@
       "registry_name": "do_activate_dojutsu",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/anime_chaos/procedures/DoActivateDojutsuProcedure.java"
+          "src/main/java/net/mcreator/animechaos/procedures/DoActivateDojutsuProcedure.java"
         ],
         "dependencies": [
           {
@@ -75,34 +75,15 @@
       }
     },
     {
-      "name": "LeftDojutsuRenderer",
+      "name": "DojutsuRenderer",
       "type": "procedure",
       "sortid": 3,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "left_dojutsu_renderer",
+      "registry_name": "dojutsu_renderer",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/anime_chaos/procedures/LeftDojutsuRendererProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      }
-    },
-    {
-      "name": "RightDojutsu",
-      "type": "procedure",
-      "sortid": 5,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "right_dojutsu",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/anime_chaos/procedures/RightDojutsuProcedure.java"
+          "src/main/java/net/mcreator/animechaos/procedures/DojutsuRendererProcedure.java"
         ],
         "dependencies": [
           {
@@ -136,7 +117,7 @@
       "name": "Anime",
       "type": "string",
       "scope": "player_persistent",
-      "value": "\"\""
+      "value": "\"Naruto\""
     },
     {
       "name": "LeftDojutsu",
@@ -151,33 +132,25 @@
       "value": "\"\""
     },
     {
-      "name": "DojutsuActivated",
-      "type": "logic",
-      "scope": "player_lifetime",
-      "value": "false"
+      "name": "RightSharinganXP",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
     },
     {
       "name": "RightSharinganLevel",
       "type": "number",
       "scope": "player_persistent",
-      "value": "0"
+      "value": "1.0"
     },
     {
-      "name": "RightSharinganXP",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "0"
+      "name": "DojutsuIsActive",
+      "type": "logic",
+      "scope": "player_lifetime",
+      "value": "false"
     }
   ],
   "sound_elements": [
-    {
-      "name": "sharingan_deactivated",
-      "files": [
-        "end_sharingan"
-      ],
-      "category": "neutral",
-      "subtitle": "Sharingan Disappears..."
-    },
     {
       "name": "sharingan_activated",
       "files": [
@@ -185,6 +158,14 @@
       ],
       "category": "player",
       "subtitle": "Sharingan Awakens!"
+    },
+    {
+      "name": "sharingan_deactivated",
+      "files": [
+        "end_sharingan"
+      ],
+      "category": "player",
+      "subtitle": "Sharingan Dissipates..."
     }
   ],
   "language_map": {
@@ -196,7 +177,7 @@
       "key.categories.anime_chaos": "Anime Chaos - General",
       "key.anime_chaos.activate_dojutsu": "Activate Dojutsu",
       "key.animechaos.activate_dojutsu": "Activate Dojutsu",
-      "subtitles.sharingan_deactivated": "Sharingan Disappears...",
+      "subtitles.sharingan_deactivated": "Sharingan Dissipates...",
       "subtitles.sharingan_activated": "Sharingan Awakens!",
       "key.categories.anime_chaos_naruto": "Anime Chaos - Naruto"
     }
@@ -209,8 +190,8 @@
     "modid": "anime_chaos",
     "modName": "Anime Chaos",
     "version": "0.1.0a",
-    "description": "An Anime Mashup Mod that fights destiny!",
-    "author": "jayso, FiveNights2161, MCreator",
+    "description": "An Anime Mashup mod, pushing to defy Destiny!",
+    "author": "jayso, MCreator",
     "websiteURL": "https://mcreator.net",
     "license": "Academic Free License v3.0",
     "disableForgeVersionCheck": true,
@@ -227,7 +208,7 @@
     ],
     "currentGenerator": "forge-1.19.2",
     "credits": "Created using mod maker MCreator - https://mcreator.net/about",
-    "modElementsPackage": "net.mcreator.anime_chaos",
+    "modElementsPackage": "net.mcreator.animechaos",
     "lockBaseModFiles": false
   },
   "mcreatorVersion": 202300224119

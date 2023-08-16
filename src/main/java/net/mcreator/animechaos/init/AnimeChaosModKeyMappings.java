@@ -15,10 +15,25 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.KeyMapping;
 
+import net.mcreator.animechaos.network.ActivateDojutsuMessage;
+import net.mcreator.animechaos.AnimeChaosMod;
+
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = {Dist.CLIENT})
-public class AnimechaosModKeyMappings {
-	public static final KeyMapping SECOND_FUNCTION = new KeyMapping("key.animechaos.second_function", GLFW.GLFW_KEY_LEFT_SHIFT, "key.categories.anime_chaos");
-	public static final KeyMapping ACTIVATE_DOJUTSU = new KeyMapping("key.animechaos.activate_dojutsu", GLFW.GLFW_KEY_0, "key.categories.anime_chaos_naruto");
+public class AnimeChaosModKeyMappings {
+	public static final KeyMapping SECOND_FUNCTION = new KeyMapping("key.anime_chaos.second_function", GLFW.GLFW_KEY_LEFT_SHIFT, "key.categories.anime_chaos");
+	public static final KeyMapping ACTIVATE_DOJUTSU = new KeyMapping("key.anime_chaos.activate_dojutsu", GLFW.GLFW_KEY_R, "key.categories.anime_chaos_naruto") {
+		private boolean isDownOld = false;
+
+		@Override
+		public void setDown(boolean isDown) {
+			super.setDown(isDown);
+			if (isDownOld != isDown && isDown) {
+				AnimeChaosMod.PACKET_HANDLER.sendToServer(new ActivateDojutsuMessage(0, 0));
+				ActivateDojutsuMessage.pressAction(Minecraft.getInstance().player, 0, 0);
+			}
+			isDownOld = isDown;
+		}
+	};
 
 	@SubscribeEvent
 	public static void registerKeyMappings(RegisterKeyMappingsEvent event) {
@@ -31,6 +46,7 @@ public class AnimechaosModKeyMappings {
 		@SubscribeEvent
 		public static void onClientTick(TickEvent.ClientTickEvent event) {
 			if (Minecraft.getInstance().screen == null) {
+				ACTIVATE_DOJUTSU.consumeClick();
 			}
 		}
 	}

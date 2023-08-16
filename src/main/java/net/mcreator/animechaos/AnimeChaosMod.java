@@ -29,7 +29,8 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.FriendlyByteBuf;
 
-import net.mcreator.animechaos.init.AnimechaosModItems;
+import net.mcreator.animechaos.init.AnimeChaosModSounds;
+import net.mcreator.animechaos.init.AnimeChaosModItems;
 
 import java.util.function.Supplier;
 import java.util.function.Function;
@@ -40,17 +41,18 @@ import java.util.Collection;
 import java.util.ArrayList;
 import java.util.AbstractMap;
 
-@Mod("animechaos")
-public class AnimechaosMod {
-	public static final Logger LOGGER = LogManager.getLogger(AnimechaosMod.class);
-	public static final String MODID = "animechaos";
+@Mod("anime_chaos")
+public class AnimeChaosMod {
+	public static final Logger LOGGER = LogManager.getLogger(AnimeChaosMod.class);
+	public static final String MODID = "anime_chaos";
 
-	public AnimechaosMod() {
+	public AnimeChaosMod() {
 		MinecraftForge.EVENT_BUS.register(this);
 
 		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
+		AnimeChaosModSounds.REGISTRY.register(bus);
 
-		AnimechaosModItems.REGISTRY.register(bus);
+		AnimeChaosModItems.REGISTRY.register(bus);
 
 	}
 

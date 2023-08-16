@@ -25,15 +25,15 @@ import net.minecraft.nbt.CompoundTag;
 import net.minecraft.core.Direction;
 import net.minecraft.client.Minecraft;
 
-import net.mcreator.animechaos.AnimechaosMod;
+import net.mcreator.animechaos.AnimeChaosMod;
 
 import java.util.function.Supplier;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
-public class AnimechaosModVariables {
+public class AnimeChaosModVariables {
 	@SubscribeEvent
 	public static void init(FMLCommonSetupEvent event) {
-		AnimechaosMod.addNetworkMessage(PlayerVariablesSyncMessage.class, PlayerVariablesSyncMessage::buffer, PlayerVariablesSyncMessage::new, PlayerVariablesSyncMessage::handler);
+		AnimeChaosMod.addNetworkMessage(PlayerVariablesSyncMessage.class, PlayerVariablesSyncMessage::buffer, PlayerVariablesSyncMessage::new, PlayerVariablesSyncMessage::handler);
 	}
 
 	@SubscribeEvent
@@ -66,13 +66,16 @@ public class AnimechaosModVariables {
 			event.getOriginal().revive();
 			PlayerVariables original = ((PlayerVariables) event.getOriginal().getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
 			PlayerVariables clone = ((PlayerVariables) event.getEntity().getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
-			clone.SharinganXP = original.SharinganXP;
-			clone.SharinganLevel = original.SharinganLevel;
+			clone.LeftSharinganXP = original.LeftSharinganXP;
+			clone.LeftSharinganLevel = original.LeftSharinganLevel;
 			clone.Clan = original.Clan;
 			clone.Anime = original.Anime;
 			clone.LeftDojutsu = original.LeftDojutsu;
 			clone.RightDojutsu = original.RightDojutsu;
+			clone.RightSharinganXP = original.RightSharinganXP;
+			clone.RightSharinganLevel = original.RightSharinganLevel;
 			if (!event.isWasDeath()) {
+				clone.DojutsuIsActive = original.DojutsuIsActive;
 			}
 		}
 	}
@@ -85,7 +88,7 @@ public class AnimechaosModVariables {
 		@SubscribeEvent
 		public static void onAttachCapabilities(AttachCapabilitiesEvent<Entity> event) {
 			if (event.getObject() instanceof Player && !(event.getObject() instanceof FakePlayer))
-				event.addCapability(new ResourceLocation("animechaos", "player_variables"), new PlayerVariablesProvider());
+				event.addCapability(new ResourceLocation("anime_chaos", "player_variables"), new PlayerVariablesProvider());
 		}
 
 		private final PlayerVariables playerVariables = new PlayerVariables();
@@ -108,37 +111,46 @@ public class AnimechaosModVariables {
 	}
 
 	public static class PlayerVariables {
-		public double SharinganXP = 0;
-		public double SharinganLevel = 0;
+		public double LeftSharinganXP = 0;
+		public double LeftSharinganLevel = 1.0;
 		public String Clan = "\"Uchiha\"";
-		public String Anime = "\"\"";
-		public String LeftDojutsu = "\"\"";
+		public String Anime = "\"Naruto\"";
+		public String LeftDojutsu = "\"Sharingan\"";
 		public String RightDojutsu = "\"\"";
+		public double RightSharinganXP = 0;
+		public double RightSharinganLevel = 1.0;
+		public boolean DojutsuIsActive = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
-				AnimechaosMod.PACKET_HANDLER.send(PacketDistributor.PLAYER.with(() -> serverPlayer), new PlayerVariablesSyncMessage(this));
+				AnimeChaosMod.PACKET_HANDLER.send(PacketDistributor.PLAYER.with(() -> serverPlayer), new PlayerVariablesSyncMessage(this));
 		}
 
 		public Tag writeNBT() {
 			CompoundTag nbt = new CompoundTag();
-			nbt.putDouble("SharinganXP", SharinganXP);
-			nbt.putDouble("SharinganLevel", SharinganLevel);
+			nbt.putDouble("LeftSharinganXP", LeftSharinganXP);
+			nbt.putDouble("LeftSharinganLevel", LeftSharinganLevel);
 			nbt.putString("Clan", Clan);
 			nbt.putString("Anime", Anime);
 			nbt.putString("LeftDojutsu", LeftDojutsu);
 			nbt.putString("RightDojutsu", RightDojutsu);
+			nbt.putDouble("RightSharinganXP", RightSharinganXP);
+			nbt.putDouble("RightSharinganLevel", RightSharinganLevel);
+			nbt.putBoolean("DojutsuIsActive", DojutsuIsActive);
 			return nbt;
 		}
 
 		public void readNBT(Tag Tag) {
 			CompoundTag nbt = (CompoundTag) Tag;
-			SharinganXP = nbt.getDouble("SharinganXP");
-			SharinganLevel = nbt.getDouble("SharinganLevel");
+			LeftSharinganXP = nbt.getDouble("LeftSharinganXP");
+			LeftSharinganLevel = nbt.getDouble("LeftSharinganLevel");
 			Clan = nbt.getString("Clan");
 			Anime = nbt.getString("Anime");
 			LeftDojutsu = nbt.getString("LeftDojutsu");
 			RightDojutsu = nbt.getString("RightDojutsu");
+			RightSharinganXP = nbt.getDouble("RightSharinganXP");
+			RightSharinganLevel = nbt.getDouble("RightSharinganLevel");
+			DojutsuIsActive = nbt.getBoolean("DojutsuIsActive");
 		}
 	}
 
@@ -163,12 +175,15 @@ public class AnimechaosModVariables {
 			context.enqueueWork(() -> {
 				if (!context.getDirection().getReceptionSide().isServer()) {
 					PlayerVariables variables = ((PlayerVariables) Minecraft.getInstance().player.getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
-					variables.SharinganXP = message.data.SharinganXP;
-					variables.SharinganLevel = message.data.SharinganLevel;
+					variables.LeftSharinganXP = message.data.LeftSharinganXP;
+					variables.LeftSharinganLevel = message.data.LeftSharinganLevel;
 					variables.Clan = message.data.Clan;
 					variables.Anime = message.data.Anime;
 					variables.LeftDojutsu = message.data.LeftDojutsu;
 					variables.RightDojutsu = message.data.RightDojutsu;
+					variables.RightSharinganXP = message.data.RightSharinganXP;
+					variables.RightSharinganLevel = message.data.RightSharinganLevel;
+					variables.DojutsuIsActive = message.data.DojutsuIsActive;
 				}
 			});
 			context.setPacketHandled(true);

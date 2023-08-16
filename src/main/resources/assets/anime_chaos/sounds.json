@@ -1,18 +1,18 @@
 {
-  "sharingan_deactivated": {
-    "subtitle": "subtitles.sharingan_deactivated",
-    "sounds": [
-      {
-        "name": "anime_chaos:end_sharingan",
-        "stream": false
-      }
-    ]
-  },
   "sharingan_activated": {
     "subtitle": "subtitles.sharingan_activated",
     "sounds": [
       {
         "name": "anime_chaos:collen-eyes-efect",
+        "stream": false
+      }
+    ]
+  },
+  "sharingan_deactivated": {
+    "subtitle": "subtitles.sharingan_deactivated",
+    "sounds": [
+      {
+        "name": "anime_chaos:end_sharingan",
         "stream": false
       }
     ]

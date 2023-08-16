@@ -8,7 +8,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 
 import net.minecraft.network.FriendlyByteBuf;
 
-import net.mcreator.animechaos.AnimechaosMod;
+import net.mcreator.animechaos.AnimeChaosMod;
 
 import java.util.function.Supplier;
 
@@ -40,6 +40,6 @@ public class SecondFunctionMessage {
 
 	@SubscribeEvent
 	public static void registerMessage(FMLCommonSetupEvent event) {
-		AnimechaosMod.addNetworkMessage(SecondFunctionMessage.class, SecondFunctionMessage::buffer, SecondFunctionMessage::new, SecondFunctionMessage::handler);
+		AnimeChaosMod.addNetworkMessage(SecondFunctionMessage.class, SecondFunctionMessage::buffer, SecondFunctionMessage::new, SecondFunctionMessage::handler);
 	}
 }
