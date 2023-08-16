@@ -1,0 +1,234 @@
+{
+  "mod_elements": [
+    {
+      "name": "Test",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "test",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/anime_chaos/item/TestItem.java",
+          "src/main/resources/assets/anime_chaos/models/item/test.json"
+        ]
+      }
+    },
+    {
+      "name": "ActivateDojutsu",
+      "type": "keybind",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "activate_dojutsu",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/anime_chaos/network/ActivateDojutsuMessage.java"
+        ]
+      }
+    },
+    {
+      "name": "SecondFunction",
+      "type": "keybind",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "second_function",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/anime_chaos/network/SecondFunctionMessage.java"
+        ]
+      }
+    },
+    {
+      "name": "DoActivateDojutsu",
+      "type": "procedure",
+      "sortid": 4,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "do_activate_dojutsu",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/anime_chaos/procedures/DoActivateDojutsuProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "LeftDojutsuRenderer",
+      "type": "procedure",
+      "sortid": 3,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "left_dojutsu_renderer",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/anime_chaos/procedures/LeftDojutsuRendererProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "RightDojutsu",
+      "type": "procedure",
+      "sortid": 5,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "right_dojutsu",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/anime_chaos/procedures/RightDojutsuProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    }
+  ],
+  "variable_elements": [
+    {
+      "name": "LeftSharinganXP",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "LeftSharinganLevel",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "1.0"
+    },
+    {
+      "name": "Clan",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "\"Uchiha\""
+    },
+    {
+      "name": "Anime",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "\"\""
+    },
+    {
+      "name": "LeftDojutsu",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "\"Sharingan\""
+    },
+    {
+      "name": "RightDojutsu",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "\"\""
+    },
+    {
+      "name": "DojutsuActivated",
+      "type": "logic",
+      "scope": "player_lifetime",
+      "value": "false"
+    },
+    {
+      "name": "RightSharinganLevel",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "RightSharinganXP",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    }
+  ],
+  "sound_elements": [
+    {
+      "name": "sharingan_deactivated",
+      "files": [
+        "end_sharingan"
+      ],
+      "category": "neutral",
+      "subtitle": "Sharingan Disappears..."
+    },
+    {
+      "name": "sharingan_activated",
+      "files": [
+        "collen-eyes-efect"
+      ],
+      "category": "player",
+      "subtitle": "Sharingan Awakens!"
+    }
+  ],
+  "language_map": {
+    "en_us": {
+      "key.anime_chaos.second_function": "Second Function",
+      "item.anime_chaos.test": "Anime Chaos Logo",
+      "item.animechaos.test": "Anime Chaos Logo",
+      "key.animechaos.second_function": "Second Function",
+      "key.categories.anime_chaos": "Anime Chaos - General",
+      "key.anime_chaos.activate_dojutsu": "Activate Dojutsu",
+      "key.animechaos.activate_dojutsu": "Activate Dojutsu",
+      "subtitles.sharingan_deactivated": "Sharingan Disappears...",
+      "subtitles.sharingan_activated": "Sharingan Awakens!",
+      "key.categories.anime_chaos_naruto": "Anime Chaos - Naruto"
+    }
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": []
+  },
+  "workspaceSettings": {
+    "modid": "anime_chaos",
+    "modName": "Anime Chaos",
+    "version": "0.1.0a",
+    "description": "An Anime Mashup Mod that fights destiny!",
+    "author": "jayso, FiveNights2161, MCreator",
+    "websiteURL": "https://mcreator.net",
+    "license": "Academic Free License v3.0",
+    "disableForgeVersionCheck": true,
+    "serverSideOnly": false,
+    "requiredMods": [
+      "kleiders_custom_renderer"
+    ],
+    "dependencies": [
+      "kleiders_custom_renderer"
+    ],
+    "dependants": [],
+    "mcreatorDependencies": [
+      "kleidersplayerrenderer"
+    ],
+    "currentGenerator": "forge-1.19.2",
+    "credits": "Created using mod maker MCreator - https://mcreator.net/about",
+    "modElementsPackage": "net.mcreator.anime_chaos",
+    "lockBaseModFiles": false
+  },
+  "mcreatorVersion": 202300224119
+}
