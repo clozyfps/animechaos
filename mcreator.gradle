@@ -8,3 +8,13 @@ dependencies {
   implementation fg.deobf("curse.maven:kleidersplayerrenderer-682065:4478427")
 }
 
+repositories {
+  maven {
+      url = "https://jitpack.io"
+  }
+}
+
+dependencies {
+  implementation fg.deobf('com.github.Virtuoel:Pehkui:3.7.4-1.19.2-forge')
+}
+

@@ -11,7 +11,7 @@ import net.minecraft.core.BlockPos;
 
 import net.mcreator.animechaos.network.AnimeChaosModVariables;
 
-public class DoActivateDojutsuProcedure {
+public class DojutsuVariableStuffProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
@@ -23,7 +23,6 @@ public class DoActivateDojutsuProcedure {
 					capability.syncPlayerVariables(entity);
 				});
 			}
-			DojutsuRendererProcedure.execute(entity);
 			if (((entity.getCapability(AnimeChaosModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeChaosModVariables.PlayerVariables())).LeftDojutsu).equals("\"Sharingan\"")
 					|| ((entity.getCapability(AnimeChaosModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeChaosModVariables.PlayerVariables())).RightDojutsu).equals("\"Sharingan\"")) {
 				if (world instanceof Level _level) {
@@ -42,7 +41,6 @@ public class DoActivateDojutsuProcedure {
 					capability.syncPlayerVariables(entity);
 				});
 			}
-			DojutsuRendererProcedure.execute(entity);
 			if (((entity.getCapability(AnimeChaosModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeChaosModVariables.PlayerVariables())).LeftDojutsu).equals("\"Sharingan\"")
 					|| ((entity.getCapability(AnimeChaosModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeChaosModVariables.PlayerVariables())).RightDojutsu).equals("\"Sharingan\"")) {
 				if (world instanceof Level _level) {
