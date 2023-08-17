@@ -24,7 +24,8 @@
         "files": [
           "src/main/java/net/mcreator/animechaos/network/ActivateDojutsuMessage.java"
         ]
-      }
+      },
+      "path": "~/Naruto"
     },
     {
       "name": "SecondFunction",
@@ -37,7 +38,8 @@
         "files": [
           "src/main/java/net/mcreator/animechaos/network/SecondFunctionMessage.java"
         ]
-      }
+      },
+      "path": "~/Naruto"
     },
     {
       "name": "DoActivateDojutsu",
@@ -72,7 +74,8 @@
             "type": "world"
           }
         ]
-      }
+      },
+      "path": "~/Naruto"
     },
     {
       "name": "DojutsuRenderer",
@@ -91,7 +94,8 @@
             "type": "entity"
           }
         ]
-      }
+      },
+      "path": "~/Naruto"
     }
   ],
   "variable_elements": [
@@ -187,6 +191,35 @@
     "children": [
       {
         "name": "Fire Force",
+        "children": [
+          {
+            "name": "Procedures",
+            "children": []
+          },
+          {
+            "name": "GUI",
+            "children": []
+          },
+          {
+            "name": "Mobs",
+            "children": []
+          },
+          {
+            "name": "Items",
+            "children": []
+          },
+          {
+            "name": "Blocks",
+            "children": []
+          },
+          {
+            "name": "Misc",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Naruto",
         "children": []
       }
     ]
