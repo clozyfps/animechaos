@@ -116,7 +116,7 @@ public class AnimeChaosModVariables {
 		public String Clan = "\"Uchiha\"";
 		public String Anime = "\"Naruto\"";
 		public String LeftDojutsu = "\"Sharingan\"";
-		public String RightDojutsu = "\"Sharingan\"";
+		public String RightDojutsu = "\"\"";
 		public double RightSharinganXP = 0;
 		public double RightSharinganLevel = 1.0;
 		public boolean DojutsuIsActive = false;

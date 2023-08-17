@@ -8,7 +8,7 @@ version="0.1.0"
 displayName="Anime Chaos"
 credits="Created using mod maker MCreator - https://mcreator.net/about"
 displayURL="https://mcreator.net"
-authors="jayso, FiveNights2161, MCreator"
+authors="jayso, MCreator"
 description="An Anime Mashup mod, pushing to defy Destiny!"
 
 [[dependencies.anime_chaos]]
@@ -28,12 +28,6 @@ description="An Anime Mashup mod, pushing to defy Destiny!"
 
 [[dependencies.anime_chaos]]
     modId="kleidersplayerrenderer"
-    mandatory=false
-    versionRange="[0,)"
-    ordering="NONE"
-    side="BOTH"
-[[dependencies.anime_chaos]]
-    modId="pehkui"
     mandatory=false
     versionRange="[0,)"
     ordering="NONE"

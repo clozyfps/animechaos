@@ -14,6 +14,19 @@
       }
     },
     {
+      "name": "ActivateDojutsu",
+      "type": "keybind",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "activate_dojutsu",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animechaos/network/ActivateDojutsuMessage.java"
+        ]
+      }
+    },
+    {
       "name": "SecondFunction",
       "type": "keybind",
       "sortid": 1,
@@ -42,38 +55,6 @@
             "name": "entity",
             "type": "entity"
           }
-        ]
-      }
-    },
-    {
-      "name": "Tomoe1RightRenderer",
-      "type": "procedure",
-      "sortid": 6,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "tomoe_1_right_renderer",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/animechaos/procedures/Tomoe1RightRendererProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      }
-    },
-    {
-      "name": "ActivateDojutsu",
-      "type": "keybind",
-      "sortid": 7,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "activate_dojutsu",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/animechaos/network/ActivateDojutsuMessage.java"
         ]
       }
     },
@@ -108,6 +89,25 @@
           {
             "name": "world",
             "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Tomoe1RightRenderer",
+      "type": "procedure",
+      "sortid": 6,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tomoe_1_right_renderer",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animechaos/procedures/Tomoe1RightRendererProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
           }
         ]
       }
@@ -167,7 +167,7 @@
       "name": "RightDojutsu",
       "type": "string",
       "scope": "player_persistent",
-      "value": "\"Sharingan\""
+      "value": "\"\""
     },
     {
       "name": "RightSharinganXP",
@@ -210,8 +210,11 @@
     "en_us": {
       "key.anime_chaos.second_function": "Second Function",
       "item.anime_chaos.test": "Anime Chaos Logo",
+      "item.animechaos.test": "Anime Chaos Logo",
+      "key.animechaos.second_function": "Second Function",
       "key.categories.anime_chaos": "Anime Chaos - General",
       "key.anime_chaos.activate_dojutsu": "Activate Dojutsu",
+      "key.animechaos.activate_dojutsu": "Activate Dojutsu",
       "subtitles.sharingan_deactivated": "Sharingan Dissipates...",
       "subtitles.sharingan_activated": "Sharingan Awakens!",
       "key.categories.anime_chaos_naruto": "Anime Chaos - Naruto"
@@ -219,14 +222,48 @@
   },
   "foldersRoot": {
     "name": "~",
-    "children": []
+    "children": [
+      {
+        "name": "Fire Force",
+        "children": [
+          {
+            "name": "Procedures",
+            "children": []
+          },
+          {
+            "name": "GUI",
+            "children": []
+          },
+          {
+            "name": "Mobs",
+            "children": []
+          },
+          {
+            "name": "Items",
+            "children": []
+          },
+          {
+            "name": "Blocks",
+            "children": []
+          },
+          {
+            "name": "Misc",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Naruto",
+        "children": []
+      }
+    ]
   },
   "workspaceSettings": {
     "modid": "anime_chaos",
     "modName": "Anime Chaos",
     "version": "0.1.0a",
     "description": "An Anime Mashup mod, pushing to defy Destiny!",
-    "author": "jayso, FiveNights2161, MCreator",
+    "author": "jayso, MCreator",
     "websiteURL": "https://mcreator.net",
     "license": "Academic Free License v3.0",
     "disableForgeVersionCheck": true,
@@ -239,8 +276,7 @@
     ],
     "dependants": [],
     "mcreatorDependencies": [
-      "kleidersplayerrenderer",
-      "pehkui"
+      "kleidersplayerrenderer"
     ],
     "currentGenerator": "forge-1.19.2",
     "credits": "Created using mod maker MCreator - https://mcreator.net/about",
