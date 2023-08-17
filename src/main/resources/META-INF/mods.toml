@@ -3,15 +3,14 @@ loaderVersion="[43,)"
 license="Academic Free License v3.0"
 
 [[mods]]
-modId="anime_chaos"
-version="0.1.0"
-displayName="Anime Chaos"
+modId="animechaos"
+version="1.0.0"
+displayName="animechaos"
 credits="Created using mod maker MCreator - https://mcreator.net/about"
 displayURL="https://mcreator.net"
 authors="jayso, MCreator"
-description="An Anime Mashup mod, pushing to defy Destiny!"
 
-[[dependencies.anime_chaos]]
+[[dependencies.animechaos]]
     modId="minecraft"
     mandatory=true
     versionRange="[1.19.2]"
@@ -19,23 +18,5 @@ description="An Anime Mashup mod, pushing to defy Destiny!"
     side="BOTH"
 
 
-[[dependencies.anime_chaos]]
-    modId="kleiders_custom_renderer"
-    mandatory=true
-    versionRange="[0,)"
-    ordering="NONE"
-    side="BOTH"
 
-[[dependencies.anime_chaos]]
-    modId="kleidersplayerrenderer"
-    mandatory=false
-    versionRange="[0,)"
-    ordering="NONE"
-    side="BOTH"
-[[dependencies.anime_chaos]]
-    modId="kleiders_custom_renderer"
-    mandatory=false
-    versionRange="[0,)"
-    ordering="NONE"
-    side="BOTH"
 
