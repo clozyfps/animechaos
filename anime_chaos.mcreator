@@ -184,7 +184,12 @@
   },
   "foldersRoot": {
     "name": "~",
-    "children": []
+    "children": [
+      {
+        "name": "Fire Force",
+        "children": []
+      }
+    ]
   },
   "workspaceSettings": {
     "modid": "anime_chaos",
