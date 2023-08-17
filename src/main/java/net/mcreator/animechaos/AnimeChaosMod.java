@@ -29,8 +29,6 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.FriendlyByteBuf;
 
-import net.mcreator.animechaos.init.AnimechaosModItems;
-
 import java.util.function.Supplier;
 import java.util.function.Function;
 import java.util.function.BiConsumer;

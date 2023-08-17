@@ -23,7 +23,16 @@
   },
   "foldersRoot": {
     "name": "~",
-    "children": []
+    "children": [
+      {
+        "name": "Hunter x Hunter",
+        "children": []
+      },
+      {
+        "name": "Keybinds",
+        "children": []
+      }
+    ]
   },
   "workspaceSettings": {
     "modid": "animechaos",
