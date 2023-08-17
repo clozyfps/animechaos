@@ -135,6 +135,118 @@
         ]
       },
       "path": "~/Naruto"
+    },
+    {
+      "name": "AutoActivateSharingan",
+      "type": "procedure",
+      "sortid": 10,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "auto_activate_sharingan",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animechaos/procedures/AutoActivateSharinganProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Naruto"
+    },
+    {
+      "name": "LevelLeftSharingan",
+      "type": "procedure",
+      "sortid": 11,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "level_left_sharingan",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animechaos/procedures/LevelLeftSharinganProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Naruto"
+    },
+    {
+      "name": "LevelRightSharingan",
+      "type": "procedure",
+      "sortid": 12,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "level_right_sharingan",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animechaos/procedures/LevelRightSharinganProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Naruto"
     }
   ],
   "variable_elements": [
@@ -166,7 +278,7 @@
       "name": "LeftDojutsu",
       "type": "string",
       "scope": "player_persistent",
-      "value": "\"Sharingan\""
+      "value": "\"\""
     },
     {
       "name": "RightDojutsu",
