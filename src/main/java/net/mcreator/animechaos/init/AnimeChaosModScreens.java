@@ -12,13 +12,17 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraft.client.gui.screens.MenuScreens;
 
 import net.mcreator.animechaos.client.gui.StatScreenScreen;
+import net.mcreator.animechaos.client.gui.StartUpGen1Screen;
+import net.mcreator.animechaos.client.gui.PlayerLoadupScreen;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class AnimeChaosModScreens {
 	@SubscribeEvent
 	public static void clientLoad(FMLClientSetupEvent event) {
 		event.enqueueWork(() -> {
+			MenuScreens.register(AnimeChaosModMenus.PLAYER_LOADUP.get(), PlayerLoadupScreen::new);
 			MenuScreens.register(AnimeChaosModMenus.STAT_SCREEN.get(), StatScreenScreen::new);
+			MenuScreens.register(AnimeChaosModMenus.START_UP_GEN_1.get(), StartUpGen1Screen::new);
 		});
 	}
 }

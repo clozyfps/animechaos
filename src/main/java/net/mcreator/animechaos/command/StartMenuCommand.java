@@ -11,16 +11,15 @@ import net.minecraftforge.common.util.FakePlayerFactory;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.core.Direction;
-import net.minecraft.commands.arguments.MessageArgument;
 import net.minecraft.commands.Commands;
 
-import net.mcreator.animechaos.procedures.SetClanProcedureProcedure;
+import net.mcreator.animechaos.procedures.StartMenuCMDProcedure;
 
 @Mod.EventBusSubscriber
-public class SetClanCommand {
+public class StartMenuCommand {
 	@SubscribeEvent
 	public static void registerCommand(RegisterCommandsEvent event) {
-		event.getDispatcher().register(Commands.literal("setclan").requires(s -> s.hasPermission(2)).then(Commands.argument("ClanName", MessageArgument.message()).executes(arguments -> {
+		event.getDispatcher().register(Commands.literal("startmenu").requires(s -> s.hasPermission(2)).executes(arguments -> {
 			ServerLevel world = arguments.getSource().getLevel();
 			double x = arguments.getSource().getPosition().x();
 			double y = arguments.getSource().getPosition().y();
@@ -30,8 +29,8 @@ public class SetClanCommand {
 				entity = FakePlayerFactory.getMinecraft(world);
 			Direction direction = entity.getDirection();
 
-			SetClanProcedureProcedure.execute(arguments, entity);
+			StartMenuCMDProcedure.execute(world, x, y, z, entity);
 			return 0;
-		})));
+		}));
 	}
 }

@@ -1,0 +1,117 @@
+{
+  "_fv": 43,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 240,
+    "height": 100,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": true,
+    "components": [
+      {
+        "type": "textfield",
+        "data": {
+          "placeholder": "",
+          "name": "FirstName",
+          "width": 120,
+          "height": 20,
+          "x": 101,
+          "y": 78
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_empty",
+          "text": ">",
+          "onClick": {
+            "name": "AnimeSelectForward"
+          },
+          "width": 30,
+          "height": 20,
+          "x": 135,
+          "y": 142
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_empty1",
+          "text": "<",
+          "onClick": {
+            "name": "AnimeSelectBackwards"
+          },
+          "width": 30,
+          "height": 20,
+          "x": 101,
+          "y": 142
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_animename",
+          "text": {
+            "fixedValue": "AnimeName",
+            "name": "AnimeSelectedText"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 134,
+          "y": 129
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_anime_can_be_changed",
+          "text": {
+            "fixedValue": "Anime:"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 101,
+          "y": 129
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_set_first_name",
+          "text": "Set First Name",
+          "onClick": {
+            "name": "PlayerFirstName"
+          },
+          "width": 98,
+          "height": 20,
+          "x": 226,
+          "y": 78
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_next",
+          "text": "Next",
+          "width": 46,
+          "height": 20,
+          "x": 278,
+          "y": 142
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

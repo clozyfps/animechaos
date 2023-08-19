@@ -11,17 +11,16 @@ import net.minecraftforge.common.util.FakePlayerFactory;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.core.Direction;
+import net.minecraft.commands.arguments.MessageArgument;
 import net.minecraft.commands.Commands;
 
 import net.mcreator.animechaos.procedures.SetAnimeProcedureProcedure;
-
-import com.mojang.brigadier.arguments.StringArgumentType;
 
 @Mod.EventBusSubscriber
 public class SetAnimeCommand {
 	@SubscribeEvent
 	public static void registerCommand(RegisterCommandsEvent event) {
-		event.getDispatcher().register(Commands.literal("setanime").requires(s -> s.hasPermission(2)).then(Commands.argument("AnimeName", StringArgumentType.word()).executes(arguments -> {
+		event.getDispatcher().register(Commands.literal("setanime").requires(s -> s.hasPermission(2)).then(Commands.argument("AnimeName", MessageArgument.message()).executes(arguments -> {
 			ServerLevel world = arguments.getSource().getLevel();
 			double x = arguments.getSource().getPosition().x();
 			double y = arguments.getSource().getPosition().y();

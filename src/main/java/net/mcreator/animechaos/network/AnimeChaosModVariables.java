@@ -86,6 +86,8 @@ public class AnimeChaosModVariables {
 			clone.StatXP = original.StatXP;
 			clone.GlobalPlayerHealth = original.GlobalPlayerHealth;
 			clone.JutsuXP = original.JutsuXP;
+			clone.JoinedWorld = original.JoinedWorld;
+			clone.PlayerFirstName = original.PlayerFirstName;
 			if (!event.isWasDeath()) {
 				clone.DojutsuIsActive = original.DojutsuIsActive;
 				clone.holdingSecondFunction = original.holdingSecondFunction;
@@ -127,8 +129,8 @@ public class AnimeChaosModVariables {
 	public static class PlayerVariables {
 		public double LeftSharinganXP = 0;
 		public double LeftSharinganLevel = 1.0;
-		public String Clan = "none";
-		public String Anime = "none";
+		public String Clan = "None";
+		public String Anime = "None";
 		public String LeftDojutsu = "\"Sharingan\"";
 		public String RightDojutsu = "\"Sharingan\"";
 		public double RightSharinganXP = 0;
@@ -148,6 +150,8 @@ public class AnimeChaosModVariables {
 		public double GlobalPlayerHealth = 0;
 		public double JutsuXP = 0;
 		public boolean SaidLatom = false;
+		public boolean JoinedWorld = false;
+		public String PlayerFirstName = "\"\"";
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -179,6 +183,8 @@ public class AnimeChaosModVariables {
 			nbt.putDouble("GlobalPlayerHealth", GlobalPlayerHealth);
 			nbt.putDouble("JutsuXP", JutsuXP);
 			nbt.putBoolean("SaidLatom", SaidLatom);
+			nbt.putBoolean("JoinedWorld", JoinedWorld);
+			nbt.putString("PlayerFirstName", PlayerFirstName);
 			return nbt;
 		}
 
@@ -207,6 +213,8 @@ public class AnimeChaosModVariables {
 			GlobalPlayerHealth = nbt.getDouble("GlobalPlayerHealth");
 			JutsuXP = nbt.getDouble("JutsuXP");
 			SaidLatom = nbt.getBoolean("SaidLatom");
+			JoinedWorld = nbt.getBoolean("JoinedWorld");
+			PlayerFirstName = nbt.getString("PlayerFirstName");
 		}
 	}
 
@@ -254,6 +262,8 @@ public class AnimeChaosModVariables {
 					variables.GlobalPlayerHealth = message.data.GlobalPlayerHealth;
 					variables.JutsuXP = message.data.JutsuXP;
 					variables.SaidLatom = message.data.SaidLatom;
+					variables.JoinedWorld = message.data.JoinedWorld;
+					variables.PlayerFirstName = message.data.PlayerFirstName;
 				}
 			});
 			context.setPacketHandled(true);

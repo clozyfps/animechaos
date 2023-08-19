@@ -117,7 +117,7 @@
     "rangedAttackRadius": 10.0,
     "spawnThisMob": true,
     "doesDespawnWhenIdle": true,
-    "spawningProbability": 20,
+    "spawningProbability": 50,
     "mobSpawningType": "monster",
     "minNumberOfMobsPerGroup": 1,
     "maxNumberOfMobsPerGroup": 2,
