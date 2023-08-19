@@ -74,6 +74,10 @@ public class AnimeChaosModVariables {
 			clone.RightDojutsu = original.RightDojutsu;
 			clone.RightSharinganXP = original.RightSharinganXP;
 			clone.RightSharinganLevel = original.RightSharinganLevel;
+			clone.GlobalMaxPlayerEnergy = original.GlobalMaxPlayerEnergy;
+			clone.Ninjutsu = original.Ninjutsu;
+			clone.ChakraControl = original.ChakraControl;
+			clone.GlobalPlayerEnergy = original.GlobalPlayerEnergy;
 			if (!event.isWasDeath()) {
 				clone.DojutsuIsActive = original.DojutsuIsActive;
 				clone.holdingSecondFunction = original.holdingSecondFunction;
@@ -124,6 +128,10 @@ public class AnimeChaosModVariables {
 		public boolean DojutsuIsActive = false;
 		public boolean holdingSecondFunction = false;
 		public boolean SaidLatom = false;
+		public double GlobalMaxPlayerEnergy = 0;
+		public double Ninjutsu = 1.0;
+		public boolean ChakraControl = false;
+		public double GlobalPlayerEnergy = 0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -143,6 +151,10 @@ public class AnimeChaosModVariables {
 			nbt.putBoolean("DojutsuIsActive", DojutsuIsActive);
 			nbt.putBoolean("holdingSecondFunction", holdingSecondFunction);
 			nbt.putBoolean("SaidLatom", SaidLatom);
+			nbt.putDouble("GlobalMaxPlayerEnergy", GlobalMaxPlayerEnergy);
+			nbt.putDouble("Ninjutsu", Ninjutsu);
+			nbt.putBoolean("ChakraControl", ChakraControl);
+			nbt.putDouble("GlobalPlayerEnergy", GlobalPlayerEnergy);
 			return nbt;
 		}
 
@@ -159,6 +171,10 @@ public class AnimeChaosModVariables {
 			DojutsuIsActive = nbt.getBoolean("DojutsuIsActive");
 			holdingSecondFunction = nbt.getBoolean("holdingSecondFunction");
 			SaidLatom = nbt.getBoolean("SaidLatom");
+			GlobalMaxPlayerEnergy = nbt.getDouble("GlobalMaxPlayerEnergy");
+			Ninjutsu = nbt.getDouble("Ninjutsu");
+			ChakraControl = nbt.getBoolean("ChakraControl");
+			GlobalPlayerEnergy = nbt.getDouble("GlobalPlayerEnergy");
 		}
 	}
 
@@ -194,6 +210,10 @@ public class AnimeChaosModVariables {
 					variables.DojutsuIsActive = message.data.DojutsuIsActive;
 					variables.holdingSecondFunction = message.data.holdingSecondFunction;
 					variables.SaidLatom = message.data.SaidLatom;
+					variables.GlobalMaxPlayerEnergy = message.data.GlobalMaxPlayerEnergy;
+					variables.Ninjutsu = message.data.Ninjutsu;
+					variables.ChakraControl = message.data.ChakraControl;
+					variables.GlobalPlayerEnergy = message.data.GlobalPlayerEnergy;
 				}
 			});
 			context.setPacketHandled(true);

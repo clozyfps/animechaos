@@ -30,6 +30,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.FriendlyByteBuf;
 
 import net.mcreator.animechaos.init.AnimeChaosModSounds;
+import net.mcreator.animechaos.init.AnimeChaosModMenus;
 import net.mcreator.animechaos.init.AnimeChaosModItems;
 import net.mcreator.animechaos.init.AnimeChaosModEntities;
 
@@ -55,6 +56,8 @@ public class AnimeChaosMod {
 
 		AnimeChaosModItems.REGISTRY.register(bus);
 		AnimeChaosModEntities.REGISTRY.register(bus);
+
+		AnimeChaosModMenus.REGISTRY.register(bus);
 
 	}
 

@@ -372,7 +372,7 @@
           }
         ]
       },
-      "path": "~/Fire Force/Procedures/Infernals"
+      "path": "~/Fire Force/Procedures"
     },
     {
       "name": "InfernalTickUpdate",
@@ -408,7 +408,7 @@
           }
         ]
       },
-      "path": "~/Fire Force/Procedures/Infernals"
+      "path": "~/Fire Force/Procedures"
     },
     {
       "name": "RestingInfernalTickUpdate",
@@ -444,7 +444,7 @@
           }
         ]
       },
-      "path": "~/Fire Force/Procedures/Infernals"
+      "path": "~/Fire Force/Procedures"
     },
     {
       "name": "InfernalLatom",
@@ -505,6 +505,139 @@
         ]
       },
       "path": "~/Fire Force/Mobs"
+    },
+    {
+      "name": "StatScreen",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stat_screen",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animechaos/world/inventory/StatScreenMenu.java",
+          "src/main/java/net/mcreator/animechaos/client/gui/StatScreenScreen.java"
+        ]
+      },
+      "path": "~/Naruto"
+    },
+    {
+      "name": "DoOpenStatMenu",
+      "type": "procedure",
+      "sortid": 17,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "do_open_stat_menu",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animechaos/procedures/DoOpenStatMenuProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Naruto"
+    },
+    {
+      "name": "OpenStatsMenu",
+      "type": "keybind",
+      "sortid": 18,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "open_stats_menu",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animechaos/network/OpenStatsMenuMessage.java"
+        ]
+      },
+      "path": "~/Naruto"
+    },
+    {
+      "name": "ShowPlayer",
+      "type": "procedure",
+      "sortid": 16,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "show_player",
+      "metadata": {
+        "return_type": "entity",
+        "files": [
+          "src/main/java/net/mcreator/animechaos/procedures/ShowPlayerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Naruto"
+    },
+    {
+      "name": "DoChakraControl",
+      "type": "procedure",
+      "sortid": 19,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "do_chakra_control",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animechaos/procedures/DoChakraControlProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Naruto"
     }
   ],
   "variable_elements": [
@@ -573,6 +706,30 @@
       "type": "logic",
       "scope": "player_lifetime",
       "value": "false"
+    },
+    {
+      "name": "GlobalMaxPlayerEnergy",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "Ninjutsu",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "1.0"
+    },
+    {
+      "name": "ChakraControl",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "GlobalPlayerEnergy",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
     }
   ],
   "sound_elements": [
@@ -601,11 +758,9 @@
       "key.anime_chaos.activate_dojutsu": "Activate Dojutsu",
       "key.animechaos.activate_dojutsu": "Activate Dojutsu",
       "subtitles.sharingan_deactivated": "Sharingan Dissipates...",
-      "item.anime_chaos.infernal_spawn_egg": "Infernal Spawn Egg",
       "key.anime_chaos.second_function": "Second Function",
       "item.anime_chaos.resting_infernal_spawn_egg": "Infernal (Resting) Spawn Egg",
       "item.animechaos.test": "Anime Chaos Logo",
-      "entity.anime_chaos.infernal": "Infernal",
       "subtitles.sharingan_activated": "Sharingan Awakens!",
       "entity.anime_chaos.resting_infernal": "Infernal (Resting)",
       "key.categories.anime_chaos_naruto": "Anime Chaos - Naruto"
