@@ -11,42 +11,41 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
-import net.mcreator.animechaos.world.inventory.PlayerLoadupMenu;
-import net.mcreator.animechaos.procedures.PlayerFirstNameProcedure;
-import net.mcreator.animechaos.procedures.NextButtonProcedure;
-import net.mcreator.animechaos.procedures.AnimeSelectForwardProcedure;
-import net.mcreator.animechaos.procedures.AnimeSelectBackwardsProcedure;
+import net.mcreator.animechaos.world.inventory.StartUpGen2Menu;
+import net.mcreator.animechaos.procedures.SelectGen2Procedure;
+import net.mcreator.animechaos.procedures.NextGen3Procedure;
+import net.mcreator.animechaos.procedures.NextGen1Procedure;
 import net.mcreator.animechaos.AnimeChaosMod;
 
 import java.util.function.Supplier;
 import java.util.HashMap;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
-public class PlayerLoadupButtonMessage {
+public class StartUpGen2ButtonMessage {
 	private final int buttonID, x, y, z;
 
-	public PlayerLoadupButtonMessage(FriendlyByteBuf buffer) {
+	public StartUpGen2ButtonMessage(FriendlyByteBuf buffer) {
 		this.buttonID = buffer.readInt();
 		this.x = buffer.readInt();
 		this.y = buffer.readInt();
 		this.z = buffer.readInt();
 	}
 
-	public PlayerLoadupButtonMessage(int buttonID, int x, int y, int z) {
+	public StartUpGen2ButtonMessage(int buttonID, int x, int y, int z) {
 		this.buttonID = buttonID;
 		this.x = x;
 		this.y = y;
 		this.z = z;
 	}
 
-	public static void buffer(PlayerLoadupButtonMessage message, FriendlyByteBuf buffer) {
+	public static void buffer(StartUpGen2ButtonMessage message, FriendlyByteBuf buffer) {
 		buffer.writeInt(message.buttonID);
 		buffer.writeInt(message.x);
 		buffer.writeInt(message.y);
 		buffer.writeInt(message.z);
 	}
 
-	public static void handler(PlayerLoadupButtonMessage message, Supplier<NetworkEvent.Context> contextSupplier) {
+	public static void handler(StartUpGen2ButtonMessage message, Supplier<NetworkEvent.Context> contextSupplier) {
 		NetworkEvent.Context context = contextSupplier.get();
 		context.enqueueWork(() -> {
 			Player entity = context.getSender();
@@ -61,30 +60,26 @@ public class PlayerLoadupButtonMessage {
 
 	public static void handleButtonAction(Player entity, int buttonID, int x, int y, int z) {
 		Level world = entity.level;
-		HashMap guistate = PlayerLoadupMenu.guistate;
+		HashMap guistate = StartUpGen2Menu.guistate;
 		// security measure to prevent arbitrary chunk generation
 		if (!world.hasChunkAt(new BlockPos(x, y, z)))
 			return;
 		if (buttonID == 0) {
 
-			AnimeSelectForwardProcedure.execute(entity);
+			SelectGen2Procedure.execute(entity);
 		}
 		if (buttonID == 1) {
 
-			AnimeSelectBackwardsProcedure.execute(entity);
+			NextGen3Procedure.execute(world, x, y, z, entity);
 		}
 		if (buttonID == 2) {
 
-			PlayerFirstNameProcedure.execute(entity, guistate);
-		}
-		if (buttonID == 3) {
-
-			NextButtonProcedure.execute(world, x, y, z, entity);
+			NextGen1Procedure.execute(world, x, y, z, entity);
 		}
 	}
 
 	@SubscribeEvent
 	public static void registerMessage(FMLCommonSetupEvent event) {
-		AnimeChaosMod.addNetworkMessage(PlayerLoadupButtonMessage.class, PlayerLoadupButtonMessage::buffer, PlayerLoadupButtonMessage::new, PlayerLoadupButtonMessage::handler);
+		AnimeChaosMod.addNetworkMessage(StartUpGen2ButtonMessage.class, StartUpGen2ButtonMessage::buffer, StartUpGen2ButtonMessage::new, StartUpGen2ButtonMessage::handler);
 	}
 }

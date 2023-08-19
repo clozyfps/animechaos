@@ -88,6 +88,8 @@ public class AnimeChaosModVariables {
 			clone.JutsuXP = original.JutsuXP;
 			clone.JoinedWorld = original.JoinedWorld;
 			clone.PlayerFirstName = original.PlayerFirstName;
+			clone.FireForceGen = original.FireForceGen;
+			clone.Pyrokinesis = original.Pyrokinesis;
 			if (!event.isWasDeath()) {
 				clone.DojutsuIsActive = original.DojutsuIsActive;
 				clone.holdingSecondFunction = original.holdingSecondFunction;
@@ -152,6 +154,8 @@ public class AnimeChaosModVariables {
 		public boolean SaidLatom = false;
 		public boolean JoinedWorld = false;
 		public String PlayerFirstName = "\"\"";
+		public double FireForceGen = 0;
+		public String Pyrokinesis = "\"\"";
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -185,6 +189,8 @@ public class AnimeChaosModVariables {
 			nbt.putBoolean("SaidLatom", SaidLatom);
 			nbt.putBoolean("JoinedWorld", JoinedWorld);
 			nbt.putString("PlayerFirstName", PlayerFirstName);
+			nbt.putDouble("FireForceGen", FireForceGen);
+			nbt.putString("Pyrokinesis", Pyrokinesis);
 			return nbt;
 		}
 
@@ -215,6 +221,8 @@ public class AnimeChaosModVariables {
 			SaidLatom = nbt.getBoolean("SaidLatom");
 			JoinedWorld = nbt.getBoolean("JoinedWorld");
 			PlayerFirstName = nbt.getString("PlayerFirstName");
+			FireForceGen = nbt.getDouble("FireForceGen");
+			Pyrokinesis = nbt.getString("Pyrokinesis");
 		}
 	}
 
@@ -264,6 +272,8 @@ public class AnimeChaosModVariables {
 					variables.SaidLatom = message.data.SaidLatom;
 					variables.JoinedWorld = message.data.JoinedWorld;
 					variables.PlayerFirstName = message.data.PlayerFirstName;
+					variables.FireForceGen = message.data.FireForceGen;
+					variables.Pyrokinesis = message.data.Pyrokinesis;
 				}
 			});
 			context.setPacketHandled(true);

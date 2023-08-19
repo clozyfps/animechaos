@@ -99,6 +99,9 @@
         "data": {
           "name": "button_next",
           "text": "Next",
+          "onClick": {
+            "name": "NextButton"
+          },
           "width": 46,
           "height": 20,
           "x": 278,

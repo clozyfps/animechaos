@@ -22,7 +22,7 @@
       {
         "type": "image",
         "data": {
-          "image": "gen1label.png",
+          "image": "gen3label.png",
           "use1Xscale": false,
           "x": 132,
           "y": 26
@@ -34,7 +34,7 @@
           "name": "button_select",
           "text": "Select",
           "onClick": {
-            "name": "SelectGen1"
+            "name": "SelectGen3"
           },
           "width": 56,
           "height": 20,
@@ -48,7 +48,7 @@
           "name": "button_empty",
           "text": ">",
           "onClick": {
-            "name": "NextGen2"
+            "name": "NextGen1"
           },
           "width": 30,
           "height": 20,
@@ -62,7 +62,7 @@
           "name": "button_empty1",
           "text": "<",
           "onClick": {
-            "name": "NextGen3"
+            "name": "NextGen2"
           },
           "width": 30,
           "height": 20,

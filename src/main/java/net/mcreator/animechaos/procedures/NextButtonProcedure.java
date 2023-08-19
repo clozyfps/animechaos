@@ -14,6 +14,7 @@ import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.animechaos.world.inventory.StatScreenMenu;
+import net.mcreator.animechaos.world.inventory.StartUpGen1Menu;
 import net.mcreator.animechaos.network.AnimeChaosModVariables;
 
 import io.netty.buffer.Unpooled;
@@ -51,12 +52,12 @@ public class NextButtonProcedure {
 					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
 						@Override
 						public Component getDisplayName() {
-							return Component.literal("StatScreen");
+							return Component.literal("StartUpGen1");
 						}
 
 						@Override
 						public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-							return new StatScreenMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
+							return new StartUpGen1Menu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
 						}
 					}, _bpos);
 				}

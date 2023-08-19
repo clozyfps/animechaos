@@ -131,6 +131,10 @@ public class PlayerLoadupScreen extends AbstractContainerScreen<PlayerLoadupMenu
 		guistate.put("button:button_set_first_name", button_set_first_name);
 		this.addRenderableWidget(button_set_first_name);
 		button_next = new Button(this.leftPos + 184, this.topPos + 72, 46, 20, Component.translatable("gui.anime_chaos.player_loadup.button_next"), e -> {
+			if (true) {
+				AnimeChaosMod.PACKET_HANDLER.sendToServer(new PlayerLoadupButtonMessage(3, x, y, z));
+				PlayerLoadupButtonMessage.handleButtonAction(entity, 3, x, y, z);
+			}
 		});
 		guistate.put("button:button_next", button_next);
 		this.addRenderableWidget(button_next);

@@ -9,8 +9,8 @@ import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.Minecraft;
 
-import net.mcreator.animechaos.world.inventory.StartUpGen1Menu;
-import net.mcreator.animechaos.network.StartUpGen1ButtonMessage;
+import net.mcreator.animechaos.world.inventory.StartUpGen2Menu;
+import net.mcreator.animechaos.network.StartUpGen2ButtonMessage;
 import net.mcreator.animechaos.AnimeChaosMod;
 
 import java.util.HashMap;
@@ -18,8 +18,8 @@ import java.util.HashMap;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.systems.RenderSystem;
 
-public class StartUpGen1Screen extends AbstractContainerScreen<StartUpGen1Menu> {
-	private final static HashMap<String, Object> guistate = StartUpGen1Menu.guistate;
+public class StartUpGen2Screen extends AbstractContainerScreen<StartUpGen2Menu> {
+	private final static HashMap<String, Object> guistate = StartUpGen2Menu.guistate;
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
@@ -27,7 +27,7 @@ public class StartUpGen1Screen extends AbstractContainerScreen<StartUpGen1Menu> 
 	Button button_empty;
 	Button button_empty1;
 
-	public StartUpGen1Screen(StartUpGen1Menu container, Inventory inventory, Component text) {
+	public StartUpGen2Screen(StartUpGen2Menu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
 		this.world = container.world;
 		this.x = container.x;
@@ -38,7 +38,7 @@ public class StartUpGen1Screen extends AbstractContainerScreen<StartUpGen1Menu> 
 		this.imageHeight = 202;
 	}
 
-	private static final ResourceLocation texture = new ResourceLocation("anime_chaos:textures/screens/start_up_gen_1.png");
+	private static final ResourceLocation texture = new ResourceLocation("anime_chaos:textures/screens/start_up_gen_2.png");
 
 	@Override
 	public void render(PoseStack ms, int mouseX, int mouseY, float partialTicks) {
@@ -58,7 +58,7 @@ public class StartUpGen1Screen extends AbstractContainerScreen<StartUpGen1Menu> 
 		RenderSystem.setShaderTexture(0, new ResourceLocation("anime_chaos:textures/screens/background.png"));
 		this.blit(ms, this.leftPos + 11, this.topPos + 42, 0, 0, 162, 125, 162, 125);
 
-		RenderSystem.setShaderTexture(0, new ResourceLocation("anime_chaos:textures/screens/gen1label.png"));
+		RenderSystem.setShaderTexture(0, new ResourceLocation("anime_chaos:textures/screens/gen2label.png"));
 		this.blit(ms, this.leftPos + 11, this.topPos + 7, 0, 0, 69, 30, 69, 30);
 
 		RenderSystem.disableBlend();
@@ -92,26 +92,26 @@ public class StartUpGen1Screen extends AbstractContainerScreen<StartUpGen1Menu> 
 	public void init() {
 		super.init();
 		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
-		button_select = new Button(this.leftPos + 64, this.topPos + 173, 56, 20, Component.translatable("gui.anime_chaos.start_up_gen_1.button_select"), e -> {
+		button_select = new Button(this.leftPos + 64, this.topPos + 173, 56, 20, Component.translatable("gui.anime_chaos.start_up_gen_2.button_select"), e -> {
 			if (true) {
-				AnimeChaosMod.PACKET_HANDLER.sendToServer(new StartUpGen1ButtonMessage(0, x, y, z));
-				StartUpGen1ButtonMessage.handleButtonAction(entity, 0, x, y, z);
+				AnimeChaosMod.PACKET_HANDLER.sendToServer(new StartUpGen2ButtonMessage(0, x, y, z));
+				StartUpGen2ButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
 		});
 		guistate.put("button:button_select", button_select);
 		this.addRenderableWidget(button_select);
-		button_empty = new Button(this.leftPos + 191, this.topPos + 93, 30, 20, Component.translatable("gui.anime_chaos.start_up_gen_1.button_empty"), e -> {
+		button_empty = new Button(this.leftPos + 191, this.topPos + 93, 30, 20, Component.translatable("gui.anime_chaos.start_up_gen_2.button_empty"), e -> {
 			if (true) {
-				AnimeChaosMod.PACKET_HANDLER.sendToServer(new StartUpGen1ButtonMessage(1, x, y, z));
-				StartUpGen1ButtonMessage.handleButtonAction(entity, 1, x, y, z);
+				AnimeChaosMod.PACKET_HANDLER.sendToServer(new StartUpGen2ButtonMessage(1, x, y, z));
+				StartUpGen2ButtonMessage.handleButtonAction(entity, 1, x, y, z);
 			}
 		});
 		guistate.put("button:button_empty", button_empty);
 		this.addRenderableWidget(button_empty);
-		button_empty1 = new Button(this.leftPos + -36, this.topPos + 93, 30, 20, Component.translatable("gui.anime_chaos.start_up_gen_1.button_empty1"), e -> {
+		button_empty1 = new Button(this.leftPos + -36, this.topPos + 93, 30, 20, Component.translatable("gui.anime_chaos.start_up_gen_2.button_empty1"), e -> {
 			if (true) {
-				AnimeChaosMod.PACKET_HANDLER.sendToServer(new StartUpGen1ButtonMessage(2, x, y, z));
-				StartUpGen1ButtonMessage.handleButtonAction(entity, 2, x, y, z);
+				AnimeChaosMod.PACKET_HANDLER.sendToServer(new StartUpGen2ButtonMessage(2, x, y, z));
+				StartUpGen2ButtonMessage.handleButtonAction(entity, 2, x, y, z);
 			}
 		});
 		guistate.put("button:button_empty1", button_empty1);
