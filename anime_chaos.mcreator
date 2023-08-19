@@ -372,7 +372,7 @@
           }
         ]
       },
-      "path": "~/Fire Force/Procedures"
+      "path": "~/Fire Force/Procedures/Infernals"
     },
     {
       "name": "InfernalTickUpdate",
@@ -408,7 +408,7 @@
           }
         ]
       },
-      "path": "~/Fire Force/Procedures"
+      "path": "~/Fire Force/Procedures/Infernals"
     },
     {
       "name": "RestingInfernalTickUpdate",
@@ -444,7 +444,7 @@
           }
         ]
       },
-      "path": "~/Fire Force/Procedures"
+      "path": "~/Fire Force/Procedures/Infernals"
     },
     {
       "name": "InfernalLatom",
@@ -468,7 +468,7 @@
           }
         ]
       },
-      "path": "~/Fire Force/Mobs"
+      "path": "~/Fire Force/Procedures/Infernals"
     },
     {
       "name": "LatomReset",
@@ -504,7 +504,7 @@
           }
         ]
       },
-      "path": "~/Fire Force/Mobs"
+      "path": "~/Fire Force/Procedures/Infernals"
     },
     {
       "name": "StatScreen",
@@ -524,7 +524,7 @@
       "name": "DoOpenStatMenu",
       "type": "procedure",
       "sortid": 17,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "do_open_stat_menu",
       "metadata": {
@@ -607,7 +607,7 @@
       "name": "DoChakraControl",
       "type": "procedure",
       "sortid": 19,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "do_chakra_control",
       "metadata": {
