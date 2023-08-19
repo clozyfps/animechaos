@@ -11,6 +11,8 @@ import net.minecraftforge.api.distmarker.Dist;
 
 import net.mcreator.animechaos.client.renderer.RestingInfernalRenderer;
 import net.mcreator.animechaos.client.renderer.InfernalRenderer;
+import net.mcreator.animechaos.client.renderer.DemonInfernalRestingRenderer;
+import net.mcreator.animechaos.client.renderer.DemonInfernalRenderer;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class AnimeChaosModEntityRenderers {
@@ -18,5 +20,7 @@ public class AnimeChaosModEntityRenderers {
 	public static void registerEntityRenderers(EntityRenderersEvent.RegisterRenderers event) {
 		event.registerEntityRenderer(AnimeChaosModEntities.INFERNAL.get(), InfernalRenderer::new);
 		event.registerEntityRenderer(AnimeChaosModEntities.RESTING_INFERNAL.get(), RestingInfernalRenderer::new);
+		event.registerEntityRenderer(AnimeChaosModEntities.DEMON_INFERNAL.get(), DemonInfernalRenderer::new);
+		event.registerEntityRenderer(AnimeChaosModEntities.DEMON_INFERNAL_RESTING.get(), DemonInfernalRestingRenderer::new);
 	}
 }

@@ -1,0 +1,20 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": [
+    "warped_forest",
+    "forest",
+    "basalt_deltas",
+    "dark_forest",
+    "plains",
+    "birch_forest",
+    "crimson_forest",
+    "desert",
+    "nether_wastes"
+  ],
+  "spawners": {
+    "type": "anime_chaos:infernal",
+    "weight": 20,
+    "minCount": 1,
+    "maxCount": 2
+  }
+}

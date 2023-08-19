@@ -1,6 +1,17 @@
 package net.mcreator.animechaos.procedures;
 
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.Event;
+import net.minecraftforge.event.TickEvent;
+
+import net.minecraft.world.phys.Vec3;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.core.BlockPos;
+
+import net.mcreator.animechaos.network.AnimeChaosModVariables;
 
 import javax.annotation.Nullable;
 
@@ -24,23 +35,6 @@ public class DoChakraControlProcedure {
 				&& ((world.getBlockState(new BlockPos(x, y - 1, z))).getBlock() == Blocks.WATER || (world.getBlockState(new BlockPos(x, y, z))).getBlock() == Blocks.WATER)
 				&& (entity.getCapability(AnimeChaosModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeChaosModVariables.PlayerVariables())).GlobalPlayerEnergy > 0) {
 			entity.setDeltaMovement(new Vec3(0, 0.5, 0));
-			if ((entity.getCapability(AnimeChaosModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeChaosModVariables.PlayerVariables())).GlobalPlayerEnergy - 1 >= 0) {
-				{
-					double _setval = (entity.getCapability(AnimeChaosModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeChaosModVariables.PlayerVariables())).GlobalPlayerEnergy - 1;
-					entity.getCapability(AnimeChaosModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.GlobalPlayerEnergy = _setval;
-						capability.syncPlayerVariables(entity);
-					});
-				}
-			} else if ((entity.getCapability(AnimeChaosModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeChaosModVariables.PlayerVariables())).GlobalPlayerEnergy - 1 < 0) {
-				{
-					double _setval = 0;
-					entity.getCapability(AnimeChaosModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.GlobalPlayerEnergy = _setval;
-						capability.syncPlayerVariables(entity);
-					});
-				}
-			}
 		}
 	}
 }

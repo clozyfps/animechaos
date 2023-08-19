@@ -18,6 +18,8 @@ import net.minecraft.world.entity.Entity;
 
 import net.mcreator.animechaos.entity.RestingInfernalEntity;
 import net.mcreator.animechaos.entity.InfernalEntity;
+import net.mcreator.animechaos.entity.DemonInfernalRestingEntity;
+import net.mcreator.animechaos.entity.DemonInfernalEntity;
 import net.mcreator.animechaos.AnimeChaosMod;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
@@ -27,6 +29,10 @@ public class AnimeChaosModEntities {
 			EntityType.Builder.<InfernalEntity>of(InfernalEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(InfernalEntity::new).fireImmune().sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<RestingInfernalEntity>> RESTING_INFERNAL = register("resting_infernal", EntityType.Builder.<RestingInfernalEntity>of(RestingInfernalEntity::new, MobCategory.MONSTER)
 			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(RestingInfernalEntity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<DemonInfernalEntity>> DEMON_INFERNAL = register("demon_infernal", EntityType.Builder.<DemonInfernalEntity>of(DemonInfernalEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
+			.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(DemonInfernalEntity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<DemonInfernalRestingEntity>> DEMON_INFERNAL_RESTING = register("demon_infernal_resting", EntityType.Builder.<DemonInfernalRestingEntity>of(DemonInfernalRestingEntity::new, MobCategory.MONSTER)
+			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(DemonInfernalRestingEntity::new).fireImmune().sized(0.6f, 1.8f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -37,6 +43,8 @@ public class AnimeChaosModEntities {
 		event.enqueueWork(() -> {
 			InfernalEntity.init();
 			RestingInfernalEntity.init();
+			DemonInfernalEntity.init();
+			DemonInfernalRestingEntity.init();
 		});
 	}
 
@@ -44,5 +52,7 @@ public class AnimeChaosModEntities {
 	public static void registerAttributes(EntityAttributeCreationEvent event) {
 		event.put(INFERNAL.get(), InfernalEntity.createAttributes().build());
 		event.put(RESTING_INFERNAL.get(), RestingInfernalEntity.createAttributes().build());
+		event.put(DEMON_INFERNAL.get(), DemonInfernalEntity.createAttributes().build());
+		event.put(DEMON_INFERNAL_RESTING.get(), DemonInfernalRestingEntity.createAttributes().build());
 	}
 }

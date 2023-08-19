@@ -1,0 +1,16 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": [
+    "warped_forest",
+    "soul_sand_valley",
+    "basalt_deltas",
+    "crimson_forest",
+    "nether_wastes"
+  ],
+  "spawners": {
+    "type": "anime_chaos:demon_infernal",
+    "weight": 10,
+    "minCount": 1,
+    "maxCount": 1
+  }
+}

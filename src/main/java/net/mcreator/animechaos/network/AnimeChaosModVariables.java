@@ -127,8 +127,8 @@ public class AnimeChaosModVariables {
 	public static class PlayerVariables {
 		public double LeftSharinganXP = 0;
 		public double LeftSharinganLevel = 1.0;
-		public String Clan = "\"Uchiha\"";
-		public String Anime = "\"Naruto\"";
+		public String Clan = "none";
+		public String Anime = "none";
 		public String LeftDojutsu = "\"Sharingan\"";
 		public String RightDojutsu = "\"Sharingan\"";
 		public double RightSharinganXP = 0;

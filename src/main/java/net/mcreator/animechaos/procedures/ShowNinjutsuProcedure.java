@@ -1,8 +1,8 @@
 package net.mcreator.animechaos.procedures;
 
-import net.minecraftforge.eventbus.api.Event;
+import net.minecraft.world.entity.Entity;
 
-import javax.annotation.Nullable;
+import net.mcreator.animechaos.network.AnimeChaosModVariables;
 
 public class ShowNinjutsuProcedure {
 	public static String execute(Entity entity) {

@@ -1,11 +1,14 @@
 package net.mcreator.animechaos.procedures;
 
-import net.minecraftforge.eventbus.api.Event;
+import net.minecraft.world.entity.Entity;
 
-import javax.annotation.Nullable;
+import net.mcreator.animechaos.network.AnimeChaosModVariables;
 
 public class ShowNinjaXPRequiredProcedure {
-	public static String execute() {
-		return "XP: " + new java.text.DecimalFormat("###,###,###,###").format() + "/" + new java.text.DecimalFormat("###,###,###,###").format();
+	public static String execute(Entity entity) {
+		if (entity == null)
+			return "";
+		return "XP: " + new java.text.DecimalFormat("###,###,###,###").format((entity.getCapability(AnimeChaosModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeChaosModVariables.PlayerVariables())).NinjaXP) + "/"
+				+ new java.text.DecimalFormat("###,###,###,###").format((entity.getCapability(AnimeChaosModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeChaosModVariables.PlayerVariables())).NunjaXPRequired);
 	}
 }

@@ -1,11 +1,23 @@
 
 package net.mcreator.animechaos.network;
 
+import net.minecraftforge.network.NetworkEvent;
+import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+
+import net.minecraft.world.level.Level;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.network.FriendlyByteBuf;
+
+import net.mcreator.animechaos.procedures.DeactivateSecondFunctionProcedure;
+import net.mcreator.animechaos.procedures.ActivateSecondFunctionProcedure;
 import net.mcreator.animechaos.AnimeChaosMod;
+
+import java.util.function.Supplier;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class SecondFunctionMessage {
-
 	int type, pressedms;
 
 	public SecondFunctionMessage(int type, int pressedms) {
@@ -36,16 +48,13 @@ public class SecondFunctionMessage {
 		double x = entity.getX();
 		double y = entity.getY();
 		double z = entity.getZ();
-
 		// security measure to prevent arbitrary chunk generation
 		if (!world.hasChunkAt(entity.blockPosition()))
 			return;
-
 		if (type == 0) {
 
 			ActivateSecondFunctionProcedure.execute(entity);
 		}
-
 		if (type == 1) {
 
 			DeactivateSecondFunctionProcedure.execute(entity);
@@ -56,5 +65,4 @@ public class SecondFunctionMessage {
 	public static void registerMessage(FMLCommonSetupEvent event) {
 		AnimeChaosMod.addNetworkMessage(SecondFunctionMessage.class, SecondFunctionMessage::buffer, SecondFunctionMessage::new, SecondFunctionMessage::handler);
 	}
-
 }
