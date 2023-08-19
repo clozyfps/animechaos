@@ -76,6 +76,7 @@ public class AnimeChaosModVariables {
 			clone.RightSharinganLevel = original.RightSharinganLevel;
 			if (!event.isWasDeath()) {
 				clone.DojutsuIsActive = original.DojutsuIsActive;
+				clone.holdingSecondFunction = original.holdingSecondFunction;
 			}
 		}
 	}
@@ -116,10 +117,11 @@ public class AnimeChaosModVariables {
 		public String Clan = "\"Uchiha\"";
 		public String Anime = "\"Naruto\"";
 		public String LeftDojutsu = "\"Sharingan\"";
-		public String RightDojutsu = "\"\"";
+		public String RightDojutsu = "\"Sharingan\"";
 		public double RightSharinganXP = 0;
-		public double RightSharinganLevel = 1.0;
+		public double RightSharinganLevel = 2.0;
 		public boolean DojutsuIsActive = false;
+		public boolean holdingSecondFunction = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -137,6 +139,7 @@ public class AnimeChaosModVariables {
 			nbt.putDouble("RightSharinganXP", RightSharinganXP);
 			nbt.putDouble("RightSharinganLevel", RightSharinganLevel);
 			nbt.putBoolean("DojutsuIsActive", DojutsuIsActive);
+			nbt.putBoolean("holdingSecondFunction", holdingSecondFunction);
 			return nbt;
 		}
 
@@ -151,6 +154,7 @@ public class AnimeChaosModVariables {
 			RightSharinganXP = nbt.getDouble("RightSharinganXP");
 			RightSharinganLevel = nbt.getDouble("RightSharinganLevel");
 			DojutsuIsActive = nbt.getBoolean("DojutsuIsActive");
+			holdingSecondFunction = nbt.getBoolean("holdingSecondFunction");
 		}
 	}
 
@@ -184,6 +188,7 @@ public class AnimeChaosModVariables {
 					variables.RightSharinganXP = message.data.RightSharinganXP;
 					variables.RightSharinganLevel = message.data.RightSharinganLevel;
 					variables.DojutsuIsActive = message.data.DojutsuIsActive;
+					variables.holdingSecondFunction = message.data.holdingSecondFunction;
 				}
 			});
 			context.setPacketHandled(true);

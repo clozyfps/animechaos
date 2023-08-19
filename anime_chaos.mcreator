@@ -39,7 +39,8 @@
         "files": [
           "src/main/java/net/mcreator/animechaos/network/SecondFunctionMessage.java"
         ]
-      }
+      },
+      "path": "~/Naruto"
     },
     {
       "name": "Tomoe1LeftRenderer",
@@ -266,7 +267,8 @@
             "type": "entity"
           }
         ]
-      }
+      },
+      "path": "~/Naruto"
     },
     {
       "name": "DeactivateSecondFunction",
@@ -285,7 +287,8 @@
             "type": "entity"
           }
         ]
-      }
+      },
+      "path": "~/Naruto"
     },
     {
       "name": "DoNinjaJump",
