@@ -26,7 +26,7 @@
           "src/main/java/net/mcreator/animechaos/network/ActivateDojutsuMessage.java"
         ]
       },
-      "path": "~/Naruto"
+      "path": "~/Naruto/Keybinds"
     },
     {
       "name": "SecondFunction",
@@ -60,7 +60,7 @@
           }
         ]
       },
-      "path": "~/Naruto"
+      "path": "~/Naruto/Procedures"
     },
     {
       "name": "DojutsuVariableStuff",
@@ -96,7 +96,7 @@
           }
         ]
       },
-      "path": "~/Naruto"
+      "path": "~/Naruto/Procedures"
     },
     {
       "name": "Tomoe1RightRenderer",
@@ -116,7 +116,7 @@
           }
         ]
       },
-      "path": "~/Naruto"
+      "path": "~/Naruto/Procedures"
     },
     {
       "name": "SharinganEffects",
@@ -136,7 +136,7 @@
           }
         ]
       },
-      "path": "~/Naruto"
+      "path": "~/Naruto/Procedures"
     },
     {
       "name": "AutoActivateSharingan",
@@ -176,7 +176,7 @@
           }
         ]
       },
-      "path": "~/Naruto"
+      "path": "~/Naruto/Procedures"
     },
     {
       "name": "LevelLeftSharingan",
@@ -212,7 +212,7 @@
           }
         ]
       },
-      "path": "~/Naruto"
+      "path": "~/Naruto/Procedures"
     },
     {
       "name": "LevelRightSharingan",
@@ -248,7 +248,7 @@
           }
         ]
       },
-      "path": "~/Naruto"
+      "path": "~/Naruto/Procedures"
     },
     {
       "name": "ActivateSecondFunction",
@@ -308,7 +308,7 @@
           }
         ]
       },
-      "path": "~/Naruto"
+      "path": "~/Naruto/Procedures"
     },
     {
       "name": "StatScreen",
@@ -323,7 +323,7 @@
           "src/main/java/net/mcreator/animechaos/world/inventory/StatScreenMenu.java"
         ]
       },
-      "path": "~/Naruto"
+      "path": "~/Naruto/GUIs"
     },
     {
       "name": "DoOpenStatMenu",
@@ -359,7 +359,7 @@
           }
         ]
       },
-      "path": "~/Naruto"
+      "path": "~/Naruto/Procedures"
     },
     {
       "name": "OpenStatsMenu",
@@ -373,7 +373,7 @@
           "src/main/java/net/mcreator/animechaos/network/OpenStatsMenuMessage.java"
         ]
       },
-      "path": "~/Naruto"
+      "path": "~/Naruto/Keybinds"
     },
     {
       "name": "ShowPlayer",
@@ -406,7 +406,7 @@
           }
         ]
       },
-      "path": "~/Naruto"
+      "path": "~/Naruto/Procedures"
     },
     {
       "name": "DoChakraControl",
@@ -442,7 +442,7 @@
           }
         ]
       },
-      "path": "~/Naruto"
+      "path": "~/Naruto/Procedures"
     },
     {
       "name": "InfernalTickUpdate",
@@ -1050,8 +1050,8 @@
   "language_map": {
     "en_us": {
       "item.anime_chaos.test": "Anime Chaos Logo",
-      "key.animechaos.second_function": "Second Function",
       "key.categories.anime_chaos": "Anime Chaos - General",
+      "key.animechaos.second_function": "Second Function",
       "key.anime_chaos.activate_dojutsu": "Activate Dojutsu",
       "key.animechaos.activate_dojutsu": "Activate Dojutsu",
       "subtitles.sharingan_deactivated": "Sharingan Dissipates...",
