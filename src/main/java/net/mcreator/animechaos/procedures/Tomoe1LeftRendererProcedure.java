@@ -36,18 +36,39 @@ public class Tomoe1LeftRendererProcedure {
 		Minecraft mc = Minecraft.getInstance();
 		EntityRenderDispatcher dis = Minecraft.getInstance().getEntityRenderDispatcher();
 		EntityRendererProvider.Context context = new EntityRendererProvider.Context(dis, mc.getItemRenderer(), mc.getBlockRenderer(), dis.getItemInHandRenderer(), mc.getResourceManager(), mc.getEntityModels(), mc.font);
-		if (((entity.getCapability(AnimeChaosModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeChaosModVariables.PlayerVariables())).LeftDojutsu).equals("\"Sharingan\"")) {
-			if ((entity.getCapability(AnimeChaosModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeChaosModVariables.PlayerVariables())).LeftSharinganLevel == 1) {
-				if ((entity.getCapability(AnimeChaosModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeChaosModVariables.PlayerVariables())).DojutsuIsActive == true) {
-					if (_evt.getRenderer() instanceof PlayerRenderer) {
-						if (_evt instanceof RenderLivingEvent.Pre) {
-							// _evt.setCanceled(true);
-						}
-						new com.kleiders.kleidersplayerrenderer.ClassicPlayerRenderer(
-								new EntityRendererProvider.Context(dis, mc.getItemRenderer(), mc.getBlockRenderer(), dis.getItemInHandRenderer(), mc.getResourceManager(), mc.getEntityModels(), mc.font),
-								new ResourceLocation("anime_chaos:textures/entities/1tomoeleft.png"))
-								.render((AbstractClientPlayer) _evt.getEntity(), _evt.getEntity().getYRot(), _evt.getPartialTick(), _evt.getPoseStack(), _evt.getMultiBufferSource(), _evt.getPackedLight());
+		if ((entity.getCapability(AnimeChaosModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeChaosModVariables.PlayerVariables())).DojutsuIsActive == true) {
+			if (((entity.getCapability(AnimeChaosModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeChaosModVariables.PlayerVariables())).LeftDojutsu).equals("\"Sharingan\"")
+					&& (entity.getCapability(AnimeChaosModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeChaosModVariables.PlayerVariables())).LeftSharinganLevel == 1) {
+				if (_evt.getRenderer() instanceof PlayerRenderer) {
+					if (_evt instanceof RenderLivingEvent.Pre) {
+						// _evt.setCanceled(true);
 					}
+					new com.kleiders.kleidersplayerrenderer.ClassicPlayerRenderer(
+							new EntityRendererProvider.Context(dis, mc.getItemRenderer(), mc.getBlockRenderer(), dis.getItemInHandRenderer(), mc.getResourceManager(), mc.getEntityModels(), mc.font),
+							new ResourceLocation("anime_chaos:textures/entities/1tomoesharinganleft.png"))
+							.render((AbstractClientPlayer) _evt.getEntity(), _evt.getEntity().getYRot(), _evt.getPartialTick(), _evt.getPoseStack(), _evt.getMultiBufferSource(), _evt.getPackedLight());
+				}
+			} else if (((entity.getCapability(AnimeChaosModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeChaosModVariables.PlayerVariables())).LeftDojutsu).equals("\"Sharingan\"")
+					&& (entity.getCapability(AnimeChaosModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeChaosModVariables.PlayerVariables())).LeftSharinganLevel == 2) {
+				if (_evt.getRenderer() instanceof PlayerRenderer) {
+					if (_evt instanceof RenderLivingEvent.Pre) {
+						// _evt.setCanceled(true);
+					}
+					new com.kleiders.kleidersplayerrenderer.ClassicPlayerRenderer(
+							new EntityRendererProvider.Context(dis, mc.getItemRenderer(), mc.getBlockRenderer(), dis.getItemInHandRenderer(), mc.getResourceManager(), mc.getEntityModels(), mc.font),
+							new ResourceLocation("anime_chaos:textures/entities/tomoe2sharinganleft.png"))
+							.render((AbstractClientPlayer) _evt.getEntity(), _evt.getEntity().getYRot(), _evt.getPartialTick(), _evt.getPoseStack(), _evt.getMultiBufferSource(), _evt.getPackedLight());
+				}
+			} else if (((entity.getCapability(AnimeChaosModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeChaosModVariables.PlayerVariables())).LeftDojutsu).equals("\"Sharingan\"")
+					&& (entity.getCapability(AnimeChaosModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeChaosModVariables.PlayerVariables())).LeftSharinganLevel == 3) {
+				if (_evt.getRenderer() instanceof PlayerRenderer) {
+					if (_evt instanceof RenderLivingEvent.Pre) {
+						// _evt.setCanceled(true);
+					}
+					new com.kleiders.kleidersplayerrenderer.ClassicPlayerRenderer(
+							new EntityRendererProvider.Context(dis, mc.getItemRenderer(), mc.getBlockRenderer(), dis.getItemInHandRenderer(), mc.getResourceManager(), mc.getEntityModels(), mc.font),
+							new ResourceLocation("anime_chaos:textures/entities/tomoe3sharinganleft.png"))
+							.render((AbstractClientPlayer) _evt.getEntity(), _evt.getEntity().getYRot(), _evt.getPartialTick(), _evt.getPoseStack(), _evt.getMultiBufferSource(), _evt.getPackedLight());
 				}
 			}
 		}

@@ -247,6 +247,64 @@
         ]
       },
       "path": "~/Naruto"
+    },
+    {
+      "name": "ActivateSecondFunction",
+      "type": "procedure",
+      "sortid": 13,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "activate_second_function",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animechaos/procedures/ActivateSecondFunctionProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "DeactivateSecondFunction",
+      "type": "procedure",
+      "sortid": 14,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "deactivate_second_function",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animechaos/procedures/DeactivateSecondFunctionProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "DoNinjaJump",
+      "type": "procedure",
+      "sortid": 15,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "do_ninja_jump",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animechaos/procedures/DoNinjaJumpProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Naruto"
     }
   ],
   "variable_elements": [
@@ -278,13 +336,13 @@
       "name": "LeftDojutsu",
       "type": "string",
       "scope": "player_persistent",
-      "value": "\"\""
+      "value": "\"Sharingan\""
     },
     {
       "name": "RightDojutsu",
       "type": "string",
       "scope": "player_persistent",
-      "value": "\"\""
+      "value": "\"Sharingan\""
     },
     {
       "name": "RightSharinganXP",
@@ -296,10 +354,16 @@
       "name": "RightSharinganLevel",
       "type": "number",
       "scope": "player_persistent",
-      "value": "1.0"
+      "value": "2.0"
     },
     {
       "name": "DojutsuIsActive",
+      "type": "logic",
+      "scope": "player_lifetime",
+      "value": "false"
+    },
+    {
+      "name": "holdingSecondFunction",
       "type": "logic",
       "scope": "player_lifetime",
       "value": "false"
