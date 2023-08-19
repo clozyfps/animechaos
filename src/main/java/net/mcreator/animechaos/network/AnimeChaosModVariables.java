@@ -74,10 +74,10 @@ public class AnimeChaosModVariables {
 			clone.RightDojutsu = original.RightDojutsu;
 			clone.RightSharinganXP = original.RightSharinganXP;
 			clone.RightSharinganLevel = original.RightSharinganLevel;
-			clone.GlobalPlayerEnergy = original.GlobalPlayerEnergy;
 			clone.GlobalMaxPlayerEnergy = original.GlobalMaxPlayerEnergy;
 			clone.Ninjutsu = original.Ninjutsu;
 			clone.ChakraControl = original.ChakraControl;
+			clone.GlobalPlayerEnergy = original.GlobalPlayerEnergy;
 			if (!event.isWasDeath()) {
 				clone.DojutsuIsActive = original.DojutsuIsActive;
 				clone.holdingSecondFunction = original.holdingSecondFunction;
@@ -117,19 +117,19 @@ public class AnimeChaosModVariables {
 
 	public static class PlayerVariables {
 		public double LeftSharinganXP = 0;
-		public double LeftSharinganLevel = 0.0;
+		public double LeftSharinganLevel = 1.0;
 		public String Clan = "\"Uchiha\"";
 		public String Anime = "\"Naruto\"";
 		public String LeftDojutsu = "\"Sharingan\"";
 		public String RightDojutsu = "\"Sharingan\"";
 		public double RightSharinganXP = 0;
-		public double RightSharinganLevel = 0.0;
+		public double RightSharinganLevel = 2.0;
 		public boolean DojutsuIsActive = false;
 		public boolean holdingSecondFunction = false;
-		public double GlobalPlayerEnergy = 0;
 		public double GlobalMaxPlayerEnergy = 0;
 		public double Ninjutsu = 1.0;
 		public boolean ChakraControl = false;
+		public double GlobalPlayerEnergy = 0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -148,10 +148,10 @@ public class AnimeChaosModVariables {
 			nbt.putDouble("RightSharinganLevel", RightSharinganLevel);
 			nbt.putBoolean("DojutsuIsActive", DojutsuIsActive);
 			nbt.putBoolean("holdingSecondFunction", holdingSecondFunction);
-			nbt.putDouble("GlobalPlayerEnergy", GlobalPlayerEnergy);
 			nbt.putDouble("GlobalMaxPlayerEnergy", GlobalMaxPlayerEnergy);
 			nbt.putDouble("Ninjutsu", Ninjutsu);
 			nbt.putBoolean("ChakraControl", ChakraControl);
+			nbt.putDouble("GlobalPlayerEnergy", GlobalPlayerEnergy);
 			return nbt;
 		}
 
@@ -167,10 +167,10 @@ public class AnimeChaosModVariables {
 			RightSharinganLevel = nbt.getDouble("RightSharinganLevel");
 			DojutsuIsActive = nbt.getBoolean("DojutsuIsActive");
 			holdingSecondFunction = nbt.getBoolean("holdingSecondFunction");
-			GlobalPlayerEnergy = nbt.getDouble("GlobalPlayerEnergy");
 			GlobalMaxPlayerEnergy = nbt.getDouble("GlobalMaxPlayerEnergy");
 			Ninjutsu = nbt.getDouble("Ninjutsu");
 			ChakraControl = nbt.getBoolean("ChakraControl");
+			GlobalPlayerEnergy = nbt.getDouble("GlobalPlayerEnergy");
 		}
 	}
 
@@ -205,10 +205,10 @@ public class AnimeChaosModVariables {
 					variables.RightSharinganLevel = message.data.RightSharinganLevel;
 					variables.DojutsuIsActive = message.data.DojutsuIsActive;
 					variables.holdingSecondFunction = message.data.holdingSecondFunction;
-					variables.GlobalPlayerEnergy = message.data.GlobalPlayerEnergy;
 					variables.GlobalMaxPlayerEnergy = message.data.GlobalMaxPlayerEnergy;
 					variables.Ninjutsu = message.data.Ninjutsu;
 					variables.ChakraControl = message.data.ChakraControl;
+					variables.GlobalPlayerEnergy = message.data.GlobalPlayerEnergy;
 				}
 			});
 			context.setPacketHandled(true);
