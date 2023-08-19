@@ -4,6 +4,12 @@
   "definition": {
     "triggerKey": "LSHIFT",
     "keyBindingName": "Second Function",
-    "keyBindingCategoryKey": "anime_chaos"
+    "keyBindingCategoryKey": "anime_chaos",
+    "onKeyPressed": {
+      "name": "ActivateSecondFunction"
+    },
+    "onKeyReleased": {
+      "name": "DeactivateSecondFunction"
+    }
   }
 }

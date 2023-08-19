@@ -18,7 +18,7 @@
   "sound_elements": [],
   "language_map": {
     "en_us": {
-      "item.animechaos.test": "Test"
+      "item.animechaos.test": "Anime Chaos Logo"
     }
   },
   "foldersRoot": {
@@ -43,10 +43,16 @@
     "license": "Academic Free License v3.0",
     "disableForgeVersionCheck": true,
     "serverSideOnly": false,
-    "requiredMods": [],
-    "dependencies": [],
+    "requiredMods": [
+      "kleiders_custom_renderer"
+    ],
+    "dependencies": [
+      "kleiders_custom_renderer"
+    ],
     "dependants": [],
-    "mcreatorDependencies": [],
+    "mcreatorDependencies": [
+      "kleidersplayerrenderer"
+    ],
     "currentGenerator": "forge-1.19.2",
     "credits": "Created using mod maker MCreator - https://mcreator.net/about",
     "modElementsPackage": "net.mcreator.animechaos",

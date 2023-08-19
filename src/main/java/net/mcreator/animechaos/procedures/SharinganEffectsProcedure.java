@@ -43,6 +43,38 @@ public class SharinganEffectsProcedure {
 				_entity.addEffect(new MobEffectInstance(MobEffects.DIG_SPEED, 5, 0, true, false));
 			if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
 				_entity.addEffect(new MobEffectInstance(MobEffects.NIGHT_VISION, 5, 0, true, false));
+			if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
+				_entity.addEffect(new MobEffectInstance(MobEffects.JUMP, 5, 0, true, false));
+		} else if ((((entity.getCapability(AnimeChaosModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeChaosModVariables.PlayerVariables())).LeftDojutsu).equals("\"Sharingan\"")
+				|| ((entity.getCapability(AnimeChaosModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeChaosModVariables.PlayerVariables())).RightDojutsu).equals("\"Sharingan\""))
+				&& ((entity.getCapability(AnimeChaosModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeChaosModVariables.PlayerVariables())).LeftSharinganLevel == 2
+						|| (entity.getCapability(AnimeChaosModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeChaosModVariables.PlayerVariables())).RightSharinganLevel == 2)
+				&& (entity.getCapability(AnimeChaosModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeChaosModVariables.PlayerVariables())).DojutsuIsActive == true) {
+			if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
+				_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 5, 1, true, false));
+			if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
+				_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 5, 1, true, false));
+			if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
+				_entity.addEffect(new MobEffectInstance(MobEffects.DIG_SPEED, 5, 0, true, false));
+			if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
+				_entity.addEffect(new MobEffectInstance(MobEffects.NIGHT_VISION, 5, 0, true, false));
+			if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
+				_entity.addEffect(new MobEffectInstance(MobEffects.JUMP, 5, 0, true, false));
+		} else if ((((entity.getCapability(AnimeChaosModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeChaosModVariables.PlayerVariables())).LeftDojutsu).equals("\"Sharingan\"")
+				|| ((entity.getCapability(AnimeChaosModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeChaosModVariables.PlayerVariables())).RightDojutsu).equals("\"Sharingan\""))
+				&& ((entity.getCapability(AnimeChaosModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeChaosModVariables.PlayerVariables())).LeftSharinganLevel == 3
+						|| (entity.getCapability(AnimeChaosModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeChaosModVariables.PlayerVariables())).RightSharinganLevel == 3)
+				&& (entity.getCapability(AnimeChaosModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeChaosModVariables.PlayerVariables())).DojutsuIsActive == true) {
+			if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
+				_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 5, 2, true, false));
+			if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
+				_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 5, 2, true, false));
+			if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
+				_entity.addEffect(new MobEffectInstance(MobEffects.DIG_SPEED, 5, 1, true, false));
+			if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
+				_entity.addEffect(new MobEffectInstance(MobEffects.NIGHT_VISION, 5, 0, true, false));
+			if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
+				_entity.addEffect(new MobEffectInstance(MobEffects.JUMP, 5, 1, true, false));
 		}
 	}
 }
