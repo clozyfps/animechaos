@@ -77,6 +77,7 @@ public class AnimeChaosModVariables {
 			if (!event.isWasDeath()) {
 				clone.DojutsuIsActive = original.DojutsuIsActive;
 				clone.holdingSecondFunction = original.holdingSecondFunction;
+				clone.SaidLatom = original.SaidLatom;
 			}
 		}
 	}
@@ -122,6 +123,7 @@ public class AnimeChaosModVariables {
 		public double RightSharinganLevel = 2.0;
 		public boolean DojutsuIsActive = false;
 		public boolean holdingSecondFunction = false;
+		public boolean SaidLatom = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -140,6 +142,7 @@ public class AnimeChaosModVariables {
 			nbt.putDouble("RightSharinganLevel", RightSharinganLevel);
 			nbt.putBoolean("DojutsuIsActive", DojutsuIsActive);
 			nbt.putBoolean("holdingSecondFunction", holdingSecondFunction);
+			nbt.putBoolean("SaidLatom", SaidLatom);
 			return nbt;
 		}
 
@@ -155,6 +158,7 @@ public class AnimeChaosModVariables {
 			RightSharinganLevel = nbt.getDouble("RightSharinganLevel");
 			DojutsuIsActive = nbt.getBoolean("DojutsuIsActive");
 			holdingSecondFunction = nbt.getBoolean("holdingSecondFunction");
+			SaidLatom = nbt.getBoolean("SaidLatom");
 		}
 	}
 
@@ -189,6 +193,7 @@ public class AnimeChaosModVariables {
 					variables.RightSharinganLevel = message.data.RightSharinganLevel;
 					variables.DojutsuIsActive = message.data.DojutsuIsActive;
 					variables.holdingSecondFunction = message.data.holdingSecondFunction;
+					variables.SaidLatom = message.data.SaidLatom;
 				}
 			});
 			context.setPacketHandled(true);

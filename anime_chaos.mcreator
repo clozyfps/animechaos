@@ -372,7 +372,7 @@
           }
         ]
       },
-      "path": "~/Fire Force/Procedures"
+      "path": "~/Fire Force/Procedures/Infernals"
     },
     {
       "name": "InfernalTickUpdate",
@@ -408,7 +408,7 @@
           }
         ]
       },
-      "path": "~/Fire Force/Procedures"
+      "path": "~/Fire Force/Procedures/Infernals"
     },
     {
       "name": "RestingInfernalTickUpdate",
@@ -444,7 +444,67 @@
           }
         ]
       },
-      "path": "~/Fire Force/Procedures"
+      "path": "~/Fire Force/Procedures/Infernals"
+    },
+    {
+      "name": "InfernalLatom",
+      "type": "procedure",
+      "sortid": 16,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "infernal_latom",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animechaos/procedures/InfernalLatomProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Fire Force/Mobs"
+    },
+    {
+      "name": "LatomReset",
+      "type": "procedure",
+      "sortid": 17,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "latom_reset",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animechaos/procedures/LatomResetProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Fire Force/Mobs"
     }
   ],
   "variable_elements": [
@@ -507,6 +567,12 @@
       "type": "logic",
       "scope": "player_lifetime",
       "value": "false"
+    },
+    {
+      "name": "SaidLatom",
+      "type": "logic",
+      "scope": "player_lifetime",
+      "value": "false"
     }
   ],
   "sound_elements": [
@@ -530,8 +596,8 @@
   "language_map": {
     "en_us": {
       "item.anime_chaos.test": "Anime Chaos Logo",
-      "key.animechaos.second_function": "Second Function",
       "key.categories.anime_chaos": "Anime Chaos - General",
+      "key.animechaos.second_function": "Second Function",
       "key.anime_chaos.activate_dojutsu": "Activate Dojutsu",
       "key.animechaos.activate_dojutsu": "Activate Dojutsu",
       "subtitles.sharingan_deactivated": "Sharingan Dissipates...",
@@ -553,7 +619,12 @@
         "children": [
           {
             "name": "Procedures",
-            "children": []
+            "children": [
+              {
+                "name": "Infernals",
+                "children": []
+              }
+            ]
           },
           {
             "name": "GUI",
