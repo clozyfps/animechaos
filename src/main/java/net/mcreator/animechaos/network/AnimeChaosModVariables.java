@@ -78,17 +78,18 @@ public class AnimeChaosModVariables {
 			clone.Ninjutsu = original.Ninjutsu;
 			clone.ChakraControl = original.ChakraControl;
 			clone.GlobalPlayerEnergy = original.GlobalPlayerEnergy;
-			clone.GlobalMaxPlayerHealth = original.GlobalMaxPlayerHealth;
-			clone.GlobalPlayerHealth = original.GlobalPlayerHealth;
 			clone.NinjaXP = original.NinjaXP;
-			clone.NinjaLevel = original.NinjaLevel;
-			clone.StatXP = original.StatXP;
-			clone.JutsuXP = original.JutsuXP;
 			clone.NunjaXPRequired = original.NunjaXPRequired;
+			clone.GlobalMaxPlayerHealth = original.GlobalMaxPlayerHealth;
+			clone.NinjaLevel = original.NinjaLevel;
 			clone.NarutoIterator = original.NarutoIterator;
+			clone.StatXP = original.StatXP;
+			clone.GlobalPlayerHealth = original.GlobalPlayerHealth;
+			clone.JutsuXP = original.JutsuXP;
 			if (!event.isWasDeath()) {
 				clone.DojutsuIsActive = original.DojutsuIsActive;
 				clone.holdingSecondFunction = original.holdingSecondFunction;
+				clone.SaidLatom = original.SaidLatom;
 			}
 		}
 	}
@@ -135,17 +136,18 @@ public class AnimeChaosModVariables {
 		public boolean DojutsuIsActive = false;
 		public boolean holdingSecondFunction = false;
 		public double GlobalMaxPlayerEnergy = 0;
-		public double Ninjutsu = 5.0;
+		public double Ninjutsu = 1.0;
 		public boolean ChakraControl = false;
 		public double GlobalPlayerEnergy = 0;
-		public double GlobalMaxPlayerHealth = 0;
-		public double GlobalPlayerHealth = 0;
 		public double NinjaXP = 0;
-		public double NinjaLevel = 0;
-		public double StatXP = 0;
-		public double JutsuXP = 0;
 		public double NunjaXPRequired = 5.0;
+		public double GlobalMaxPlayerHealth = 0;
+		public double NinjaLevel = 0;
 		public double NarutoIterator = 0;
+		public double StatXP = 0;
+		public double GlobalPlayerHealth = 0;
+		public double JutsuXP = 0;
+		public boolean SaidLatom = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -168,14 +170,15 @@ public class AnimeChaosModVariables {
 			nbt.putDouble("Ninjutsu", Ninjutsu);
 			nbt.putBoolean("ChakraControl", ChakraControl);
 			nbt.putDouble("GlobalPlayerEnergy", GlobalPlayerEnergy);
-			nbt.putDouble("GlobalMaxPlayerHealth", GlobalMaxPlayerHealth);
-			nbt.putDouble("GlobalPlayerHealth", GlobalPlayerHealth);
 			nbt.putDouble("NinjaXP", NinjaXP);
-			nbt.putDouble("NinjaLevel", NinjaLevel);
-			nbt.putDouble("StatXP", StatXP);
-			nbt.putDouble("JutsuXP", JutsuXP);
 			nbt.putDouble("NunjaXPRequired", NunjaXPRequired);
+			nbt.putDouble("GlobalMaxPlayerHealth", GlobalMaxPlayerHealth);
+			nbt.putDouble("NinjaLevel", NinjaLevel);
 			nbt.putDouble("NarutoIterator", NarutoIterator);
+			nbt.putDouble("StatXP", StatXP);
+			nbt.putDouble("GlobalPlayerHealth", GlobalPlayerHealth);
+			nbt.putDouble("JutsuXP", JutsuXP);
+			nbt.putBoolean("SaidLatom", SaidLatom);
 			return nbt;
 		}
 
@@ -195,14 +198,15 @@ public class AnimeChaosModVariables {
 			Ninjutsu = nbt.getDouble("Ninjutsu");
 			ChakraControl = nbt.getBoolean("ChakraControl");
 			GlobalPlayerEnergy = nbt.getDouble("GlobalPlayerEnergy");
-			GlobalMaxPlayerHealth = nbt.getDouble("GlobalMaxPlayerHealth");
-			GlobalPlayerHealth = nbt.getDouble("GlobalPlayerHealth");
 			NinjaXP = nbt.getDouble("NinjaXP");
-			NinjaLevel = nbt.getDouble("NinjaLevel");
-			StatXP = nbt.getDouble("StatXP");
-			JutsuXP = nbt.getDouble("JutsuXP");
 			NunjaXPRequired = nbt.getDouble("NunjaXPRequired");
+			GlobalMaxPlayerHealth = nbt.getDouble("GlobalMaxPlayerHealth");
+			NinjaLevel = nbt.getDouble("NinjaLevel");
 			NarutoIterator = nbt.getDouble("NarutoIterator");
+			StatXP = nbt.getDouble("StatXP");
+			GlobalPlayerHealth = nbt.getDouble("GlobalPlayerHealth");
+			JutsuXP = nbt.getDouble("JutsuXP");
+			SaidLatom = nbt.getBoolean("SaidLatom");
 		}
 	}
 
@@ -241,14 +245,15 @@ public class AnimeChaosModVariables {
 					variables.Ninjutsu = message.data.Ninjutsu;
 					variables.ChakraControl = message.data.ChakraControl;
 					variables.GlobalPlayerEnergy = message.data.GlobalPlayerEnergy;
-					variables.GlobalMaxPlayerHealth = message.data.GlobalMaxPlayerHealth;
-					variables.GlobalPlayerHealth = message.data.GlobalPlayerHealth;
 					variables.NinjaXP = message.data.NinjaXP;
-					variables.NinjaLevel = message.data.NinjaLevel;
-					variables.StatXP = message.data.StatXP;
-					variables.JutsuXP = message.data.JutsuXP;
 					variables.NunjaXPRequired = message.data.NunjaXPRequired;
+					variables.GlobalMaxPlayerHealth = message.data.GlobalMaxPlayerHealth;
+					variables.NinjaLevel = message.data.NinjaLevel;
 					variables.NarutoIterator = message.data.NarutoIterator;
+					variables.StatXP = message.data.StatXP;
+					variables.GlobalPlayerHealth = message.data.GlobalPlayerHealth;
+					variables.JutsuXP = message.data.JutsuXP;
+					variables.SaidLatom = message.data.SaidLatom;
 				}
 			});
 			context.setPacketHandled(true);

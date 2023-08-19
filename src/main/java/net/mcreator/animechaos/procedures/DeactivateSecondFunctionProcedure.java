@@ -1,8 +1,8 @@
 package net.mcreator.animechaos.procedures;
 
-import net.minecraft.world.entity.Entity;
+import net.minecraftforge.eventbus.api.Event;
 
-import net.mcreator.animechaos.network.AnimeChaosModVariables;
+import javax.annotation.Nullable;
 
 public class DeactivateSecondFunctionProcedure {
 	public static void execute(Entity entity) {

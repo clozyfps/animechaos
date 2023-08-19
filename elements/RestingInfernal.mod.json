@@ -96,6 +96,12 @@
     "stepSound": {
       "value": ""
     },
+    "whenMobDies": {
+      "name": "LatomReset"
+    },
+    "onRightClickedOn": {
+      "name": "InfernalLatom"
+    },
     "onMobTickUpdate": {
       "name": "RestingInfernalTickUpdate"
     },

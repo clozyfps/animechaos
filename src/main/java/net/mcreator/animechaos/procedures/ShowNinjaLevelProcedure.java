@@ -1,13 +1,11 @@
 package net.mcreator.animechaos.procedures;
 
-import net.minecraft.world.entity.Entity;
+import net.minecraftforge.eventbus.api.Event;
 
-import net.mcreator.animechaos.network.AnimeChaosModVariables;
+import javax.annotation.Nullable;
 
 public class ShowNinjaLevelProcedure {
-	public static String execute(Entity entity) {
-		if (entity == null)
-			return "";
-		return "Level: " + new java.text.DecimalFormat("###,###,###,###").format((entity.getCapability(AnimeChaosModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeChaosModVariables.PlayerVariables())).NinjaLevel);
+	public static String execute() {
+		return "Level: " + new java.text.DecimalFormat("###,###,###,###").format();
 	}
 }

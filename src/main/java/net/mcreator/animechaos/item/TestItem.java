@@ -1,12 +1,11 @@
 
 package net.mcreator.animechaos.item;
 
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.item.Rarity;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Item;
+import net.minecraft.world.entity.ai.attributes.Attributes;
+import javax.annotation.Nullable;
 
 public class TestItem extends Item {
+
 	public TestItem() {
 		super(new Item.Properties().tab(null).stacksTo(1).fireResistant().rarity(Rarity.COMMON));
 	}
@@ -20,4 +19,5 @@ public class TestItem extends Item {
 	public boolean isCorrectToolForDrops(BlockState state) {
 		return true;
 	}
+
 }

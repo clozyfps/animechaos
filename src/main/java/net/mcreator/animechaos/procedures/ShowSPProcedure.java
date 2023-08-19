@@ -1,13 +1,11 @@
 package net.mcreator.animechaos.procedures;
 
-import net.minecraft.world.entity.Entity;
+import net.minecraftforge.eventbus.api.Event;
 
-import net.mcreator.animechaos.network.AnimeChaosModVariables;
+import javax.annotation.Nullable;
 
 public class ShowSPProcedure {
-	public static String execute(Entity entity) {
-		if (entity == null)
-			return "";
-		return "SP: " + new java.text.DecimalFormat("###,###,###,###,###").format((entity.getCapability(AnimeChaosModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeChaosModVariables.PlayerVariables())).StatXP);
+	public static String execute() {
+		return "SP: " + new java.text.DecimalFormat("###,###,###,###,###").format();
 	}
 }
