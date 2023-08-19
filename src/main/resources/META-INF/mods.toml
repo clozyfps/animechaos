@@ -6,9 +6,9 @@ license="Academic Free License v3.0"
 modId="anime_chaos"
 version="0.1.0"
 displayName="Anime Chaos"
-credits="Created using mod maker MCreator - https://mcreator.net/about"
-displayURL="https://mcreator.net"
-authors="jayso, MCreator"
+credits="Respective Creators and Anime."
+displayURL="https://discord.gg/B3CapddcRc"
+authors="clozyfps, FiveNights, NoiiLive, jayso"
 description="An Anime Mashup mod, pushing to defy Destiny!"
 
 [[dependencies.anime_chaos]]
