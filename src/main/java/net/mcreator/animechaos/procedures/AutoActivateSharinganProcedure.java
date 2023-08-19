@@ -39,7 +39,7 @@ public class AutoActivateSharinganProcedure {
 			return;
 		double tmp = 0;
 		double tmp2 = 0;
-		if (((Entity) world.getEntitiesOfClass(Monster.class, AABB.ofSize(new Vec3(x, y, z), 5, 5, 5), e -> true).stream().sorted(new Object() {
+		if ((((Entity) world.getEntitiesOfClass(Monster.class, AABB.ofSize(new Vec3(x, y, z), 5, 5, 5), e -> true).stream().sorted(new Object() {
 			Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
 				return Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_x, _y, _z));
 			}
@@ -51,7 +51,11 @@ public class AutoActivateSharinganProcedure {
 			Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
 				return Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_x, _y, _z));
 			}
-		}.compareDistOf(x, y, z)).findFirst().orElse(null)) == sourceentity) {
+		}.compareDistOf(x, y, z)).findFirst().orElse(null)) == sourceentity) && ((Entity) world.getEntitiesOfClass(Player.class, AABB.ofSize(new Vec3(x, y, z), 5, 5, 5), e -> true).stream().sorted(new Object() {
+			Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
+				return Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_x, _y, _z));
+			}
+		}.compareDistOf(x, y, z)).findFirst().orElse(null)) == entity) {
 			if (((entity.getCapability(AnimeChaosModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeChaosModVariables.PlayerVariables())).Clan).equals("\"Uchiha\"")
 					&& ((entity.getCapability(AnimeChaosModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeChaosModVariables.PlayerVariables())).LeftDojutsu).equals("\"\"")
 					&& ((entity.getCapability(AnimeChaosModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeChaosModVariables.PlayerVariables())).RightDojutsu).equals("\"\"")) {

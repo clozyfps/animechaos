@@ -8,10 +8,17 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
 import net.minecraft.client.gui.screens.inventory.InventoryScreen;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
+import net.minecraft.client.gui.components.ImageButton;
 import net.minecraft.client.Minecraft;
 
 import net.mcreator.animechaos.world.inventory.StatScreenMenu;
+import net.mcreator.animechaos.procedures.ShowSPProcedure;
 import net.mcreator.animechaos.procedures.ShowPlayerProcedure;
+import net.mcreator.animechaos.procedures.ShowNinjutsuProcedure;
+import net.mcreator.animechaos.procedures.ShowNinjaXPRequiredProcedure;
+import net.mcreator.animechaos.procedures.ShowNinjaLevelProcedure;
+import net.mcreator.animechaos.network.StatScreenButtonMessage;
+import net.mcreator.animechaos.AnimeChaosMod;
 
 import java.util.HashMap;
 
@@ -23,6 +30,7 @@ public class StatScreenScreen extends AbstractContainerScreen<StatScreenMenu> {
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
+	ImageButton imagebutton_addbutton;
 
 	public StatScreenScreen(StatScreenMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -73,6 +81,18 @@ public class StatScreenScreen extends AbstractContainerScreen<StatScreenMenu> {
 
 	@Override
 	protected void renderLabels(PoseStack poseStack, int mouseX, int mouseY) {
+		this.font.draw(poseStack,
+
+				ShowNinjutsuProcedure.execute(entity), 126, 8, -12829636);
+		this.font.draw(poseStack,
+
+				ShowNinjaXPRequiredProcedure.execute(entity), 173, 151, -12829636);
+		this.font.draw(poseStack,
+
+				ShowSPProcedure.execute(entity), 173, 140, -12829636);
+		this.font.draw(poseStack,
+
+				ShowNinjaLevelProcedure.execute(entity), 173, 129, -12829636);
 	}
 
 	@Override
@@ -85,5 +105,13 @@ public class StatScreenScreen extends AbstractContainerScreen<StatScreenMenu> {
 	public void init() {
 		super.init();
 		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
+		imagebutton_addbutton = new ImageButton(this.leftPos + 117, this.topPos + 10, 7, 7, 0, 0, 7, new ResourceLocation("anime_chaos:textures/screens/atlas/imagebutton_addbutton.png"), 7, 14, e -> {
+			if (true) {
+				AnimeChaosMod.PACKET_HANDLER.sendToServer(new StatScreenButtonMessage(0, x, y, z));
+				StatScreenButtonMessage.handleButtonAction(entity, 0, x, y, z);
+			}
+		});
+		guistate.put("button:imagebutton_addbutton", imagebutton_addbutton);
+		this.addRenderableWidget(imagebutton_addbutton);
 	}
 }

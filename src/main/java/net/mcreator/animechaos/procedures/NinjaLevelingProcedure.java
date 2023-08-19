@@ -43,7 +43,7 @@ public class NinjaLevelingProcedure {
 				});
 			}
 			{
-				double _setval = (entity.getCapability(AnimeChaosModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeChaosModVariables.PlayerVariables())).NinjaLevel + 1;
+				double _setval = (entity.getCapability(AnimeChaosModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeChaosModVariables.PlayerVariables())).NunjaXPRequired + 1;
 				entity.getCapability(AnimeChaosModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 					capability.NunjaXPRequired = _setval;
 					capability.syncPlayerVariables(entity);

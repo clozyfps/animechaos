@@ -28,7 +28,7 @@ public class GetNinjaXPProcedure {
 	private static void execute(@Nullable Event event, Entity sourceentity) {
 		if (sourceentity == null)
 			return;
-		if (sourceentity instanceof Player == true && ((sourceentity.getCapability(AnimeChaosModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeChaosModVariables.PlayerVariables())).Anime).equals("\"Naruto\"")) {
+		if (sourceentity instanceof Player == true && ((sourceentity.getCapability(AnimeChaosModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeChaosModVariables.PlayerVariables())).Anime).equals("Naruto")) {
 			{
 				double _setval = (sourceentity.getCapability(AnimeChaosModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeChaosModVariables.PlayerVariables())).NinjaXP + 1;
 				sourceentity.getCapability(AnimeChaosModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {

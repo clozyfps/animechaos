@@ -22,6 +22,83 @@
           "x": 121,
           "y": 173
         }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_addbutton",
+          "image": "addbutton.png",
+          "hoveredImage": "addbutton.png",
+          "onClick": {
+            "name": "DoIncreaseNinjutsu"
+          },
+          "x": 203,
+          "y": 47
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_show_ninjutsu",
+          "text": {
+            "fixedValue": "",
+            "name": "ShowNinjutsu"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 212,
+          "y": 45
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_show_ninja_xp_required",
+          "text": {
+            "fixedValue": "",
+            "name": "ShowNinjaXPRequired"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 259,
+          "y": 188
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_show_sp",
+          "text": {
+            "fixedValue": "",
+            "name": "ShowSP"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 259,
+          "y": 177
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_show_ninja_level",
+          "text": {
+            "fixedValue": "",
+            "name": "ShowNinjaLevel"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 259,
+          "y": 166
+        }
       }
     ],
     "gridSettings": {

@@ -320,8 +320,9 @@
       "registry_name": "stat_screen",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/animechaos/world/inventory/StatScreenMenu.java",
-          "src/main/java/net/mcreator/animechaos/client/gui/StatScreenScreen.java"
+          "src/main/java/net/mcreator/animechaos/client/gui/StatScreenScreen.java",
+          "src/main/java/net/mcreator/animechaos/network/StatScreenButtonMessage.java",
+          "src/main/java/net/mcreator/animechaos/world/inventory/StatScreenMenu.java"
         ]
       },
       "path": "~/Naruto/GUIs"

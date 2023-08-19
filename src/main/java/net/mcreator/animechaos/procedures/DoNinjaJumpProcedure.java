@@ -28,7 +28,25 @@ public class DoNinjaJumpProcedure {
 		if (entity == null)
 			return;
 		if (entity instanceof Player == true && (entity.getCapability(AnimeChaosModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeChaosModVariables.PlayerVariables())).holdingSecondFunction == true
-				&& ((entity.getCapability(AnimeChaosModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeChaosModVariables.PlayerVariables())).Anime).equals("\"Naruto\"")) {
+				&& ((entity.getCapability(AnimeChaosModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeChaosModVariables.PlayerVariables())).Anime).equals("Naruto")
+				&& (entity.getCapability(AnimeChaosModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeChaosModVariables.PlayerVariables())).GlobalPlayerEnergy > 0) {
+			if ((entity.getCapability(AnimeChaosModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeChaosModVariables.PlayerVariables())).GlobalPlayerEnergy - 3 >= 0) {
+				{
+					double _setval = (entity.getCapability(AnimeChaosModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeChaosModVariables.PlayerVariables())).GlobalPlayerEnergy - 3;
+					entity.getCapability(AnimeChaosModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.GlobalPlayerEnergy = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+			} else if ((entity.getCapability(AnimeChaosModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeChaosModVariables.PlayerVariables())).GlobalPlayerEnergy - 3 < 0) {
+				{
+					double _setval = 0;
+					entity.getCapability(AnimeChaosModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.GlobalPlayerEnergy = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+			}
 			entity.setDeltaMovement(new Vec3((5 * entity.getLookAngle().x), (2.5 * entity.getLookAngle().y), (5 * entity.getLookAngle().z)));
 		}
 	}
