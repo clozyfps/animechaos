@@ -62,6 +62,13 @@ public class StartMenuOpenProcedure {
 					capability.syncPlayerVariables(entity);
 				});
 			}
+			{
+				String _setval = entity.getDisplayName().getString();
+				entity.getCapability(AnimeChaosModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.PlayerFirstName = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
 		}
 	}
 }

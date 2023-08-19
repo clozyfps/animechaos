@@ -20,15 +20,16 @@ public class SelectGen1Procedure {
 			});
 		}
 		{
-			String _setval = "Infernal";
+			String _setval = "Infernalize";
 			entity.getCapability(AnimeChaosModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 				capability.Pyrokinesis = _setval;
 				capability.syncPlayerVariables(entity);
 			});
 		}
 		if (entity instanceof Player _player && !_player.level.isClientSide())
-			_player.displayClientMessage(Component.literal("You are now Generation 1..."), false);
+			_player.displayClientMessage(Component.literal("You are Generation 1..."), false);
 		if (entity instanceof Player _player && !_player.level.isClientSide())
-			_player.displayClientMessage(Component.literal("You have the Ability to \u00A76\u00A7lInfernalize"), false);
+			_player.displayClientMessage(Component.literal("\u00A7fYou have the Ability... Infernalize"), false);
+		RollFireForceClanProcedure.execute(entity);
 	}
 }

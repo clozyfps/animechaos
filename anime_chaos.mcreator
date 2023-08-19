@@ -1524,6 +1524,46 @@
         ]
       },
       "path": "~/Fire Force/Procedures/GUI"
+    },
+    {
+      "name": "RollFireForceClan",
+      "type": "procedure",
+      "sortid": 64,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "roll_fire_force_clan",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animechaos/procedures/RollFireForceClanProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Fire Force/Procedures/Clan"
+    },
+    {
+      "name": "FireForceClanConfirm",
+      "type": "procedure",
+      "sortid": 65,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fire_force_clan_confirm",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animechaos/procedures/FireForceClanConfirmProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Fire Force/Procedures/Clan"
     }
   ],
   "variable_elements": [
@@ -1810,6 +1850,10 @@
               },
               {
                 "name": "GUI",
+                "children": []
+              },
+              {
+                "name": "Clan",
                 "children": []
               }
             ]

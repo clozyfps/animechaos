@@ -20,6 +20,7 @@ public class SelectGen3Procedure {
 			});
 		}
 		if (entity instanceof Player _player && !_player.level.isClientSide())
-			_player.displayClientMessage(Component.literal("You are now Generation 3..."), false);
+			_player.displayClientMessage(Component.literal("You are Generation 3..."), false);
+		RollFireForceClanProcedure.execute(entity);
 	}
 }
