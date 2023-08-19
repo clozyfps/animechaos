@@ -23,5 +23,6 @@ public class SetClanProcedureProcedure {
 		}
 		if (entity instanceof Player _player && !_player.level.isClientSide())
 			_player.displayClientMessage(Component.literal("(!!!) Clans are CASE-SENSITIVE, make sure you enter correctly."), false);
+		SetClanConfirmationProcedure.execute(entity);
 	}
 }

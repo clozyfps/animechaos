@@ -1044,6 +1044,46 @@
         ]
       },
       "path": "~/General/Procedures"
+    },
+    {
+      "name": "SetClanConfirmation",
+      "type": "procedure",
+      "sortid": 41,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_clan_confirmation",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animechaos/procedures/SetClanConfirmationProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/General/Procedures"
+    },
+    {
+      "name": "SetAnimeConfirmation",
+      "type": "procedure",
+      "sortid": 42,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_anime_confirmation",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animechaos/procedures/SetAnimeConfirmationProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/General/Procedures"
     }
   ],
   "variable_elements": [

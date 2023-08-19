@@ -23,5 +23,6 @@ public class SetAnimeProcedureProcedure {
 		}
 		if (entity instanceof Player _player && !_player.level.isClientSide())
 			_player.displayClientMessage(Component.literal("(!!!) Anime are CASE-SENSITIVE, make sure you enter correctly."), false);
+		SetAnimeConfirmationProcedure.execute(entity);
 	}
 }
