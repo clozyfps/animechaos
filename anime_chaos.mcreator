@@ -3,6 +3,7 @@
     {
       "name": "Test",
       "type": "item",
+      "sortid": 6,
       "compiles": true,
       "locked_code": false,
       "registry_name": "test",
@@ -96,6 +97,142 @@
         ]
       },
       "path": "~/Naruto"
+    },
+    {
+      "name": "Infernal",
+      "type": "livingentity",
+      "sortid": 5,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "infernal",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animechaos/client/renderer/InfernalRenderer.java",
+          "src/main/java/net/mcreator/animechaos/entity/InfernalEntity.java",
+          "src/main/resources/assets/anime_chaos/models/item/infernal_spawn_egg.json"
+        ]
+      },
+      "path": "~/Fire Force/Mobs"
+    },
+    {
+      "name": "RestingInfernal",
+      "type": "livingentity",
+      "sortid": 7,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "resting_infernal",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/anime_chaos/models/item/resting_infernal_spawn_egg.json",
+          "src/main/java/net/mcreator/animechaos/entity/RestingInfernalEntity.java",
+          "src/main/java/net/mcreator/animechaos/client/renderer/RestingInfernalRenderer.java"
+        ]
+      },
+      "path": "~/Fire Force/Mobs"
+    },
+    {
+      "name": "InfernalDeathRespawn",
+      "type": "procedure",
+      "sortid": 8,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "infernal_death_respawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animechaos/procedures/InfernalDeathRespawnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Fire Force/Procedures"
+    },
+    {
+      "name": "InfernalTickUpdate",
+      "type": "procedure",
+      "sortid": 9,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "infernal_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animechaos/procedures/InfernalTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Fire Force/Procedures"
+    },
+    {
+      "name": "RestingInfernalTickUpdate",
+      "type": "procedure",
+      "sortid": 10,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "resting_infernal_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animechaos/procedures/RestingInfernalTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Fire Force/Procedures"
     }
   ],
   "variable_elements": [
@@ -174,15 +311,19 @@
   ],
   "language_map": {
     "en_us": {
-      "key.anime_chaos.second_function": "Second Function",
       "item.anime_chaos.test": "Anime Chaos Logo",
-      "item.animechaos.test": "Anime Chaos Logo",
       "key.animechaos.second_function": "Second Function",
       "key.categories.anime_chaos": "Anime Chaos - General",
       "key.anime_chaos.activate_dojutsu": "Activate Dojutsu",
       "key.animechaos.activate_dojutsu": "Activate Dojutsu",
       "subtitles.sharingan_deactivated": "Sharingan Dissipates...",
+      "item.anime_chaos.infernal_spawn_egg": "Infernal Spawn Egg",
+      "key.anime_chaos.second_function": "Second Function",
+      "item.anime_chaos.resting_infernal_spawn_egg": "Infernal (Resting) Spawn Egg",
+      "item.animechaos.test": "Anime Chaos Logo",
+      "entity.anime_chaos.infernal": "Infernal",
       "subtitles.sharingan_activated": "Sharingan Awakens!",
+      "entity.anime_chaos.resting_infernal": "Infernal (Resting)",
       "key.categories.anime_chaos_naruto": "Anime Chaos - Naruto"
     }
   },
