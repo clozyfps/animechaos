@@ -1,0 +1,12 @@
+{
+  "_fv": 43,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "V",
+    "keyBindingName": "Open Stats Menu",
+    "keyBindingCategoryKey": "anime_chaos_naruto",
+    "onKeyPressed": {
+      "name": "DoOpenStatMenu"
+    }
+  }
+}

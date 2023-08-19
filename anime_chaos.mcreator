@@ -305,6 +305,139 @@
         ]
       },
       "path": "~/Naruto"
+    },
+    {
+      "name": "ShowPlayer",
+      "type": "procedure",
+      "sortid": 16,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "show_player",
+      "metadata": {
+        "return_type": "entity",
+        "files": [
+          "src/main/java/net/mcreator/animechaos/procedures/ShowPlayerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Naruto"
+    },
+    {
+      "name": "StatScreen",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stat_screen",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animechaos/client/gui/StatScreenScreen.java",
+          "src/main/java/net/mcreator/animechaos/world/inventory/StatScreenMenu.java"
+        ]
+      },
+      "path": "~/Naruto"
+    },
+    {
+      "name": "DoOpenStatMenu",
+      "type": "procedure",
+      "sortid": 17,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "do_open_stat_menu",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animechaos/procedures/DoOpenStatMenuProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Naruto"
+    },
+    {
+      "name": "OpenStatsMenu",
+      "type": "keybind",
+      "sortid": 18,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "open_stats_menu",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animechaos/network/OpenStatsMenuMessage.java"
+        ]
+      },
+      "path": "~/Naruto"
+    },
+    {
+      "name": "DoChakraControl",
+      "type": "procedure",
+      "sortid": 19,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "do_chakra_control",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animechaos/procedures/DoChakraControlProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Naruto"
     }
   ],
   "variable_elements": [
@@ -318,7 +451,7 @@
       "name": "LeftSharinganLevel",
       "type": "number",
       "scope": "player_persistent",
-      "value": "1.0"
+      "value": "0.0"
     },
     {
       "name": "Clan",
@@ -354,7 +487,7 @@
       "name": "RightSharinganLevel",
       "type": "number",
       "scope": "player_persistent",
-      "value": "2.0"
+      "value": "0.0"
     },
     {
       "name": "DojutsuIsActive",
@@ -366,6 +499,30 @@
       "name": "holdingSecondFunction",
       "type": "logic",
       "scope": "player_lifetime",
+      "value": "false"
+    },
+    {
+      "name": "GlobalPlayerEnergy",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "GlobalMaxPlayerEnergy",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "Ninjutsu",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "1.0"
+    },
+    {
+      "name": "ChakraControl",
+      "type": "logic",
+      "scope": "player_persistent",
       "value": "false"
     }
   ],
@@ -389,6 +546,7 @@
   ],
   "language_map": {
     "en_us": {
+      "key.anime_chaos.open_stats_menu": "Open Stats Menu",
       "key.anime_chaos.second_function": "Second Function",
       "item.anime_chaos.test": "Anime Chaos Logo",
       "item.animechaos.test": "Anime Chaos Logo",
