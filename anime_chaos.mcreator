@@ -11,7 +11,8 @@
           "src/main/java/net/mcreator/animechaos/item/TestItem.java",
           "src/main/resources/assets/anime_chaos/models/item/test.json"
         ]
-      }
+      },
+      "path": "~/General"
     },
     {
       "name": "ActivateDojutsu",
@@ -38,7 +39,8 @@
         "files": [
           "src/main/java/net/mcreator/animechaos/network/SecondFunctionMessage.java"
         ]
-      }
+      },
+      "path": "~/General"
     },
     {
       "name": "Tomoe1LeftRenderer",
@@ -265,7 +267,8 @@
             "type": "entity"
           }
         ]
-      }
+      },
+      "path": "~/General"
     },
     {
       "name": "DeactivateSecondFunction",
@@ -284,7 +287,8 @@
             "type": "entity"
           }
         ]
-      }
+      },
+      "path": "~/General"
     },
     {
       "name": "DoNinjaJump",
@@ -1046,8 +1050,8 @@
   "language_map": {
     "en_us": {
       "item.anime_chaos.test": "Anime Chaos Logo",
-      "key.categories.anime_chaos": "Anime Chaos - General",
       "key.animechaos.second_function": "Second Function",
+      "key.categories.anime_chaos": "Anime Chaos - General",
       "key.anime_chaos.activate_dojutsu": "Activate Dojutsu",
       "key.animechaos.activate_dojutsu": "Activate Dojutsu",
       "subtitles.sharingan_deactivated": "Sharingan Dissipates...",
