@@ -3,6 +3,7 @@
     {
       "name": "Test",
       "type": "item",
+      "sortid": 20,
       "compiles": true,
       "locked_code": false,
       "registry_name": "test",
@@ -11,7 +12,8 @@
           "src/main/java/net/mcreator/animechaos/item/TestItem.java",
           "src/main/resources/assets/anime_chaos/models/item/test.json"
         ]
-      }
+      },
+      "path": "~/General"
     },
     {
       "name": "ActivateDojutsu",
@@ -25,7 +27,7 @@
           "src/main/java/net/mcreator/animechaos/network/ActivateDojutsuMessage.java"
         ]
       },
-      "path": "~/Naruto"
+      "path": "~/Naruto/Keybinds"
     },
     {
       "name": "SecondFunction",
@@ -38,7 +40,8 @@
         "files": [
           "src/main/java/net/mcreator/animechaos/network/SecondFunctionMessage.java"
         ]
-      }
+      },
+      "path": "~/General"
     },
     {
       "name": "Tomoe1LeftRenderer",
@@ -58,7 +61,7 @@
           }
         ]
       },
-      "path": "~/Naruto"
+      "path": "~/Naruto/Procedures"
     },
     {
       "name": "DojutsuVariableStuff",
@@ -94,7 +97,7 @@
           }
         ]
       },
-      "path": "~/Naruto"
+      "path": "~/Naruto/Procedures"
     },
     {
       "name": "Tomoe1RightRenderer",
@@ -114,7 +117,7 @@
           }
         ]
       },
-      "path": "~/Naruto"
+      "path": "~/Naruto/Procedures"
     },
     {
       "name": "SharinganEffects",
@@ -134,7 +137,7 @@
           }
         ]
       },
-      "path": "~/Naruto"
+      "path": "~/Naruto/Procedures"
     },
     {
       "name": "AutoActivateSharingan",
@@ -174,7 +177,7 @@
           }
         ]
       },
-      "path": "~/Naruto"
+      "path": "~/Naruto/Procedures"
     },
     {
       "name": "LevelLeftSharingan",
@@ -210,7 +213,7 @@
           }
         ]
       },
-      "path": "~/Naruto"
+      "path": "~/Naruto/Procedures"
     },
     {
       "name": "LevelRightSharingan",
@@ -246,7 +249,7 @@
           }
         ]
       },
-      "path": "~/Naruto"
+      "path": "~/Naruto/Procedures"
     },
     {
       "name": "ActivateSecondFunction",
@@ -265,7 +268,8 @@
             "type": "entity"
           }
         ]
-      }
+      },
+      "path": "~/General"
     },
     {
       "name": "DeactivateSecondFunction",
@@ -284,7 +288,8 @@
             "type": "entity"
           }
         ]
-      }
+      },
+      "path": "~/General"
     },
     {
       "name": "DoNinjaJump",
@@ -304,7 +309,7 @@
           }
         ]
       },
-      "path": "~/Naruto"
+      "path": "~/Naruto/Procedures"
     },
     {
       "name": "StatScreen",
@@ -315,10 +320,11 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/animechaos/client/gui/StatScreenScreen.java",
+          "src/main/java/net/mcreator/animechaos/network/StatScreenButtonMessage.java",
           "src/main/java/net/mcreator/animechaos/world/inventory/StatScreenMenu.java"
         ]
       },
-      "path": "~/Naruto"
+      "path": "~/Naruto/GUIs"
     },
     {
       "name": "DoOpenStatMenu",
@@ -354,7 +360,7 @@
           }
         ]
       },
-      "path": "~/Naruto"
+      "path": "~/Naruto/Procedures"
     },
     {
       "name": "OpenStatsMenu",
@@ -368,7 +374,7 @@
           "src/main/java/net/mcreator/animechaos/network/OpenStatsMenuMessage.java"
         ]
       },
-      "path": "~/Naruto"
+      "path": "~/Naruto/Keybinds"
     },
     {
       "name": "ShowPlayer",
@@ -401,7 +407,7 @@
           }
         ]
       },
-      "path": "~/Naruto"
+      "path": "~/Naruto/Procedures"
     },
     {
       "name": "DoChakraControl",
@@ -437,7 +443,7 @@
           }
         ]
       },
-      "path": "~/Naruto"
+      "path": "~/Naruto/Procedures"
     },
     {
       "name": "InfernalTickUpdate",
@@ -574,6 +580,269 @@
         ]
       },
       "path": "~/Fire Force/Mobs"
+    },
+    {
+      "name": "ShowChakra",
+      "type": "procedure",
+      "sortid": 21,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "show_chakra",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/animechaos/procedures/ShowChakraProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Naruto/Procedures"
+    },
+    {
+      "name": "NarutoOverlay",
+      "type": "overlay",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "naruto_overlay",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animechaos/client/screens/NarutoOverlayOverlay.java"
+        ]
+      },
+      "path": "~/Naruto/GUIs"
+    },
+    {
+      "name": "ShowNinjutsu",
+      "type": "procedure",
+      "sortid": 22,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "show_ninjutsu",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/animechaos/procedures/ShowNinjutsuProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Naruto/Procedures"
+    },
+    {
+      "name": "ShowNinjaLevel",
+      "type": "procedure",
+      "sortid": 23,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "show_ninja_level",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/animechaos/procedures/ShowNinjaLevelProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Naruto/Procedures"
+    },
+    {
+      "name": "ShowNinjaXPRequired",
+      "type": "procedure",
+      "sortid": 24,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "show_ninja_xp_required",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/animechaos/procedures/ShowNinjaXPRequiredProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Naruto/Procedures"
+    },
+    {
+      "name": "DoIncreaseNinjutsu",
+      "type": "procedure",
+      "sortid": 25,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "do_increase_ninjutsu",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animechaos/procedures/DoIncreaseNinjutsuProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Naruto/Procedures"
+    },
+    {
+      "name": "GetNinjaXP",
+      "type": "procedure",
+      "sortid": 26,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_ninja_xp",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animechaos/procedures/GetNinjaXPProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Naruto/Procedures"
+    },
+    {
+      "name": "NinjaLeveling",
+      "type": "procedure",
+      "sortid": 27,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ninja_leveling",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animechaos/procedures/NinjaLevelingProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Naruto/Procedures"
+    },
+    {
+      "name": "NinjutsuChangeEnergy",
+      "type": "procedure",
+      "sortid": 28,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ninjutsu_change_energy",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animechaos/procedures/NinjutsuChangeEnergyProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Naruto/Procedures"
+    },
+    {
+      "name": "RegenChakra",
+      "type": "procedure",
+      "sortid": 29,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "regen_chakra",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animechaos/procedures/RegenChakraProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      },
+      "path": "~/Naruto/Procedures"
+    },
+    {
+      "name": "IsInAnimeNaruto",
+      "type": "procedure",
+      "sortid": 30,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "is_in_anime_naruto",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/animechaos/procedures/IsInAnimeNarutoProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Naruto/Procedures"
+    },
+    {
+      "name": "ShowSP",
+      "type": "procedure",
+      "sortid": 31,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "show_sp",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/animechaos/procedures/ShowSPProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Naruto/Procedures"
+    },
+    {
+      "name": "NaturalChakraRegeneration",
+      "type": "procedure",
+      "sortid": 32,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "natural_chakra_regeneration",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animechaos/procedures/NaturalChakraRegenerationProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Naruto/Procedures"
     }
   ],
   "variable_elements": [
@@ -647,7 +916,7 @@
       "name": "Ninjutsu",
       "type": "number",
       "scope": "player_persistent",
-      "value": "1.0"
+      "value": "5.0"
     },
     {
       "name": "ChakraControl",
@@ -657,6 +926,54 @@
     },
     {
       "name": "GlobalPlayerEnergy",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "GlobalMaxPlayerHealth",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "GlobalPlayerHealth",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "NinjaXP",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "NinjaLevel",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "StatXP",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "JutsuXP",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "NunjaXPRequired",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "5.0"
+    },
+    {
+      "name": "NarutoIterator",
       "type": "number",
       "scope": "player_persistent",
       "value": "0"
@@ -683,14 +1000,19 @@
   "language_map": {
     "en_us": {
       "item.anime_chaos.test": "Anime Chaos Logo",
-      "key.animechaos.second_function": "Second Function",
       "key.categories.anime_chaos": "Anime Chaos - General",
+      "key.animechaos.second_function": "Second Function",
       "key.anime_chaos.activate_dojutsu": "Activate Dojutsu",
       "key.animechaos.activate_dojutsu": "Activate Dojutsu",
       "subtitles.sharingan_deactivated": "Sharingan Dissipates...",
+      "item.anime_chaos.infernal_spawn_egg": "Infernal Spawn Egg",
+      "key.anime_chaos.open_stats_menu": "Open Stats Menu",
       "key.anime_chaos.second_function": "Second Function",
+      "item.anime_chaos.resting_infernal_spawn_egg": "Infernal (Resting) Spawn Egg",
       "item.animechaos.test": "Anime Chaos Logo",
+      "entity.anime_chaos.infernal": "Infernal",
       "subtitles.sharingan_activated": "Sharingan Awakens!",
+      "entity.anime_chaos.resting_infernal": "Infernal (Resting)",
       "key.categories.anime_chaos_naruto": "Anime Chaos - Naruto"
     }
   },
@@ -728,6 +1050,23 @@
       },
       {
         "name": "Naruto",
+        "children": [
+          {
+            "name": "GUIs",
+            "children": []
+          },
+          {
+            "name": "Keybinds",
+            "children": []
+          },
+          {
+            "name": "Procedures",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "General",
         "children": []
       }
     ]
