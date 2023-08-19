@@ -10,7 +10,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.network.FriendlyByteBuf;
 
-import net.mcreator.animechaos.procedures.DoActivateDojutsuProcedure;
+import net.mcreator.animechaos.procedures.DojutsuVariableStuffProcedure;
 import net.mcreator.animechaos.AnimeChaosMod;
 
 import java.util.function.Supplier;
@@ -52,7 +52,7 @@ public class ActivateDojutsuMessage {
 			return;
 		if (type == 0) {
 
-			DoActivateDojutsuProcedure.execute(world, x, y, z, entity);
+			DojutsuVariableStuffProcedure.execute(world, x, y, z, entity);
 		}
 	}
 

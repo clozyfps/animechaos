@@ -39,19 +39,38 @@
         "files": [
           "src/main/java/net/mcreator/animechaos/network/SecondFunctionMessage.java"
         ]
+      }
+    },
+    {
+      "name": "Tomoe1LeftRenderer",
+      "type": "procedure",
+      "sortid": 5,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tomoe_1_left_renderer",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animechaos/procedures/Tomoe1LeftRendererProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
       },
       "path": "~/Naruto"
     },
     {
-      "name": "DoActivateDojutsu",
+      "name": "DojutsuVariableStuff",
       "type": "procedure",
-      "sortid": 4,
+      "sortid": 8,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "do_activate_dojutsu",
+      "registry_name": "dojutsu_variable_stuff",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/animechaos/procedures/DoActivateDojutsuProcedure.java"
+          "src/main/java/net/mcreator/animechaos/procedures/DojutsuVariableStuffProcedure.java"
         ],
         "dependencies": [
           {
@@ -79,15 +98,205 @@
       "path": "~/Naruto"
     },
     {
-      "name": "DojutsuRenderer",
+      "name": "Tomoe1RightRenderer",
       "type": "procedure",
-      "sortid": 3,
+      "sortid": 6,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "dojutsu_renderer",
+      "registry_name": "tomoe_1_right_renderer",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/animechaos/procedures/DojutsuRendererProcedure.java"
+          "src/main/java/net/mcreator/animechaos/procedures/Tomoe1RightRendererProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Naruto"
+    },
+    {
+      "name": "SharinganEffects",
+      "type": "procedure",
+      "sortid": 9,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sharingan_effects",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animechaos/procedures/SharinganEffectsProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Naruto"
+    },
+    {
+      "name": "AutoActivateSharingan",
+      "type": "procedure",
+      "sortid": 10,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "auto_activate_sharingan",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animechaos/procedures/AutoActivateSharinganProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Naruto"
+    },
+    {
+      "name": "LevelLeftSharingan",
+      "type": "procedure",
+      "sortid": 11,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "level_left_sharingan",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animechaos/procedures/LevelLeftSharinganProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Naruto"
+    },
+    {
+      "name": "LevelRightSharingan",
+      "type": "procedure",
+      "sortid": 12,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "level_right_sharingan",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animechaos/procedures/LevelRightSharinganProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Naruto"
+    },
+    {
+      "name": "ActivateSecondFunction",
+      "type": "procedure",
+      "sortid": 13,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "activate_second_function",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animechaos/procedures/ActivateSecondFunctionProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "DeactivateSecondFunction",
+      "type": "procedure",
+      "sortid": 14,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "deactivate_second_function",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animechaos/procedures/DeactivateSecondFunctionProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "DoNinjaJump",
+      "type": "procedure",
+      "sortid": 15,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "do_ninja_jump",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animechaos/procedures/DoNinjaJumpProcedure.java"
         ],
         "dependencies": [
           {
@@ -270,7 +479,7 @@
       "name": "RightDojutsu",
       "type": "string",
       "scope": "player_persistent",
-      "value": "\"\""
+      "value": "\"Sharingan\""
     },
     {
       "name": "RightSharinganXP",
@@ -282,10 +491,16 @@
       "name": "RightSharinganLevel",
       "type": "number",
       "scope": "player_persistent",
-      "value": "1.0"
+      "value": "2.0"
     },
     {
       "name": "DojutsuIsActive",
+      "type": "logic",
+      "scope": "player_lifetime",
+      "value": "false"
+    },
+    {
+      "name": "holdingSecondFunction",
       "type": "logic",
       "scope": "player_lifetime",
       "value": "false"
