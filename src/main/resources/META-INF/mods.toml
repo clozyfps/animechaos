@@ -44,10 +44,4 @@ description="An Anime Mashup mod, pushing to defy Destiny!"
     versionRange="[0,)"
     ordering="NONE"
     side="BOTH"
-[[dependencies.anime_chaos]]
-    modId="allmods"
-    mandatory=false
-    versionRange="[0,)"
-    ordering="NONE"
-    side="BOTH"
 

@@ -320,9 +320,9 @@
       "registry_name": "stat_screen",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/animechaos/network/StatScreenButtonMessage.java",
           "src/main/java/net/mcreator/animechaos/world/inventory/StatScreenMenu.java",
-          "src/main/java/net/mcreator/animechaos/client/gui/StatScreenScreen.java"
+          "src/main/java/net/mcreator/animechaos/client/gui/StatScreenScreen.java",
+          "src/main/java/net/mcreator/animechaos/network/StatScreenButtonMessage.java"
         ]
       },
       "path": "~/Naruto/GUIs"
@@ -559,9 +559,9 @@
       "registry_name": "resting_infernal",
       "metadata": {
         "files": [
-          "src/main/resources/assets/anime_chaos/models/item/resting_infernal_spawn_egg.json",
+          "src/main/java/net/mcreator/animechaos/client/renderer/RestingInfernalRenderer.java",
           "src/main/java/net/mcreator/animechaos/entity/RestingInfernalEntity.java",
-          "src/main/java/net/mcreator/animechaos/client/renderer/RestingInfernalRenderer.java"
+          "src/main/resources/assets/anime_chaos/models/item/resting_infernal_spawn_egg.json"
         ]
       },
       "path": "~/Fire Force/Mobs"
@@ -575,9 +575,9 @@
       "registry_name": "infernal",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/animechaos/client/renderer/InfernalRenderer.java",
           "src/main/resources/data/anime_chaos/forge/biome_modifier/infernal_biome_modifier.json",
           "src/main/java/net/mcreator/animechaos/entity/InfernalEntity.java",
+          "src/main/java/net/mcreator/animechaos/client/renderer/InfernalRenderer.java",
           "src/main/resources/assets/anime_chaos/models/item/infernal_spawn_egg.json"
         ]
       },
@@ -916,8 +916,8 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/animechaos/entity/DemonInfernalEntity.java",
-          "src/main/resources/assets/anime_chaos/models/item/demon_infernal_spawn_egg.json",
           "src/main/java/net/mcreator/animechaos/client/renderer/DemonInfernalRenderer.java",
+          "src/main/resources/assets/anime_chaos/models/item/demon_infernal_spawn_egg.json",
           "src/main/resources/data/anime_chaos/forge/biome_modifier/demon_infernal_biome_modifier.json"
         ]
       },
@@ -965,8 +965,8 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/anime_chaos/models/item/demon_infernal_resting_spawn_egg.json",
-          "src/main/java/net/mcreator/animechaos/client/renderer/DemonInfernalRestingRenderer.java",
-          "src/main/java/net/mcreator/animechaos/entity/DemonInfernalRestingEntity.java"
+          "src/main/java/net/mcreator/animechaos/entity/DemonInfernalRestingEntity.java",
+          "src/main/java/net/mcreator/animechaos/client/renderer/DemonInfernalRestingRenderer.java"
         ]
       },
       "path": "~/Fire Force/Mobs"
@@ -1096,9 +1096,9 @@
       "registry_name": "player_loadup",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/animechaos/world/inventory/PlayerLoadupMenu.java",
+          "src/main/java/net/mcreator/animechaos/client/gui/PlayerLoadupScreen.java",
           "src/main/java/net/mcreator/animechaos/network/PlayerLoadupButtonMessage.java",
-          "src/main/java/net/mcreator/animechaos/client/gui/PlayerLoadupScreen.java"
+          "src/main/java/net/mcreator/animechaos/world/inventory/PlayerLoadupMenu.java"
         ]
       },
       "path": "~/General/GUI"
@@ -1319,9 +1319,9 @@
       "registry_name": "start_up_gen_1",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/animechaos/client/gui/StartUpGen1Screen.java",
+          "src/main/java/net/mcreator/animechaos/network/StartUpGen1ButtonMessage.java",
           "src/main/java/net/mcreator/animechaos/world/inventory/StartUpGen1Menu.java",
-          "src/main/java/net/mcreator/animechaos/network/StartUpGen1ButtonMessage.java"
+          "src/main/java/net/mcreator/animechaos/client/gui/StartUpGen1Screen.java"
         ]
       },
       "path": "~/Fire Force/GUI"
@@ -1335,9 +1335,9 @@
       "registry_name": "start_up_gen_2",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/animechaos/client/gui/StartUpGen2Screen.java",
           "src/main/java/net/mcreator/animechaos/world/inventory/StartUpGen2Menu.java",
-          "src/main/java/net/mcreator/animechaos/network/StartUpGen2ButtonMessage.java"
+          "src/main/java/net/mcreator/animechaos/network/StartUpGen2ButtonMessage.java",
+          "src/main/java/net/mcreator/animechaos/client/gui/StartUpGen2Screen.java"
         ]
       },
       "path": "~/Fire Force/GUI"
@@ -1351,9 +1351,9 @@
       "registry_name": "start_up_gen_3",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/animechaos/client/gui/StartUpGen3Screen.java",
+          "src/main/java/net/mcreator/animechaos/world/inventory/StartUpGen3Menu.java",
           "src/main/java/net/mcreator/animechaos/network/StartUpGen3ButtonMessage.java",
-          "src/main/java/net/mcreator/animechaos/world/inventory/StartUpGen3Menu.java"
+          "src/main/java/net/mcreator/animechaos/client/gui/StartUpGen3Screen.java"
         ]
       },
       "path": "~/Fire Force/GUI"
@@ -1565,80 +1565,186 @@
         ]
       },
       "path": "~/Fire Force/Procedures/Clan"
+    },
+    {
+      "name": "SpeciesRandomizer",
+      "type": "procedure",
+      "sortid": 69,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "species_randomizer",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animechaos/procedures/SpeciesRandomizerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Mortal Kombat/Randomizers"
+    },
+    {
+      "name": "EarthSpeciesRandomizer",
+      "type": "procedure",
+      "sortid": 70,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "earth_species_randomizer",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animechaos/procedures/EarthSpeciesRandomizerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Mortal Kombat/Randomizers"
+    },
+    {
+      "name": "OutworldSpeciesRandomizer",
+      "type": "procedure",
+      "sortid": 71,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "outworld_species_randomizer",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animechaos/procedures/OutworldSpeciesRandomizerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Mortal Kombat/Randomizers"
+    },
+    {
+      "name": "NetherRealmSpeciesRandomizer",
+      "type": "procedure",
+      "sortid": 72,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "nether_realm_species_randomizer",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animechaos/procedures/NetherRealmSpeciesRandomizerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Mortal Kombat/Randomizers"
+    },
+    {
+      "name": "Test2",
+      "type": "procedure",
+      "sortid": 74,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "test_2",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animechaos/procedures/Test2Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mortal Kombat/Randomizers"
+    },
+    {
+      "name": "FamilyRandomizer",
+      "type": "procedure",
+      "sortid": 75,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "family_randomizer",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animechaos/procedures/FamilyRandomizerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mortal Kombat/Randomizers"
+    },
+    {
+      "name": "MKfamilyconfirm",
+      "type": "procedure",
+      "sortid": 76,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "m_kfamilyconfirm",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animechaos/procedures/MKfamilyconfirmProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mortal Kombat/Randomizers"
+    },
+    {
+      "name": "FactionRandomizer",
+      "type": "procedure",
+      "sortid": 77,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "faction_randomizer",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animechaos/procedures/FactionRandomizerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Mortal Kombat/Randomizers"
     }
   ],
   "variable_elements": [
-    {
-      "name": "LeftSharinganXP",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "0"
-    },
-    {
-      "name": "LeftSharinganLevel",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "1.0"
-    },
-    {
-      "name": "Clan",
-      "type": "string",
-      "scope": "player_persistent",
-      "value": "None"
-    },
     {
       "name": "Anime",
       "type": "string",
       "scope": "player_persistent",
       "value": "None"
-    },
-    {
-      "name": "LeftDojutsu",
-      "type": "string",
-      "scope": "player_persistent",
-      "value": "\"Sharingan\""
-    },
-    {
-      "name": "RightDojutsu",
-      "type": "string",
-      "scope": "player_persistent",
-      "value": "\"Sharingan\""
-    },
-    {
-      "name": "RightSharinganXP",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "0"
-    },
-    {
-      "name": "RightSharinganLevel",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "2.0"
-    },
-    {
-      "name": "DojutsuIsActive",
-      "type": "logic",
-      "scope": "player_lifetime",
-      "value": "false"
-    },
-    {
-      "name": "holdingSecondFunction",
-      "type": "logic",
-      "scope": "player_lifetime",
-      "value": "false"
-    },
-    {
-      "name": "GlobalMaxPlayerEnergy",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "0"
-    },
-    {
-      "name": "Ninjutsu",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "1.0"
     },
     {
       "name": "ChakraControl",
@@ -1647,73 +1753,19 @@
       "value": "false"
     },
     {
-      "name": "GlobalPlayerEnergy",
-      "type": "number",
+      "name": "Clan",
+      "type": "string",
       "scope": "player_persistent",
-      "value": "0"
+      "value": "None"
     },
     {
-      "name": "NinjaXP",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "0"
-    },
-    {
-      "name": "NunjaXPRequired",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "5.0"
-    },
-    {
-      "name": "GlobalMaxPlayerHealth",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "0"
-    },
-    {
-      "name": "NinjaLevel",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "0"
-    },
-    {
-      "name": "NarutoIterator",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "0"
-    },
-    {
-      "name": "StatXP",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "0"
-    },
-    {
-      "name": "GlobalPlayerHealth",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "0"
-    },
-    {
-      "name": "JutsuXP",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "0"
-    },
-    {
-      "name": "SaidLatom",
+      "name": "DojutsuIsActive",
       "type": "logic",
       "scope": "player_lifetime",
       "value": "false"
     },
     {
-      "name": "JoinedWorld",
-      "type": "logic",
-      "scope": "player_persistent",
-      "value": "false"
-    },
-    {
-      "name": "PlayerFirstName",
+      "name": "Family",
       "type": "string",
       "scope": "player_persistent",
       "value": "\"\""
@@ -1725,10 +1777,154 @@
       "value": "0"
     },
     {
+      "name": "GlobalMaxPlayerEnergy",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "GlobalMaxPlayerHealth",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "GlobalPlayerEnergy",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "GlobalPlayerHealth",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "holdingSecondFunction",
+      "type": "logic",
+      "scope": "player_lifetime",
+      "value": "false"
+    },
+    {
+      "name": "JoinedWorld",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "JutsuXP",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "LeftDojutsu",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "\"Sharingan\""
+    },
+    {
+      "name": "LeftSharinganLevel",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "1.0"
+    },
+    {
+      "name": "LeftSharinganXP",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "NarutoIterator",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "NinjaLevel",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "NinjaXP",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "Ninjutsu",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "1.0"
+    },
+    {
+      "name": "NunjaXPRequired",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "5.0"
+    },
+    {
+      "name": "PlayerFirstName",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "\"\""
+    },
+    {
       "name": "Pyrokinesis",
       "type": "string",
       "scope": "player_persistent",
       "value": "\"\""
+    },
+    {
+      "name": "RightDojutsu",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "\"Sharingan\""
+    },
+    {
+      "name": "RightSharinganLevel",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "2.0"
+    },
+    {
+      "name": "RightSharinganXP",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "SaidLatom",
+      "type": "logic",
+      "scope": "player_lifetime",
+      "value": "false"
+    },
+    {
+      "name": "Species",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "None"
+    },
+    {
+      "name": "SpeciesRealm",
+      "type": "string",
+      "scope": "player_lifetime",
+      "value": "None"
+    },
+    {
+      "name": "StatXP",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "Faction",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "None"
     }
   ],
   "sound_elements": [
@@ -1874,6 +2070,208 @@
           },
           {
             "name": "Procedures",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Mortal Kombat",
+        "children": [
+          {
+            "name": "Randomizers",
+            "children": []
+          },
+          {
+            "name": "GUI",
+            "children": []
+          },
+          {
+            "name": "Mobs",
+            "children": []
+          },
+          {
+            "name": "Blocks",
+            "children": []
+          },
+          {
+            "name": "Items",
+            "children": []
+          },
+          {
+            "name": "Species Clans-Factions and Families",
+            "children": [
+              {
+                "name": "Clans-Factions",
+                "children": [
+                  {
+                    "name": "Special Forces -Not Started-",
+                    "children": []
+                  },
+                  {
+                    "name": "Lin Kuei -Not Started-",
+                    "children": []
+                  },
+                  {
+                    "name": "Shirai Ryu -Not Started-",
+                    "children": []
+                  },
+                  {
+                    "name": "White Lotus Society -Not Started-",
+                    "children": []
+                  },
+                  {
+                    "name": "Matako Tribe -Not Started-",
+                    "children": []
+                  },
+                  {
+                    "name": "Black Dragon -Not Started-",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "name": "Family",
+                "children": [
+                  {
+                    "name": "Tsung Family -Not Started-",
+                    "children": []
+                  },
+                  {
+                    "name": "Liang Family -Not Started-",
+                    "children": []
+                  },
+                  {
+                    "name": "Cage Family -Not Started-",
+                    "children": []
+                  },
+                  {
+                    "name": "Takashi Family -Not Started-",
+                    "children": []
+                  },
+                  {
+                    "name": "Kahn Family -Not Started-",
+                    "children": []
+                  },
+                  {
+                    "name": "Hasashi Family -Not Started-",
+                    "children": []
+                  },
+                  {
+                    "name": "Chi Family -Not Started-",
+                    "children": []
+                  },
+                  {
+                    "name": "Lao Family -Not Started-",
+                    "children": []
+                  },
+                  {
+                    "name": "Vrbada Family -Not Started-",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "name": "Species",
+                "children": [
+                  {
+                    "name": "Outworld Species",
+                    "children": [
+                      {
+                        "name": "Edenian -Not Started-",
+                        "children": []
+                      },
+                      {
+                        "name": "Shokan -Not Started-",
+                        "children": []
+                      },
+                      {
+                        "name": "Tarkatan -Not Started-",
+                        "children": []
+                      },
+                      {
+                        "name": "Kytinn -Not Started-",
+                        "children": []
+                      },
+                      {
+                        "name": "Immortals -Not Started-",
+                        "children": []
+                      },
+                      {
+                        "name": "Genetic Experiment -Not Started-",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Earth Realm Species",
+                    "children": [
+                      {
+                        "name": "Cryomancer -Not Started-",
+                        "children": []
+                      },
+                      {
+                        "name": "Cyborg -Not Started-",
+                        "children": []
+                      },
+                      {
+                        "name": "Human -Not Started-",
+                        "children": [
+                          {
+                            "name": "Elemental -Not Started-",
+                            "children": []
+                          },
+                          {
+                            "name": "Wraith -Not Started-",
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "name": "Saurian -Not Started-",
+                        "children": []
+                      },
+                      {
+                        "name": "Enerna -Not Started-",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Neather Realm Species",
+                    "children": [
+                      {
+                        "name": "Demon -Not Started-",
+                        "children": []
+                      },
+                      {
+                        "name": "Hellspawn -Not Started-",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "name": "God Species",
+                    "children": [
+                      {
+                        "name": "Elder God -Not Started-",
+                        "children": []
+                      },
+                      {
+                        "name": "God -Not Started-",
+                        "children": []
+                      },
+                      {
+                        "name": "Demi God -Not Started-",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Xp",
             "children": []
           }
         ]
