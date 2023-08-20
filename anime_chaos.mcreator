@@ -320,9 +320,9 @@
       "registry_name": "stat_screen",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/animechaos/client/gui/StatScreenScreen.java",
           "src/main/java/net/mcreator/animechaos/network/StatScreenButtonMessage.java",
-          "src/main/java/net/mcreator/animechaos/world/inventory/StatScreenMenu.java"
+          "src/main/java/net/mcreator/animechaos/world/inventory/StatScreenMenu.java",
+          "src/main/java/net/mcreator/animechaos/client/gui/StatScreenScreen.java"
         ]
       },
       "path": "~/Naruto/GUIs"
@@ -1898,7 +1898,9 @@
     ],
     "dependants": [],
     "mcreatorDependencies": [
-      "kleidersplayerrenderer"
+      "kleidersplayerrenderer",
+      "playeranimator",
+      "allmods"
     ],
     "currentGenerator": "forge-1.19.2",
     "credits": "Created using mod maker MCreator - https://mcreator.net/about",
