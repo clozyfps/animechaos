@@ -23,7 +23,7 @@ public class OutworldSpeciesRandomizerProcedure {
 				});
 			}
 		}
-		if (RealmSpecies == 2) {
+		if (SpeciesSet == 2) {
 			{
 				String _setval = "Immotal";
 				entity.getCapability(AnimeChaosModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {

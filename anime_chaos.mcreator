@@ -320,9 +320,9 @@
       "registry_name": "stat_screen",
       "metadata": {
         "files": [
+          "src/main/java/net/mcreator/animechaos/network/StatScreenButtonMessage.java",
           "src/main/java/net/mcreator/animechaos/world/inventory/StatScreenMenu.java",
-          "src/main/java/net/mcreator/animechaos/client/gui/StatScreenScreen.java",
-          "src/main/java/net/mcreator/animechaos/network/StatScreenButtonMessage.java"
+          "src/main/java/net/mcreator/animechaos/client/gui/StatScreenScreen.java"
         ]
       },
       "path": "~/Naruto/GUIs"
@@ -559,9 +559,9 @@
       "registry_name": "resting_infernal",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/animechaos/client/renderer/RestingInfernalRenderer.java",
+          "src/main/resources/assets/anime_chaos/models/item/resting_infernal_spawn_egg.json",
           "src/main/java/net/mcreator/animechaos/entity/RestingInfernalEntity.java",
-          "src/main/resources/assets/anime_chaos/models/item/resting_infernal_spawn_egg.json"
+          "src/main/java/net/mcreator/animechaos/client/renderer/RestingInfernalRenderer.java"
         ]
       },
       "path": "~/Fire Force/Mobs"
@@ -575,9 +575,9 @@
       "registry_name": "infernal",
       "metadata": {
         "files": [
+          "src/main/java/net/mcreator/animechaos/client/renderer/InfernalRenderer.java",
           "src/main/resources/data/anime_chaos/forge/biome_modifier/infernal_biome_modifier.json",
           "src/main/java/net/mcreator/animechaos/entity/InfernalEntity.java",
-          "src/main/java/net/mcreator/animechaos/client/renderer/InfernalRenderer.java",
           "src/main/resources/assets/anime_chaos/models/item/infernal_spawn_egg.json"
         ]
       },
@@ -916,8 +916,8 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/animechaos/entity/DemonInfernalEntity.java",
-          "src/main/java/net/mcreator/animechaos/client/renderer/DemonInfernalRenderer.java",
           "src/main/resources/assets/anime_chaos/models/item/demon_infernal_spawn_egg.json",
+          "src/main/java/net/mcreator/animechaos/client/renderer/DemonInfernalRenderer.java",
           "src/main/resources/data/anime_chaos/forge/biome_modifier/demon_infernal_biome_modifier.json"
         ]
       },
@@ -965,8 +965,8 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/anime_chaos/models/item/demon_infernal_resting_spawn_egg.json",
-          "src/main/java/net/mcreator/animechaos/entity/DemonInfernalRestingEntity.java",
-          "src/main/java/net/mcreator/animechaos/client/renderer/DemonInfernalRestingRenderer.java"
+          "src/main/java/net/mcreator/animechaos/client/renderer/DemonInfernalRestingRenderer.java",
+          "src/main/java/net/mcreator/animechaos/entity/DemonInfernalRestingEntity.java"
         ]
       },
       "path": "~/Fire Force/Mobs"
@@ -1096,9 +1096,9 @@
       "registry_name": "player_loadup",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/animechaos/client/gui/PlayerLoadupScreen.java",
+          "src/main/java/net/mcreator/animechaos/world/inventory/PlayerLoadupMenu.java",
           "src/main/java/net/mcreator/animechaos/network/PlayerLoadupButtonMessage.java",
-          "src/main/java/net/mcreator/animechaos/world/inventory/PlayerLoadupMenu.java"
+          "src/main/java/net/mcreator/animechaos/client/gui/PlayerLoadupScreen.java"
         ]
       },
       "path": "~/General/GUI"
@@ -1319,9 +1319,9 @@
       "registry_name": "start_up_gen_1",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/animechaos/network/StartUpGen1ButtonMessage.java",
+          "src/main/java/net/mcreator/animechaos/client/gui/StartUpGen1Screen.java",
           "src/main/java/net/mcreator/animechaos/world/inventory/StartUpGen1Menu.java",
-          "src/main/java/net/mcreator/animechaos/client/gui/StartUpGen1Screen.java"
+          "src/main/java/net/mcreator/animechaos/network/StartUpGen1ButtonMessage.java"
         ]
       },
       "path": "~/Fire Force/GUI"
@@ -1335,9 +1335,9 @@
       "registry_name": "start_up_gen_2",
       "metadata": {
         "files": [
+          "src/main/java/net/mcreator/animechaos/client/gui/StartUpGen2Screen.java",
           "src/main/java/net/mcreator/animechaos/world/inventory/StartUpGen2Menu.java",
-          "src/main/java/net/mcreator/animechaos/network/StartUpGen2ButtonMessage.java",
-          "src/main/java/net/mcreator/animechaos/client/gui/StartUpGen2Screen.java"
+          "src/main/java/net/mcreator/animechaos/network/StartUpGen2ButtonMessage.java"
         ]
       },
       "path": "~/Fire Force/GUI"
@@ -1351,9 +1351,9 @@
       "registry_name": "start_up_gen_3",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/animechaos/world/inventory/StartUpGen3Menu.java",
+          "src/main/java/net/mcreator/animechaos/client/gui/StartUpGen3Screen.java",
           "src/main/java/net/mcreator/animechaos/network/StartUpGen3ButtonMessage.java",
-          "src/main/java/net/mcreator/animechaos/client/gui/StartUpGen3Screen.java"
+          "src/main/java/net/mcreator/animechaos/world/inventory/StartUpGen3Menu.java"
         ]
       },
       "path": "~/Fire Force/GUI"
