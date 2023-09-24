@@ -1,0 +1,23 @@
+{
+  "_fv": 43,
+  "_type": "potioneffect",
+  "definition": {
+    "effectName": "Sharingan - Genjutsu Level 3",
+    "icon": "3tomoeitem.png",
+    "color": {
+      "value": -16777216,
+      "falpha": 0.0
+    },
+    "isInstant": false,
+    "isBad": true,
+    "isBenefitical": false,
+    "renderStatusInInventory": true,
+    "renderStatusInHUD": true,
+    "onActiveTick": {
+      "name": "Sharingan2TomoeGenjutsuDo"
+    },
+    "onExpired": {
+      "name": "RemoveAmbientSharinganEffects"
+    }
+  }
+}

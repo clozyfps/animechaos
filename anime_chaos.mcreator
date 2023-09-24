@@ -156,10 +156,6 @@
             "type": "entity"
           },
           {
-            "name": "sourceentity",
-            "type": "entity"
-          },
-          {
             "name": "x",
             "type": "number"
           },
@@ -320,9 +316,9 @@
       "registry_name": "stat_screen",
       "metadata": {
         "files": [
+          "src/main/java/net/mcreator/animechaos/client/gui/StatScreenScreen.java",
           "src/main/java/net/mcreator/animechaos/network/StatScreenButtonMessage.java",
-          "src/main/java/net/mcreator/animechaos/world/inventory/StatScreenMenu.java",
-          "src/main/java/net/mcreator/animechaos/client/gui/StatScreenScreen.java"
+          "src/main/java/net/mcreator/animechaos/world/inventory/StatScreenMenu.java"
         ]
       },
       "path": "~/Naruto/GUIs"
@@ -559,8 +555,8 @@
       "registry_name": "resting_infernal",
       "metadata": {
         "files": [
-          "src/main/resources/assets/anime_chaos/models/item/resting_infernal_spawn_egg.json",
           "src/main/java/net/mcreator/animechaos/entity/RestingInfernalEntity.java",
+          "src/main/resources/assets/anime_chaos/models/item/resting_infernal_spawn_egg.json",
           "src/main/java/net/mcreator/animechaos/client/renderer/RestingInfernalRenderer.java"
         ]
       },
@@ -575,10 +571,10 @@
       "registry_name": "infernal",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/animechaos/client/renderer/InfernalRenderer.java",
-          "src/main/resources/data/anime_chaos/forge/biome_modifier/infernal_biome_modifier.json",
+          "src/main/resources/assets/anime_chaos/models/item/infernal_spawn_egg.json",
           "src/main/java/net/mcreator/animechaos/entity/InfernalEntity.java",
-          "src/main/resources/assets/anime_chaos/models/item/infernal_spawn_egg.json"
+          "src/main/java/net/mcreator/animechaos/client/renderer/InfernalRenderer.java",
+          "src/main/resources/data/anime_chaos/forge/biome_modifier/infernal_biome_modifier.json"
         ]
       },
       "path": "~/Fire Force/Mobs"
@@ -915,10 +911,10 @@
       "registry_name": "demon_infernal",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/animechaos/entity/DemonInfernalEntity.java",
+          "src/main/resources/data/anime_chaos/forge/biome_modifier/demon_infernal_biome_modifier.json",
           "src/main/resources/assets/anime_chaos/models/item/demon_infernal_spawn_egg.json",
           "src/main/java/net/mcreator/animechaos/client/renderer/DemonInfernalRenderer.java",
-          "src/main/resources/data/anime_chaos/forge/biome_modifier/demon_infernal_biome_modifier.json"
+          "src/main/java/net/mcreator/animechaos/entity/DemonInfernalEntity.java"
         ]
       },
       "path": "~/Fire Force/Mobs"
@@ -964,8 +960,8 @@
       "registry_name": "demon_infernal_resting",
       "metadata": {
         "files": [
-          "src/main/resources/assets/anime_chaos/models/item/demon_infernal_resting_spawn_egg.json",
           "src/main/java/net/mcreator/animechaos/client/renderer/DemonInfernalRestingRenderer.java",
+          "src/main/resources/assets/anime_chaos/models/item/demon_infernal_resting_spawn_egg.json",
           "src/main/java/net/mcreator/animechaos/entity/DemonInfernalRestingEntity.java"
         ]
       },
@@ -1096,9 +1092,9 @@
       "registry_name": "player_loadup",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/animechaos/world/inventory/PlayerLoadupMenu.java",
+          "src/main/java/net/mcreator/animechaos/client/gui/PlayerLoadupScreen.java",
           "src/main/java/net/mcreator/animechaos/network/PlayerLoadupButtonMessage.java",
-          "src/main/java/net/mcreator/animechaos/client/gui/PlayerLoadupScreen.java"
+          "src/main/java/net/mcreator/animechaos/world/inventory/PlayerLoadupMenu.java"
         ]
       },
       "path": "~/General/GUI"
@@ -1351,9 +1347,9 @@
       "registry_name": "start_up_gen_3",
       "metadata": {
         "files": [
+          "src/main/java/net/mcreator/animechaos/world/inventory/StartUpGen3Menu.java",
           "src/main/java/net/mcreator/animechaos/client/gui/StartUpGen3Screen.java",
-          "src/main/java/net/mcreator/animechaos/network/StartUpGen3ButtonMessage.java",
-          "src/main/java/net/mcreator/animechaos/world/inventory/StartUpGen3Menu.java"
+          "src/main/java/net/mcreator/animechaos/network/StartUpGen3ButtonMessage.java"
         ]
       },
       "path": "~/Fire Force/GUI"
@@ -1737,6 +1733,221 @@
         ]
       },
       "path": "~/Mortal Kombat/Randomizers"
+    },
+    {
+      "name": "Tomoe1SharinganImplant",
+      "type": "item",
+      "sortid": 78,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tomoe_1_sharingan_implant",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animechaos/item/Tomoe1SharinganImplantItem.java",
+          "src/main/resources/assets/anime_chaos/models/item/tomoe_1_sharingan_implant.json"
+        ]
+      },
+      "path": "~/Naruto/Items/Dojutsu/Sharingan"
+    },
+    {
+      "name": "Tomoe2SharinganImplant",
+      "type": "item",
+      "sortid": 79,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tomoe_2_sharingan_implant",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animechaos/item/Tomoe2SharinganImplantItem.java",
+          "src/main/resources/assets/anime_chaos/models/item/tomoe_2_sharingan_implant.json"
+        ]
+      },
+      "path": "~/Naruto/Items/Dojutsu/Sharingan"
+    },
+    {
+      "name": "Tomoe3SharinganImplant",
+      "type": "item",
+      "sortid": 80,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tomoe_3_sharingan_implant",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/anime_chaos/models/item/tomoe_3_sharingan_implant.json",
+          "src/main/java/net/mcreator/animechaos/item/Tomoe3SharinganImplantItem.java"
+        ]
+      },
+      "path": "~/Naruto/Items/Dojutsu/Sharingan"
+    },
+    {
+      "name": "AnimeChaosNaruto",
+      "type": "tab",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "anime_chaos_naruto",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/General/Creative Mode Tabs"
+    },
+    {
+      "name": "DojutsuAbility1",
+      "type": "keybind",
+      "sortid": 81,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dojutsu_ability_1",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animechaos/network/DojutsuAbility1Message.java"
+        ]
+      },
+      "path": "~/Naruto/Keybinds"
+    },
+    {
+      "name": "SharinganGenjutsu",
+      "type": "potioneffect",
+      "sortid": 84,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sharingan_genjutsu",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animechaos/potion/SharinganGenjutsuMobEffect.java"
+        ]
+      },
+      "path": "~/Naruto/Effects"
+    },
+    {
+      "name": "Sharingan2TomoeGenjutsuDo",
+      "type": "procedure",
+      "sortid": 82,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sharingan_2_tomoe_genjutsu_do",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animechaos/procedures/Sharingan2TomoeGenjutsuDoProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Naruto/Procedures"
+    },
+    {
+      "name": "Sharingan3Genjutsu",
+      "type": "potioneffect",
+      "sortid": 83,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sharingan_3_genjutsu",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animechaos/potion/Sharingan3GenjutsuMobEffect.java"
+        ]
+      },
+      "path": "~/Naruto/Effects"
+    },
+    {
+      "name": "DoDojutsuAbility1",
+      "type": "procedure",
+      "sortid": 85,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "do_dojutsu_ability_1",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animechaos/procedures/DoDojutsuAbility1Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Naruto/Procedures"
+    },
+    {
+      "name": "ShowDojutsuAbility1Text",
+      "type": "procedure",
+      "sortid": 86,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "show_dojutsu_ability_1_text",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/animechaos/procedures/ShowDojutsuAbility1TextProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Naruto/Procedures"
+    },
+    {
+      "name": "RemoveAmbientSharinganEffects",
+      "type": "procedure",
+      "sortid": 87,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "remove_ambient_sharingan_effects",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animechaos/procedures/RemoveAmbientSharinganEffectsProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Naruto/Procedures"
+    },
+    {
+      "name": "SharinganChakraDrain",
+      "type": "procedure",
+      "sortid": 88,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sharingan_chakra_drain",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animechaos/procedures/SharinganChakraDrainProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Naruto/Procedures"
     }
   ],
   "variable_elements": [
@@ -1947,6 +2158,7 @@
   ],
   "language_map": {
     "en_us": {
+      "item.anime_chaos.tomoe_1_sharingan_implant": "1 Tomoe Sharingan Implant",
       "key.categories.anime_chaos": "Anime Chaos - General",
       "key.animechaos.second_function": "Second Function",
       "key.anime_chaos.activate_dojutsu": "Activate Dojutsu",
@@ -1958,9 +2170,11 @@
       "subtitles.sharingan_deactivated": "Sharingan Dissipates...",
       "item.anime_chaos.infernal_spawn_egg": "Infernal Spawn Egg",
       "key.anime_chaos.open_stats_menu": "Open Stats Menu",
+      "key.anime_chaos.dojutsu_ability_1": "Dojutsu Ability 1",
       "key.anime_chaos.second_function": "Second Function",
       "item.anime_chaos.resting_infernal_spawn_egg": "Infernal (Resting) Spawn Egg",
       "gui.anime_chaos.start_up_gen_3.button_empty": "\u003e",
+      "effect.anime_chaos.sharingan_genjutsu": "Sharingan - Genjutsu Level 2",
       "item.animechaos.test": "Anime Chaos Logo",
       "entity.anime_chaos.demon_infernal_resting": "Demon Infernal (Resting)",
       "gui.anime_chaos.player_loadup.button_next": "Next",
@@ -1969,14 +2183,18 @@
       "subtitles.sharingan_activated": "Sharingan Awakens!",
       "entity.anime_chaos.resting_infernal": "Infernal (Resting)",
       "entity.anime_chaos.demon_infernal": "Demon Infernal",
+      "itemGroup.tabanime_chaos_naruto": "Anime Chaos - Naruto",
       "key.categories.anime_chaos_naruto": "Anime Chaos - Naruto",
       "gui.anime_chaos.start_up_gen_1.button_empty": "\u003e",
       "gui.anime_chaos.player_loadup.button_empty1": "\u003c",
       "gui.anime_chaos.start_up_gen_2.button_empty": "\u003e",
+      "item.anime_chaos.tomoe_2_sharingan_implant": "Tomoe 2 Sharingan Implant",
       "item.anime_chaos.test": "Anime Chaos Logo",
       "gui.anime_chaos.start_up_gen_2.button_empty1": "\u003c",
       "key.animechaos.activate_dojutsu": "Activate Dojutsu",
+      "item.anime_chaos.tomoe_3_sharingan_implant": "Tomoe 2 Sharingan Implant",
       "item.anime_chaos.demon_infernal_spawn_egg": "Demon Infernal Spawn Egg",
+      "effect.anime_chaos.sharingan_3_genjutsu": "Sharingan - Genjutsu Level 3",
       "gui.anime_chaos.player_loadup.label_anime_can_be_changed": "Anime:",
       "gui.anime_chaos.start_up_gen_3.button_select": "Select",
       "gui.anime_chaos.player_loadup.label_animename": "AnimeName",
@@ -2011,6 +2229,10 @@
           },
           {
             "name": "GUI",
+            "children": []
+          },
+          {
+            "name": "Creative Mode Tabs",
             "children": []
           }
         ]
@@ -2070,6 +2292,24 @@
           },
           {
             "name": "Procedures",
+            "children": []
+          },
+          {
+            "name": "Items",
+            "children": [
+              {
+                "name": "Dojutsu",
+                "children": [
+                  {
+                    "name": "Sharingan",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Effects",
             "children": []
           }
         ]

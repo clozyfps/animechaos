@@ -12,6 +12,9 @@ import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.CreativeModeTab;
 
+import net.mcreator.animechaos.item.Tomoe3SharinganImplantItem;
+import net.mcreator.animechaos.item.Tomoe2SharinganImplantItem;
+import net.mcreator.animechaos.item.Tomoe1SharinganImplantItem;
 import net.mcreator.animechaos.item.TestItem;
 import net.mcreator.animechaos.AnimeChaosMod;
 
@@ -24,4 +27,7 @@ public class AnimeChaosModItems {
 	public static final RegistryObject<Item> DEMON_INFERNAL_RESTING_SPAWN_EGG = REGISTRY.register("demon_infernal_resting_spawn_egg",
 			() -> new ForgeSpawnEggItem(AnimeChaosModEntities.DEMON_INFERNAL_RESTING, -14941180, -9945, new Item.Properties().tab(null)));
 	public static final RegistryObject<Item> TEST = REGISTRY.register("test", () -> new TestItem());
+	public static final RegistryObject<Item> TOMOE_1_SHARINGAN_IMPLANT = REGISTRY.register("tomoe_1_sharingan_implant", () -> new Tomoe1SharinganImplantItem());
+	public static final RegistryObject<Item> TOMOE_2_SHARINGAN_IMPLANT = REGISTRY.register("tomoe_2_sharingan_implant", () -> new Tomoe2SharinganImplantItem());
+	public static final RegistryObject<Item> TOMOE_3_SHARINGAN_IMPLANT = REGISTRY.register("tomoe_3_sharingan_implant", () -> new Tomoe3SharinganImplantItem());
 }

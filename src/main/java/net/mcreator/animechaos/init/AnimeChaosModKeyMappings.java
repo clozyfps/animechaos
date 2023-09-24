@@ -17,6 +17,7 @@ import net.minecraft.client.KeyMapping;
 
 import net.mcreator.animechaos.network.SecondFunctionMessage;
 import net.mcreator.animechaos.network.OpenStatsMenuMessage;
+import net.mcreator.animechaos.network.DojutsuAbility1Message;
 import net.mcreator.animechaos.network.ActivateDojutsuMessage;
 import net.mcreator.animechaos.AnimeChaosMod;
 
@@ -66,6 +67,19 @@ public class AnimeChaosModKeyMappings {
 			isDownOld = isDown;
 		}
 	};
+	public static final KeyMapping DOJUTSU_ABILITY_1 = new KeyMapping("key.anime_chaos.dojutsu_ability_1", GLFW.GLFW_KEY_Z, "key.categories.anime_chaos_naruto") {
+		private boolean isDownOld = false;
+
+		@Override
+		public void setDown(boolean isDown) {
+			super.setDown(isDown);
+			if (isDownOld != isDown && isDown) {
+				AnimeChaosMod.PACKET_HANDLER.sendToServer(new DojutsuAbility1Message(0, 0));
+				DojutsuAbility1Message.pressAction(Minecraft.getInstance().player, 0, 0);
+			}
+			isDownOld = isDown;
+		}
+	};
 	private static long SECOND_FUNCTION_LASTPRESS = 0;
 
 	@SubscribeEvent
@@ -73,6 +87,7 @@ public class AnimeChaosModKeyMappings {
 		event.register(SECOND_FUNCTION);
 		event.register(ACTIVATE_DOJUTSU);
 		event.register(OPEN_STATS_MENU);
+		event.register(DOJUTSU_ABILITY_1);
 	}
 
 	@Mod.EventBusSubscriber({Dist.CLIENT})
@@ -83,6 +98,7 @@ public class AnimeChaosModKeyMappings {
 				SECOND_FUNCTION.consumeClick();
 				ACTIVATE_DOJUTSU.consumeClick();
 				OPEN_STATS_MENU.consumeClick();
+				DOJUTSU_ABILITY_1.consumeClick();
 			}
 		}
 	}
