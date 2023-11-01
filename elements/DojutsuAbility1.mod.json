@@ -1,0 +1,12 @@
+{
+  "_fv": 43,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "Z",
+    "keyBindingName": "Dojutsu Ability 1",
+    "keyBindingCategoryKey": "anime_chaos_naruto",
+    "onKeyPressed": {
+      "name": "DoDojutsuAbility1"
+    }
+  }
+}

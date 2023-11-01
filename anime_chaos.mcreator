@@ -648,7 +648,6 @@
     {
       "name": "NarutoOverlay",
       "type": "overlay",
-      "sortid": 83,
       "compiles": true,
       "locked_code": false,
       "registry_name": "naruto_overlay",
@@ -1716,28 +1715,32 @@
       "path": "~/Mortal Kombat/Randomizers"
     },
     {
-      "name": "MKrandomProcedure",
-      "type": "procedure",
-      "sortid": 78,
+      "name": "Crymancerspecialmovesoffhand",
+      "type": "overlay",
+      "sortid": 84,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "m_krandom_procedure",
+      "registry_name": "crymancerspecialmovesoffhand",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/animechaos/procedures/MKrandomProcedureProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
+          "src/main/java/net/mcreator/animechaos/client/screens/CrymancerspecialmovesoffhandOverlay.java"
         ]
       },
-      "path": "~/Mortal Kombat/Randomizers"
+      "path": "~/Mortal Kombat/GUI"
+    },
+    {
+      "name": "CryomancerSpecialMoves",
+      "type": "overlay",
+      "sortid": 82,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cryomancer_special_moves",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animechaos/client/screens/CryomancerSpecialMovesOverlay.java"
+        ]
+      },
+      "path": "~/Mortal Kombat/GUI"
     },
     {
       "name": "MKrandomitem",
@@ -1770,6 +1773,30 @@
       "path": "~/Mortal Kombat/Items"
     },
     {
+      "name": "MKrandomProcedure",
+      "type": "procedure",
+      "sortid": 78,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "m_krandom_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animechaos/procedures/MKrandomProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mortal Kombat/Randomizers"
+    },
+    {
       "name": "CryomancerSpecialMovesDisplayOverlayIngame",
       "type": "procedure",
       "sortid": 81,
@@ -1786,34 +1813,6 @@
             "name": "entity",
             "type": "entity"
           }
-        ]
-      },
-      "path": "~/Mortal Kombat/GUI"
-    },
-    {
-      "name": "CryomancerSpecialMoves",
-      "type": "overlay",
-      "sortid": 82,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "cryomancer_special_moves",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/animechaos/client/screens/CryomancerSpecialMovesOverlay.java"
-        ]
-      },
-      "path": "~/Mortal Kombat/GUI"
-    },
-    {
-      "name": "Crymancerspecialmovesoffhand",
-      "type": "overlay",
-      "sortid": 84,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "crymancerspecialmovesoffhand",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/animechaos/client/screens/CrymancerspecialmovesoffhandOverlay.java"
         ]
       },
       "path": "~/Mortal Kombat/GUI"
@@ -1838,6 +1837,221 @@
         ]
       },
       "path": "~/Mortal Kombat/GUI"
+    },
+    {
+      "name": "AnimeChaosNaruto",
+      "type": "tab",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "anime_chaos_naruto",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/General/Creative Mode Tabs"
+    },
+    {
+      "name": "RemoveAmbientSharinganEffects",
+      "type": "procedure",
+      "sortid": 87,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "remove_ambient_sharingan_effects",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animechaos/procedures/RemoveAmbientSharinganEffectsProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Naruto/Procedures"
+    },
+    {
+      "name": "Tomoe2SharinganImplant",
+      "type": "item",
+      "sortid": 79,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tomoe_2_sharingan_implant",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/anime_chaos/models/item/tomoe_2_sharingan_implant.json",
+          "src/main/java/net/mcreator/animechaos/item/Tomoe2SharinganImplantItem.java"
+        ]
+      },
+      "path": "~/Naruto/Items/Dojutsu/Sharingan"
+    },
+    {
+      "name": "Sharingan2TomoeGenjutsuDo",
+      "type": "procedure",
+      "sortid": 82,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sharingan_2_tomoe_genjutsu_do",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animechaos/procedures/Sharingan2TomoeGenjutsuDoProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Naruto/Procedures"
+    },
+    {
+      "name": "ShowDojutsuAbility1Text",
+      "type": "procedure",
+      "sortid": 86,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "show_dojutsu_ability_1_text",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/animechaos/procedures/ShowDojutsuAbility1TextProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Naruto/Procedures"
+    },
+    {
+      "name": "Tomoe1SharinganImplant",
+      "type": "item",
+      "sortid": 78,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tomoe_1_sharingan_implant",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animechaos/item/Tomoe1SharinganImplantItem.java",
+          "src/main/resources/assets/anime_chaos/models/item/tomoe_1_sharingan_implant.json"
+        ]
+      },
+      "path": "~/Naruto/Items/Dojutsu/Sharingan"
+    },
+    {
+      "name": "Tomoe3SharinganImplant",
+      "type": "item",
+      "sortid": 80,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tomoe_3_sharingan_implant",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/anime_chaos/models/item/tomoe_3_sharingan_implant.json",
+          "src/main/java/net/mcreator/animechaos/item/Tomoe3SharinganImplantItem.java"
+        ]
+      },
+      "path": "~/Naruto/Items/Dojutsu/Sharingan"
+    },
+    {
+      "name": "DoDojutsuAbility1",
+      "type": "procedure",
+      "sortid": 85,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "do_dojutsu_ability_1",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animechaos/procedures/DoDojutsuAbility1Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Naruto/Procedures"
+    },
+    {
+      "name": "SharinganChakraDrain",
+      "type": "procedure",
+      "sortid": 88,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sharingan_chakra_drain",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animechaos/procedures/SharinganChakraDrainProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Naruto/Procedures"
+    },
+    {
+      "name": "SharinganGenjutsu",
+      "type": "potioneffect",
+      "sortid": 84,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sharingan_genjutsu",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animechaos/potion/SharinganGenjutsuMobEffect.java"
+        ]
+      },
+      "path": "~/Naruto/Effects"
+    },
+    {
+      "name": "Sharingan3Genjutsu",
+      "type": "potioneffect",
+      "sortid": 83,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sharingan_3_genjutsu",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animechaos/potion/Sharingan3GenjutsuMobEffect.java"
+        ]
+      },
+      "path": "~/Naruto/Effects"
+    },
+    {
+      "name": "DojutsuAbility1",
+      "type": "keybind",
+      "sortid": 81,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dojutsu_ability_1",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animechaos/network/DojutsuAbility1Message.java"
+        ]
+      },
+      "path": "~/Naruto/Keybinds"
     }
   ],
   "variable_elements": [
@@ -2056,13 +2270,9 @@
     "en_us": {
       "key.categories.anime_chaos": "Anime Chaos - General",
       "key.animechaos.second_function": "Second Function",
-      "item.anime_chaos.cryomancer_abilities": "Cryomancer [Special Moves]",
-      "gui.anime_chaos.cryomancer_special_moves.label_5cold_shoulder": "5.Cold Shoulder",
       "gui.anime_chaos.start_up_gen_1.button_empty1": "\u003c",
       "key.categories.anime_chaos_ff": "Anime Chaos - Fire Force",
       "item.anime_chaos.infernal_spawn_egg": "Infernal Spawn Egg",
-      "gui.anime_chaos.crymancerspecialmovesoffhand.label_4creeping_ice": "4.Rising Ice",
-      "gui.anime_chaos.cryomancer_special_moves.label_ice_slide": "2.Ice Slide",
       "key.anime_chaos.open_stats_menu": "Open Stats Menu",
       "key.anime_chaos.second_function": "Second Function",
       "item.anime_chaos.resting_infernal_spawn_egg": "Infernal (Resting) Spawn Egg",
@@ -2074,20 +2284,14 @@
       "entity.anime_chaos.resting_infernal": "Infernal (Resting)",
       "entity.anime_chaos.demon_infernal": "Demon Infernal",
       "gui.anime_chaos.start_up_gen_2.button_empty": "\u003e",
-      "gui.anime_chaos.cryomancer_special_moves.label_3_ice_clone": "3.Ice Clone",
       "gui.anime_chaos.start_up_gen_2.button_empty1": "\u003c",
-      "gui.anime_chaos.cryomancer_special_moves.label_1": "1.Ice Ball",
       "gui.anime_chaos.start_up_gen_3.button_select": "Select",
-      "gui.anime_chaos.crymancerspecialmovesoffhand.label_3_ice_clone": "3.Ice Clone",
-      "gui.anime_chaos.crymancerspecialmovesoffhand.label_1": "1.Ice Ball",
       "key.anime_chaos.activate_dojutsu": "Activate Dojutsu",
       "gui.anime_chaos.player_loadup.button_empty": "\u003e",
-      "gui.anime_chaos.cryomancer_special_moves.label_4creeping_ice": "4.Rising Ice",
       "gui.anime_chaos.start_up_gen_3.button_empty1": "\u003c",
       "gui.anime_chaos.player_loadup.FirstName": "",
       "subtitles.sharingan_deactivated": "Sharingan Dissipates...",
       "gui.anime_chaos.start_up_gen_3.button_empty": "\u003e",
-      "gui.anime_chaos.crymancerspecialmovesoffhand.label_5cold_shoulder": "5.Cold Shoulder",
       "item.animechaos.test": "Anime Chaos Logo",
       "key.categories.anime_chaos_naruto": "Anime Chaos - Naruto",
       "gui.anime_chaos.start_up_gen_1.button_empty": "\u003e",
@@ -2097,12 +2301,10 @@
       "item.anime_chaos.demon_infernal_spawn_egg": "Demon Infernal Spawn Egg",
       "gui.anime_chaos.player_loadup.label_anime_can_be_changed": "Anime:",
       "gui.anime_chaos.player_loadup.label_animename": "AnimeName",
-      "item.anime_chaos.m_krandomitem": "Mortal Kombat Randomizer",
       "gui.anime_chaos.start_up_gen_1.button_select": "Select",
       "item.anime_chaos.demon_infernal_resting_spawn_egg": "Demon Infernal (Resting) Spawn Egg",
       "gui.anime_chaos.player_loadup.label_first_name": "First Name",
-      "gui.anime_chaos.player_loadup.button_set_first_name": "Set First Name",
-      "gui.anime_chaos.crymancerspecialmovesoffhand.label_ice_slide": "2.Ice Slide"
+      "gui.anime_chaos.player_loadup.button_set_first_name": "Set First Name"
     }
   },
   "foldersRoot": {
@@ -2125,11 +2327,15 @@
             "children": []
           },
           {
+            "name": "GUI",
+            "children": []
+          },
+          {
             "name": "Misc",
             "children": []
           },
           {
-            "name": "GUI",
+            "name": "Creative Mode Tabs",
             "children": []
           }
         ]
@@ -2161,15 +2367,15 @@
             "name": "Procedures",
             "children": [
               {
+                "name": "Clan",
+                "children": []
+              },
+              {
                 "name": "Infernals",
                 "children": []
               },
               {
                 "name": "GUI",
-                "children": []
-              },
-              {
-                "name": "Clan",
                 "children": []
               }
             ]
@@ -2190,6 +2396,24 @@
           {
             "name": "Procedures",
             "children": []
+          },
+          {
+            "name": "Effects",
+            "children": []
+          },
+          {
+            "name": "Items",
+            "children": [
+              {
+                "name": "Dojutsu",
+                "children": [
+                  {
+                    "name": "Sharingan",
+                    "children": []
+                  }
+                ]
+              }
+            ]
           }
         ]
       },
@@ -2197,33 +2421,13 @@
         "name": "Mortal Kombat",
         "children": [
           {
-            "name": "Randomizers",
-            "children": []
-          },
-          {
-            "name": "GUI",
-            "children": []
-          },
-          {
-            "name": "Mobs",
-            "children": []
-          },
-          {
-            "name": "Blocks",
-            "children": []
-          },
-          {
-            "name": "Items",
-            "children": []
-          },
-          {
             "name": "Species Clans-Factions and Families",
             "children": [
               {
                 "name": "Clans-Factions",
                 "children": [
                   {
-                    "name": "Special Forces -Not Started-",
+                    "name": "White Lotus Society -Not Started-",
                     "children": []
                   },
                   {
@@ -2235,15 +2439,15 @@
                     "children": []
                   },
                   {
-                    "name": "White Lotus Society -Not Started-",
-                    "children": []
-                  },
-                  {
                     "name": "Matako Tribe -Not Started-",
                     "children": []
                   },
                   {
                     "name": "Black Dragon -Not Started-",
+                    "children": []
+                  },
+                  {
+                    "name": "Special Forces -Not Started-",
                     "children": []
                   }
                 ]
@@ -2252,23 +2456,15 @@
                 "name": "Family",
                 "children": [
                   {
-                    "name": "Tsung Family -Not Started-",
-                    "children": []
-                  },
-                  {
-                    "name": "Liang Family -Not Started-",
-                    "children": []
-                  },
-                  {
-                    "name": "Cage Family -Not Started-",
-                    "children": []
-                  },
-                  {
                     "name": "Takashi Family -Not Started-",
                     "children": []
                   },
                   {
-                    "name": "Kahn Family -Not Started-",
+                    "name": "Tsung Family -Not Started-",
+                    "children": []
+                  },
+                  {
+                    "name": "Cage Family -Not Started-",
                     "children": []
                   },
                   {
@@ -2286,6 +2482,14 @@
                   {
                     "name": "Vrbada Family -Not Started-",
                     "children": []
+                  },
+                  {
+                    "name": "Kahn Family -Not Started-",
+                    "children": []
+                  },
+                  {
+                    "name": "Liang Family -Not Started-",
+                    "children": []
                   }
                 ]
               },
@@ -2293,30 +2497,31 @@
                 "name": "Species",
                 "children": [
                   {
-                    "name": "Outworld Species",
+                    "name": "God Species",
                     "children": [
                       {
-                        "name": "Edenian -Not Started-",
+                        "name": "Elder God -Not Started-",
                         "children": []
                       },
                       {
-                        "name": "Shokan -Not Started-",
+                        "name": "God -Not Started-",
                         "children": []
                       },
                       {
-                        "name": "Tarkatan -Not Started-",
+                        "name": "Demi God -Not Started-",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Neather Realm Species",
+                    "children": [
+                      {
+                        "name": "Hellspawn -Not Started-",
                         "children": []
                       },
                       {
-                        "name": "Kytinn -Not Started-",
-                        "children": []
-                      },
-                      {
-                        "name": "Immortals -Not Started-",
-                        "children": []
-                      },
-                      {
-                        "name": "Genetic Experiment -Not Started-",
+                        "name": "Demon -Not Started-",
                         "children": []
                       }
                     ]
@@ -2325,7 +2530,15 @@
                     "name": "Earth Realm Species",
                     "children": [
                       {
+                        "name": "Enerna -Not Started-",
+                        "children": []
+                      },
+                      {
                         "name": "Cryomancer -Not Started-",
+                        "children": []
+                      },
+                      {
+                        "name": "Saurian -Not Started-",
                         "children": []
                       },
                       {
@@ -2344,43 +2557,34 @@
                             "children": []
                           }
                         ]
-                      },
-                      {
-                        "name": "Saurian -Not Started-",
-                        "children": []
-                      },
-                      {
-                        "name": "Enerna -Not Started-",
-                        "children": []
                       }
                     ]
                   },
                   {
-                    "name": "Neather Realm Species",
+                    "name": "Outworld Species",
                     "children": [
                       {
-                        "name": "Demon -Not Started-",
+                        "name": "Edenian -Not Started-",
                         "children": []
                       },
                       {
-                        "name": "Hellspawn -Not Started-",
-                        "children": []
-                      }
-                    ]
-                  },
-                  {
-                    "name": "God Species",
-                    "children": [
-                      {
-                        "name": "Elder God -Not Started-",
+                        "name": "Tarkatan -Not Started-",
                         "children": []
                       },
                       {
-                        "name": "God -Not Started-",
+                        "name": "Immortals -Not Started-",
                         "children": []
                       },
                       {
-                        "name": "Demi God -Not Started-",
+                        "name": "Kytinn -Not Started-",
+                        "children": []
+                      },
+                      {
+                        "name": "Genetic Experiment -Not Started-",
+                        "children": []
+                      },
+                      {
+                        "name": "Shokan -Not Started-",
                         "children": []
                       }
                     ]
@@ -2390,7 +2594,27 @@
             ]
           },
           {
+            "name": "Blocks",
+            "children": []
+          },
+          {
             "name": "Xp",
+            "children": []
+          },
+          {
+            "name": "Mobs",
+            "children": []
+          },
+          {
+            "name": "GUI",
+            "children": []
+          },
+          {
+            "name": "Randomizers",
+            "children": []
+          },
+          {
+            "name": "Items",
             "children": []
           }
         ]

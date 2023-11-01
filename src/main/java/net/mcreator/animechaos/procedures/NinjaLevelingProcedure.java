@@ -33,7 +33,7 @@ public class NinjaLevelingProcedure {
 			return;
 		double GetRandomStatPointIncrease = 0;
 		double GetRandomJutsuPointIncrease = 0;
-		if ((entity.getCapability(AnimeChaosModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeChaosModVariables.PlayerVariables())).NinjaXP == (entity.getCapability(AnimeChaosModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+		if ((entity.getCapability(AnimeChaosModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeChaosModVariables.PlayerVariables())).NinjaXP >= (entity.getCapability(AnimeChaosModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 				.orElse(new AnimeChaosModVariables.PlayerVariables())).NunjaXPRequired) {
 			{
 				double _setval = (entity.getCapability(AnimeChaosModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeChaosModVariables.PlayerVariables())).NinjaLevel + 1;
@@ -56,8 +56,9 @@ public class NinjaLevelingProcedure {
 					capability.syncPlayerVariables(entity);
 				});
 			}
-			GetRandomStatPointIncrease = Mth.nextInt(RandomSource.create(), 0, 10);
-			GetRandomJutsuPointIncrease = Mth.nextInt(RandomSource.create(), 0, 10);
+			GetRandomStatPointIncrease = Mth.nextInt(RandomSource.create(), 0, (int) (2 + 1 / (0.01 * (entity.getCapability(AnimeChaosModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeChaosModVariables.PlayerVariables())).NinjaLevel)));
+			GetRandomJutsuPointIncrease = Mth.nextInt(RandomSource.create(), 0,
+					(int) (2 + 1 / (0.01 * (entity.getCapability(AnimeChaosModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeChaosModVariables.PlayerVariables())).NinjaLevel)));
 			{
 				double _setval = (entity.getCapability(AnimeChaosModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeChaosModVariables.PlayerVariables())).StatXP + GetRandomStatPointIncrease;
 				entity.getCapability(AnimeChaosModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -73,8 +74,9 @@ public class NinjaLevelingProcedure {
 				});
 			}
 			if (entity instanceof Player _player && !_player.level.isClientSide())
-				_player.displayClientMessage(
-						Component.literal(("You leveled up! You got +" + new java.text.DecimalFormat("##").format(GetRandomStatPointIncrease) + " SP and +" + new java.text.DecimalFormat("##").format(GetRandomJutsuPointIncrease) + " JP.")), false);
+				_player.displayClientMessage(Component.literal(
+						("You leveled up! You got +" + new java.text.DecimalFormat("###,###,###,###").format(GetRandomStatPointIncrease) + " SP and +" + new java.text.DecimalFormat("###,###,###,###").format(GetRandomJutsuPointIncrease) + " JP.")),
+						false);
 		}
 	}
 }

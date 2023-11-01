@@ -16,8 +16,24 @@
             "value": -16735035,
             "falpha": 0.0
           },
-          "x": 6,
-          "y": 223
+          "x": 5,
+          "y": 224
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_show_dojutsu_ability_1_text",
+          "text": {
+            "fixedValue": "",
+            "name": "ShowDojutsuAbility1Text"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 2,
+          "y": 1
         }
       }
     ],

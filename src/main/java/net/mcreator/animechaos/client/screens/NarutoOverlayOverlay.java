@@ -13,6 +13,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.client.Minecraft;
 
+import net.mcreator.animechaos.procedures.ShowDojutsuAbility1TextProcedure;
 import net.mcreator.animechaos.procedures.ShowChakraProcedure;
 import net.mcreator.animechaos.procedures.IsInAnimeNarutoProcedure;
 
@@ -38,7 +39,10 @@ public class NarutoOverlayOverlay {
 		if (IsInAnimeNarutoProcedure.execute(entity)) {
 			Minecraft.getInstance().font.draw(event.getPoseStack(),
 
-					ShowChakraProcedure.execute(entity), posX + -207, posY + 103, -16735035);
+					ShowChakraProcedure.execute(entity), posX + -208, posY + 104, -16735035);
+			Minecraft.getInstance().font.draw(event.getPoseStack(),
+
+					ShowDojutsuAbility1TextProcedure.execute(entity), posX + -211, posY + -119, -1);
 		}
 	}
 }

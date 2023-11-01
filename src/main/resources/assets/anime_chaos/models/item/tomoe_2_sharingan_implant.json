@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "anime_chaos:items/2tomoeitem"
+  }
+}

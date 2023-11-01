@@ -29,7 +29,9 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.FriendlyByteBuf;
 
+import net.mcreator.animechaos.init.AnimeChaosModTabs;
 import net.mcreator.animechaos.init.AnimeChaosModSounds;
+import net.mcreator.animechaos.init.AnimeChaosModMobEffects;
 import net.mcreator.animechaos.init.AnimeChaosModMenus;
 import net.mcreator.animechaos.init.AnimeChaosModItems;
 import net.mcreator.animechaos.init.AnimeChaosModEntities;
@@ -50,12 +52,14 @@ public class AnimeChaosMod {
 
 	public AnimeChaosMod() {
 		MinecraftForge.EVENT_BUS.register(this);
-
+		AnimeChaosModTabs.load();
 		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
 		AnimeChaosModSounds.REGISTRY.register(bus);
 
 		AnimeChaosModItems.REGISTRY.register(bus);
 		AnimeChaosModEntities.REGISTRY.register(bus);
+
+		AnimeChaosModMobEffects.REGISTRY.register(bus);
 
 		AnimeChaosModMenus.REGISTRY.register(bus);
 

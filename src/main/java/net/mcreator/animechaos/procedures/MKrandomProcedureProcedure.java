@@ -1,7 +1,8 @@
 package net.mcreator.animechaos.procedures;
 
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.entity.Entity;
+import net.minecraftforge.eventbus.api.Event;
+
+import javax.annotation.Nullable;
 
 public class MKrandomProcedureProcedure {
 	public static void execute(LevelAccessor world, Entity entity) {
