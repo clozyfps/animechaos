@@ -13,6 +13,8 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.CreativeModeTab;
 
 import net.mcreator.animechaos.item.TestItem;
+import net.mcreator.animechaos.item.MKrandomitemItem;
+import net.mcreator.animechaos.item.CryomancerAbilitiesItem;
 import net.mcreator.animechaos.AnimeChaosMod;
 
 public class AnimeChaosModItems {
@@ -24,4 +26,6 @@ public class AnimeChaosModItems {
 	public static final RegistryObject<Item> DEMON_INFERNAL_RESTING_SPAWN_EGG = REGISTRY.register("demon_infernal_resting_spawn_egg",
 			() -> new ForgeSpawnEggItem(AnimeChaosModEntities.DEMON_INFERNAL_RESTING, -14941180, -9945, new Item.Properties().tab(null)));
 	public static final RegistryObject<Item> TEST = REGISTRY.register("test", () -> new TestItem());
+	public static final RegistryObject<Item> M_KRANDOMITEM = REGISTRY.register("m_krandomitem", () -> new MKrandomitemItem());
+	public static final RegistryObject<Item> CRYOMANCER_ABILITIES = REGISTRY.register("cryomancer_abilities", () -> new CryomancerAbilitiesItem());
 }

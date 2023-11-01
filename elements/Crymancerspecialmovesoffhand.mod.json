@@ -1,0 +1,96 @@
+{
+  "_fv": 43,
+  "_type": "overlay",
+  "definition": {
+    "priority": "NORMAL",
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "name": "label_1",
+          "text": {
+            "fixedValue": "1.Ice Ball"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 2,
+          "y": 5
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_ice_slide",
+          "text": {
+            "fixedValue": "2.Ice Slide"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 3,
+          "y": 16
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_3_ice_clone",
+          "text": {
+            "fixedValue": "3.Ice Clone"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 3,
+          "y": 28
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_4creeping_ice",
+          "text": {
+            "fixedValue": "4.Rising Ice"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 3,
+          "y": 39
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_5cold_shoulder",
+          "text": {
+            "fixedValue": "5.Cold Shoulder"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 3,
+          "y": 50
+        }
+      }
+    ],
+    "baseTexture": "",
+    "overlayTarget": "Ingame",
+    "displayCondition": {
+      "name": "CryomancerSMoffhand"
+    },
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "anime_chaos:custom/cryomancer_linkuei_item",
+  "textures": {
+    "0": "anime_chaos:blocks/cryomancer-linkuei_item",
+    "particle": "anime_chaos:items/cryomancer-linkuei_item"
+  }
+}

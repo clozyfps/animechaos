@@ -93,6 +93,7 @@ public class AnimeChaosModVariables {
 			clone.Species = original.Species;
 			clone.StatXP = original.StatXP;
 			clone.Faction = original.Faction;
+			clone.overlayactive = original.overlayactive;
 			if (!event.isWasDeath()) {
 				clone.DojutsuIsActive = original.DojutsuIsActive;
 				clone.holdingSecondFunction = original.holdingSecondFunction;
@@ -164,6 +165,7 @@ public class AnimeChaosModVariables {
 		public String SpeciesRealm = "None";
 		public double StatXP = 0;
 		public String Faction = "None";
+		public boolean overlayactive = true;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -203,6 +205,7 @@ public class AnimeChaosModVariables {
 			nbt.putString("SpeciesRealm", SpeciesRealm);
 			nbt.putDouble("StatXP", StatXP);
 			nbt.putString("Faction", Faction);
+			nbt.putBoolean("overlayactive", overlayactive);
 			return nbt;
 		}
 
@@ -239,6 +242,7 @@ public class AnimeChaosModVariables {
 			SpeciesRealm = nbt.getString("SpeciesRealm");
 			StatXP = nbt.getDouble("StatXP");
 			Faction = nbt.getString("Faction");
+			overlayactive = nbt.getBoolean("overlayactive");
 		}
 	}
 
@@ -294,6 +298,7 @@ public class AnimeChaosModVariables {
 					variables.SpeciesRealm = message.data.SpeciesRealm;
 					variables.StatXP = message.data.StatXP;
 					variables.Faction = message.data.Faction;
+					variables.overlayactive = message.data.overlayactive;
 				}
 			});
 			context.setPacketHandled(true);
